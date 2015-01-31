@@ -46,36 +46,80 @@ class UserController extends BaseController {
 		return Redirect::to('/login');
 	}
 
-	public function upload_album()
+	public function submit_album()
 	{
+
+		// var_dump(Auth::user());
+		// echo '<pre>';
+		// var_dump(Input::file('image')->getclienToriginalName());
+
+
+
+		$destinationPath = 'uploads/photos';
+
+		$upload_success = Input::file('image')->move($destinationPath, Input::file('image')->getclienToriginalName());
+
+		 //start save in files table
+       
+		// echo '<pre>';
+
+		// var_dump($file);
+
+		// $this->db->insert('files', $data);
+
+
+
+		// die('ss');
+		$album =  array(
+	                'title'         =>ucfirst(Input::get('title')),
+	              
+	                'creation_date' =>date("Y-m-d H:i:s"),
+	                'modified_date' =>date("Y-m-d H:i:s"), 
+	                // 'photo_ids'     =>$photo_ids, 
+	                'user_id'       =>Auth::user()->id,
+	                'url_album'     =>Str::slug(Input::get('title'), '-'),
+	                // 'category_id'   =>$post['category'],
+	                //@todo: get real representive image for album
+	                // 'rept_photo_id' => isset($file_ids['0']) ? $file_ids['0'] : '',
+	                'status'        => 1, 
+	                'is_home'       => 0,
+	                'view_count'    => '', 
+	                'comment_count' => ''
+	    		);
+		// var_dump($album);
+
+		$album_id = DB::table('albums')->insertGetId($album);
+
+		 $file = array(
+        	// 'file_id'       => $file_id,
+	   		// 'parent_file_id'=> NULL,
+	        // 'type'			=> NULL,
+	        'parent_type'	=> 'album', 
+	        'parent_id'		=> $album_id,
+	        'user_id'		=> Auth::user()->id,
+	        'creation_date'	=> date("Y-m-d H:i:s"),
+	        'modified_date'	=> date("Y-m-d H:i:s"),
+	       
+	        'storage_path'	=> 'public/photos/'. Input::file('image')->getClientOriginalName(),
+
+	        'extension'		=> Input::file('image')->getClientMimeType(),
+	        'name'			=> Input::file('image')->getClientOriginalName(),
+	        'mime_major'	=> 'image',
+	        'mime_minor'	=> Input::file('image')->getClientMimeType(),
+            // 'size'          => $image_data['file_size'],
+	        // 'width'			=> $image_data['image_width'],
+            // 'height'        => $image_data['image_height']
+
+		);
+		DB::table('files')->insert($file);
+
+		return Redirect::to('/home');
 		// die('ss');
 
-		// Input::file('file');
-
-		// $data = array(
-  //               'title'         =>ucfirst($post['title']),
-              
-  //               'creation_date' =>date("Y-m-d H:i:s"),
-  //               'modified_date' =>date("Y-m-d H:i:s"), 
-  //               'photo_ids'     =>$photo_ids, 
-  //               'user_id'       =>$userinfo->user_id,
-  //               'url_album'     =>convertForUrl($post['title']),
-  //               'category_id'   =>$post['category'],
-  //               //@todo: get real representive image for album
-  //               'rept_photo_id' => isset($file_ids['0']) ? $file_ids['0'] : '',
-  //               'status'        => 1, 
-  //               'is_home'       => 0,
-  //               'view_count'    => '', 
-  //               'comment_count' => ''
-  //           );
-  //       $this->db->insert('albums', $data); 
-        //end save in albums table
-        //end upload album
-
-        // redirect(base_url());
-
-
-
+	}
+	
+	public function upload_album()
+	{
 		return View::make('user.uploadAlbum');
 	}	
 	public function view($username){

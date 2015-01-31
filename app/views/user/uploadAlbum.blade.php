@@ -6,7 +6,7 @@
 <?php $base_url = URL::to('/') ?>
 
 <div class="content form_photo  col-md-12">
-    <form  enctype="multipart/form-data" method="post" class="form-horizontal">
+    <form  enctype="multipart/form-data" method="post" class="form-horizontal" action="<?php echo $base_url?>/submit-album">
         <input name="type" value="Photo" type="hidden">
         <input id="post_type" name="post_type" value="Photo" type="hidden">
         <h3>Đăng ảnh</h3>
@@ -36,8 +36,8 @@
                 <label class="control-label" for="tag">Tags<span>(không bắt buộc)</span></label>
             </div>
             <div class="col-xs-12 col-md-6">
-                <input id="photo_tag_input" type="text" class="text tag_input tipped" name="tags" value="" placeholder="tag 1, tag 2, tag 3, tag 4, tag 5">
-                <p class="info" style="visibility: hidden;">Dùng dấu phẩy ',' để ngăn cách tag. Ví dụ: trẻ trâu, troll, độc thân.</p>
+                <input id="photo_tag_input" type="text" class="form-control" name="tags" value="" placeholder="tag 1, tag 2, tag 3, tag 4, tag 5">
+                <!-- <p class="info" style="visibility: hidden;">Dùng dấu phẩy ',' để ngăn cách tag. Ví dụ: trẻ trâu, troll, độc thân.</p> -->
             </div>
         </div>
 
