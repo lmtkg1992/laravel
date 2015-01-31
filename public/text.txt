@@ -5196,3 +5196,1900 @@ User Object
     [morphClass:protected] => 
     [exists] => 1
 )
+Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 100001913165516
+            [title] => ccdaad
+            [user_id] => 100001913165516
+            [url_video] => http://www.youtube.com/watch?v=bESGLojNYSo
+            [youtube_id] => bESGLojNYSo
+            [description] => co gang len
+            [creation_date] => 2013-11-15 07:57:40
+            [modified_date] => 2014-02-22 07:04:20
+            [view_count] => 0
+            [comment_count] => 0
+            [like_count] => 0
+            [email] => lmtkg@yahoo.com.vn
+            [username] => lmtkg
+            [displayname] => aaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => https://www.facebook.com/tri.lyminh
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [liked] => 10
+            [thumbnail_id] => 
+            [remember_token] => 
+            [updated_at] => 
+            [video_id] => 17
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 100000604996892
+            [title] => Video hay
+            [user_id] => 100000604996892
+            [url_video] => http://www.youtube.com/watch?v=pRpeEdMmmQ0
+            [youtube_id] => pRpeEdMmmQ0
+            [description] => ccccffff beeppp
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [comment_count] => 2
+            [like_count] => 0
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+            [video_id] => 18
+        )
+
+)
+User Object
+(
+    [table:protected] => users
+    [hidden:protected] => Array
+        (
+            [0] => password
+            [1] => remember_token
+        )
+
+    [fillable:protected] => Array
+        (
+            [0] => email
+            [1] => password
+        )
+
+    [connection:protected] => 
+    [primaryKey:protected] => id
+    [perPage:protected] => 15
+    [incrementing] => 1
+    [timestamps] => 1
+    [attributes:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [original:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [relations:protected] => Array
+        (
+        )
+
+    [visible:protected] => Array
+        (
+        )
+
+    [appends:protected] => Array
+        (
+        )
+
+    [guarded:protected] => Array
+        (
+            [0] => *
+        )
+
+    [dates:protected] => Array
+        (
+        )
+
+    [touches:protected] => Array
+        (
+        )
+
+    [observables:protected] => Array
+        (
+        )
+
+    [with:protected] => Array
+        (
+        )
+
+    [morphClass:protected] => 
+    [exists] => 1
+)
+User Object
+(
+    [table:protected] => users
+    [hidden:protected] => Array
+        (
+            [0] => password
+            [1] => remember_token
+        )
+
+    [fillable:protected] => Array
+        (
+            [0] => email
+            [1] => password
+        )
+
+    [connection:protected] => 
+    [primaryKey:protected] => id
+    [perPage:protected] => 15
+    [incrementing] => 1
+    [timestamps] => 1
+    [attributes:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [original:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [relations:protected] => Array
+        (
+        )
+
+    [visible:protected] => Array
+        (
+        )
+
+    [appends:protected] => Array
+        (
+        )
+
+    [guarded:protected] => Array
+        (
+            [0] => *
+        )
+
+    [dates:protected] => Array
+        (
+        )
+
+    [touches:protected] => Array
+        (
+        )
+
+    [observables:protected] => Array
+        (
+        )
+
+    [with:protected] => Array
+        (
+        )
+
+    [morphClass:protected] => 
+    [exists] => 1
+)
+Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 100001913165516
+            [title] => ccdaad
+            [user_id] => 100001913165516
+            [url_video] => http://www.youtube.com/watch?v=bESGLojNYSo
+            [youtube_id] => bESGLojNYSo
+            [description] => co gang len
+            [creation_date] => 2013-11-15 07:57:40
+            [modified_date] => 2014-02-22 07:04:20
+            [view_count] => 0
+            [comment_count] => 0
+            [like_count] => 0
+            [email] => lmtkg@yahoo.com.vn
+            [username] => lmtkg
+            [displayname] => aaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => https://www.facebook.com/tri.lyminh
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [liked] => 10
+            [thumbnail_id] => 
+            [remember_token] => 
+            [updated_at] => 
+            [video_id] => 17
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 100000604996892
+            [title] => Video hay
+            [user_id] => 100000604996892
+            [url_video] => http://www.youtube.com/watch?v=pRpeEdMmmQ0
+            [youtube_id] => pRpeEdMmmQ0
+            [description] => ccccffff beeppp
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [comment_count] => 2
+            [like_count] => 0
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+            [video_id] => 18
+        )
+
+)
+User Object
+(
+    [table:protected] => users
+    [hidden:protected] => Array
+        (
+            [0] => password
+            [1] => remember_token
+        )
+
+    [fillable:protected] => Array
+        (
+            [0] => email
+            [1] => password
+        )
+
+    [connection:protected] => 
+    [primaryKey:protected] => id
+    [perPage:protected] => 15
+    [incrementing] => 1
+    [timestamps] => 1
+    [attributes:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [original:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [relations:protected] => Array
+        (
+        )
+
+    [visible:protected] => Array
+        (
+        )
+
+    [appends:protected] => Array
+        (
+        )
+
+    [guarded:protected] => Array
+        (
+            [0] => *
+        )
+
+    [dates:protected] => Array
+        (
+        )
+
+    [touches:protected] => Array
+        (
+        )
+
+    [observables:protected] => Array
+        (
+        )
+
+    [with:protected] => Array
+        (
+        )
+
+    [morphClass:protected] => 
+    [exists] => 1
+)
+User Object
+(
+    [table:protected] => users
+    [hidden:protected] => Array
+        (
+            [0] => password
+            [1] => remember_token
+        )
+
+    [fillable:protected] => Array
+        (
+            [0] => email
+            [1] => password
+        )
+
+    [connection:protected] => 
+    [primaryKey:protected] => id
+    [perPage:protected] => 15
+    [incrementing] => 1
+    [timestamps] => 1
+    [attributes:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [original:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [relations:protected] => Array
+        (
+        )
+
+    [visible:protected] => Array
+        (
+        )
+
+    [appends:protected] => Array
+        (
+        )
+
+    [guarded:protected] => Array
+        (
+            [0] => *
+        )
+
+    [dates:protected] => Array
+        (
+        )
+
+    [touches:protected] => Array
+        (
+        )
+
+    [observables:protected] => Array
+        (
+        )
+
+    [with:protected] => Array
+        (
+        )
+
+    [morphClass:protected] => 
+    [exists] => 1
+)
+User Object
+(
+    [table:protected] => users
+    [hidden:protected] => Array
+        (
+            [0] => password
+            [1] => remember_token
+        )
+
+    [fillable:protected] => Array
+        (
+            [0] => email
+            [1] => password
+        )
+
+    [connection:protected] => 
+    [primaryKey:protected] => id
+    [perPage:protected] => 15
+    [incrementing] => 1
+    [timestamps] => 1
+    [attributes:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [original:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [relations:protected] => Array
+        (
+        )
+
+    [visible:protected] => Array
+        (
+        )
+
+    [appends:protected] => Array
+        (
+        )
+
+    [guarded:protected] => Array
+        (
+            [0] => *
+        )
+
+    [dates:protected] => Array
+        (
+        )
+
+    [touches:protected] => Array
+        (
+        )
+
+    [observables:protected] => Array
+        (
+        )
+
+    [with:protected] => Array
+        (
+        )
+
+    [morphClass:protected] => 
+    [exists] => 1
+)
+User Object
+(
+    [table:protected] => users
+    [hidden:protected] => Array
+        (
+            [0] => password
+            [1] => remember_token
+        )
+
+    [fillable:protected] => Array
+        (
+            [0] => email
+            [1] => password
+        )
+
+    [connection:protected] => 
+    [primaryKey:protected] => id
+    [perPage:protected] => 15
+    [incrementing] => 1
+    [timestamps] => 1
+    [attributes:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [original:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [relations:protected] => Array
+        (
+        )
+
+    [visible:protected] => Array
+        (
+        )
+
+    [appends:protected] => Array
+        (
+        )
+
+    [guarded:protected] => Array
+        (
+            [0] => *
+        )
+
+    [dates:protected] => Array
+        (
+        )
+
+    [touches:protected] => Array
+        (
+        )
+
+    [observables:protected] => Array
+        (
+        )
+
+    [with:protected] => Array
+        (
+        )
+
+    [morphClass:protected] => 
+    [exists] => 1
+)
+User Object
+(
+    [table:protected] => users
+    [hidden:protected] => Array
+        (
+            [0] => password
+            [1] => remember_token
+        )
+
+    [fillable:protected] => Array
+        (
+            [0] => email
+            [1] => password
+        )
+
+    [connection:protected] => 
+    [primaryKey:protected] => id
+    [perPage:protected] => 15
+    [incrementing] => 1
+    [timestamps] => 1
+    [attributes:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [original:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [relations:protected] => Array
+        (
+        )
+
+    [visible:protected] => Array
+        (
+        )
+
+    [appends:protected] => Array
+        (
+        )
+
+    [guarded:protected] => Array
+        (
+            [0] => *
+        )
+
+    [dates:protected] => Array
+        (
+        )
+
+    [touches:protected] => Array
+        (
+        )
+
+    [observables:protected] => Array
+        (
+        )
+
+    [with:protected] => Array
+        (
+        )
+
+    [morphClass:protected] => 
+    [exists] => 1
+)
+User Object
+(
+    [table:protected] => users
+    [hidden:protected] => Array
+        (
+            [0] => password
+            [1] => remember_token
+        )
+
+    [fillable:protected] => Array
+        (
+            [0] => email
+            [1] => password
+        )
+
+    [connection:protected] => 
+    [primaryKey:protected] => id
+    [perPage:protected] => 15
+    [incrementing] => 1
+    [timestamps] => 1
+    [attributes:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [original:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [relations:protected] => Array
+        (
+        )
+
+    [visible:protected] => Array
+        (
+        )
+
+    [appends:protected] => Array
+        (
+        )
+
+    [guarded:protected] => Array
+        (
+            [0] => *
+        )
+
+    [dates:protected] => Array
+        (
+        )
+
+    [touches:protected] => Array
+        (
+        )
+
+    [observables:protected] => Array
+        (
+        )
+
+    [with:protected] => Array
+        (
+        )
+
+    [morphClass:protected] => 
+    [exists] => 1
+)
+User Object
+(
+    [table:protected] => users
+    [hidden:protected] => Array
+        (
+            [0] => password
+            [1] => remember_token
+        )
+
+    [fillable:protected] => Array
+        (
+            [0] => email
+            [1] => password
+        )
+
+    [connection:protected] => 
+    [primaryKey:protected] => id
+    [perPage:protected] => 15
+    [incrementing] => 1
+    [timestamps] => 1
+    [attributes:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [original:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [relations:protected] => Array
+        (
+        )
+
+    [visible:protected] => Array
+        (
+        )
+
+    [appends:protected] => Array
+        (
+        )
+
+    [guarded:protected] => Array
+        (
+            [0] => *
+        )
+
+    [dates:protected] => Array
+        (
+        )
+
+    [touches:protected] => Array
+        (
+        )
+
+    [observables:protected] => Array
+        (
+        )
+
+    [with:protected] => Array
+        (
+        )
+
+    [morphClass:protected] => 
+    [exists] => 1
+)
+User Object
+(
+    [table:protected] => users
+    [hidden:protected] => Array
+        (
+            [0] => password
+            [1] => remember_token
+        )
+
+    [fillable:protected] => Array
+        (
+            [0] => email
+            [1] => password
+        )
+
+    [connection:protected] => 
+    [primaryKey:protected] => id
+    [perPage:protected] => 15
+    [incrementing] => 1
+    [timestamps] => 1
+    [attributes:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [original:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [relations:protected] => Array
+        (
+        )
+
+    [visible:protected] => Array
+        (
+        )
+
+    [appends:protected] => Array
+        (
+        )
+
+    [guarded:protected] => Array
+        (
+            [0] => *
+        )
+
+    [dates:protected] => Array
+        (
+        )
+
+    [touches:protected] => Array
+        (
+        )
+
+    [observables:protected] => Array
+        (
+        )
+
+    [with:protected] => Array
+        (
+        )
+
+    [morphClass:protected] => 
+    [exists] => 1
+)
+User Object
+(
+    [table:protected] => users
+    [hidden:protected] => Array
+        (
+            [0] => password
+            [1] => remember_token
+        )
+
+    [fillable:protected] => Array
+        (
+            [0] => email
+            [1] => password
+        )
+
+    [connection:protected] => 
+    [primaryKey:protected] => id
+    [perPage:protected] => 15
+    [incrementing] => 1
+    [timestamps] => 1
+    [attributes:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [original:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [relations:protected] => Array
+        (
+        )
+
+    [visible:protected] => Array
+        (
+        )
+
+    [appends:protected] => Array
+        (
+        )
+
+    [guarded:protected] => Array
+        (
+            [0] => *
+        )
+
+    [dates:protected] => Array
+        (
+        )
+
+    [touches:protected] => Array
+        (
+        )
+
+    [observables:protected] => Array
+        (
+        )
+
+    [with:protected] => Array
+        (
+        )
+
+    [morphClass:protected] => 
+    [exists] => 1
+)
+User Object
+(
+    [table:protected] => users
+    [hidden:protected] => Array
+        (
+            [0] => password
+            [1] => remember_token
+        )
+
+    [fillable:protected] => Array
+        (
+            [0] => email
+            [1] => password
+        )
+
+    [connection:protected] => 
+    [primaryKey:protected] => id
+    [perPage:protected] => 15
+    [incrementing] => 1
+    [timestamps] => 1
+    [attributes:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [original:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [relations:protected] => Array
+        (
+        )
+
+    [visible:protected] => Array
+        (
+        )
+
+    [appends:protected] => Array
+        (
+        )
+
+    [guarded:protected] => Array
+        (
+            [0] => *
+        )
+
+    [dates:protected] => Array
+        (
+        )
+
+    [touches:protected] => Array
+        (
+        )
+
+    [observables:protected] => Array
+        (
+        )
+
+    [with:protected] => Array
+        (
+        )
+
+    [morphClass:protected] => 
+    [exists] => 1
+)
+User Object
+(
+    [table:protected] => users
+    [hidden:protected] => Array
+        (
+            [0] => password
+            [1] => remember_token
+        )
+
+    [fillable:protected] => Array
+        (
+            [0] => email
+            [1] => password
+        )
+
+    [connection:protected] => 
+    [primaryKey:protected] => id
+    [perPage:protected] => 15
+    [incrementing] => 1
+    [timestamps] => 1
+    [attributes:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [original:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [relations:protected] => Array
+        (
+        )
+
+    [visible:protected] => Array
+        (
+        )
+
+    [appends:protected] => Array
+        (
+        )
+
+    [guarded:protected] => Array
+        (
+            [0] => *
+        )
+
+    [dates:protected] => Array
+        (
+        )
+
+    [touches:protected] => Array
+        (
+        )
+
+    [observables:protected] => Array
+        (
+        )
+
+    [with:protected] => Array
+        (
+        )
+
+    [morphClass:protected] => 
+    [exists] => 1
+)
+User Object
+(
+    [table:protected] => users
+    [hidden:protected] => Array
+        (
+            [0] => password
+            [1] => remember_token
+        )
+
+    [fillable:protected] => Array
+        (
+            [0] => email
+            [1] => password
+        )
+
+    [connection:protected] => 
+    [primaryKey:protected] => id
+    [perPage:protected] => 15
+    [incrementing] => 1
+    [timestamps] => 1
+    [attributes:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [original:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [relations:protected] => Array
+        (
+        )
+
+    [visible:protected] => Array
+        (
+        )
+
+    [appends:protected] => Array
+        (
+        )
+
+    [guarded:protected] => Array
+        (
+            [0] => *
+        )
+
+    [dates:protected] => Array
+        (
+        )
+
+    [touches:protected] => Array
+        (
+        )
+
+    [observables:protected] => Array
+        (
+        )
+
+    [with:protected] => Array
+        (
+        )
+
+    [morphClass:protected] => 
+    [exists] => 1
+)
+Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 100001913165516
+            [title] => ccdaad
+            [user_id] => 100001913165516
+            [url_video] => http://www.youtube.com/watch?v=bESGLojNYSo
+            [youtube_id] => bESGLojNYSo
+            [description] => co gang len
+            [creation_date] => 2013-11-15 07:57:40
+            [modified_date] => 2014-02-22 07:04:20
+            [view_count] => 0
+            [comment_count] => 0
+            [like_count] => 0
+            [email] => lmtkg@yahoo.com.vn
+            [username] => lmtkg
+            [displayname] => aaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => https://www.facebook.com/tri.lyminh
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [liked] => 10
+            [thumbnail_id] => 
+            [remember_token] => 
+            [updated_at] => 
+            [video_id] => 17
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 100000604996892
+            [title] => Video hay
+            [user_id] => 100000604996892
+            [url_video] => http://www.youtube.com/watch?v=pRpeEdMmmQ0
+            [youtube_id] => pRpeEdMmmQ0
+            [description] => ccccffff beeppp
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [comment_count] => 2
+            [like_count] => 0
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+            [video_id] => 18
+        )
+
+)
+User Object
+(
+    [table:protected] => users
+    [hidden:protected] => Array
+        (
+            [0] => password
+            [1] => remember_token
+        )
+
+    [fillable:protected] => Array
+        (
+            [0] => email
+            [1] => password
+        )
+
+    [connection:protected] => 
+    [primaryKey:protected] => id
+    [perPage:protected] => 15
+    [incrementing] => 1
+    [timestamps] => 1
+    [attributes:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [original:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [relations:protected] => Array
+        (
+        )
+
+    [visible:protected] => Array
+        (
+        )
+
+    [appends:protected] => Array
+        (
+        )
+
+    [guarded:protected] => Array
+        (
+            [0] => *
+        )
+
+    [dates:protected] => Array
+        (
+        )
+
+    [touches:protected] => Array
+        (
+        )
+
+    [observables:protected] => Array
+        (
+        )
+
+    [with:protected] => Array
+        (
+        )
+
+    [morphClass:protected] => 
+    [exists] => 1
+)
+User Object
+(
+    [table:protected] => users
+    [hidden:protected] => Array
+        (
+            [0] => password
+            [1] => remember_token
+        )
+
+    [fillable:protected] => Array
+        (
+            [0] => email
+            [1] => password
+        )
+
+    [connection:protected] => 
+    [primaryKey:protected] => id
+    [perPage:protected] => 15
+    [incrementing] => 1
+    [timestamps] => 1
+    [attributes:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [original:protected] => Array
+        (
+            [id] => 100000604996892
+            [email] => nguyenuit@gmail.com
+            [username] => nguyenuit
+            [displayname] => Nguyen Ly Thai aaaaaaaaaaaaaaaaa
+            [photo_id] => 0
+            [status] => 
+            [status_date] => 
+            [password] => $2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC
+            [website] => phuong ggggggggggg
+            [description] => ccccffff beeppp
+            [level_id] => 1
+            [enabled] => 1
+            [verified] => 0
+            [approved] => 1
+            [creation_date] => 2013-11-15 07:58:15
+            [modified_date] => 2014-02-22 06:17:32
+            [view_count] => 0
+            [liked] => 0
+            [thumbnail_id] => 301
+            [remember_token] => lL4kSqGjvFPBB47kWoomlohimRZjPKZspvMK0Pt1qb7ha3gJIaMavdUVpO0P
+            [updated_at] => 2015-01-30 14:33:33
+        )
+
+    [relations:protected] => Array
+        (
+        )
+
+    [visible:protected] => Array
+        (
+        )
+
+    [appends:protected] => Array
+        (
+        )
+
+    [guarded:protected] => Array
+        (
+            [0] => *
+        )
+
+    [dates:protected] => Array
+        (
+        )
+
+    [touches:protected] => Array
+        (
+        )
+
+    [observables:protected] => Array
+        (
+        )
+
+    [with:protected] => Array
+        (
+        )
+
+    [morphClass:protected] => 
+    [exists] => 1
+)

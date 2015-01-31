@@ -13,11 +13,10 @@
 		 ?>
 		<ul id="nav">
 			<li class="current"><a href="<?= $base_url .'/home'?>">Home</a></li>
-			<!-- <li><a href="#">Hot</a></li> -->
-			<li><a href="<?= $base_url?>vote">Bình chọn</a>
-			<li><a href="<?= $base_url?>video">Video</a></li>	
+			<li><a href="<?= $base_url?>/vote">Bình chọn</a>
+			<li><a href="<?= $base_url?>/video">Video</a></li>	
 			<li>
-				<a href="<?= $base_url?>upload-album">
+				<a href="<?= $base_url?>/upload-album">
 					<img src ='<?= $base_url?>images/upload_icon.png' alt='Dang Anh' />Dang Anh
 				</a>
 			</li>

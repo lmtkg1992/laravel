@@ -50,6 +50,32 @@ class UserController extends BaseController {
 	{
 		// die('ss');
 
+		// Input::file('file');
+
+		// $data = array(
+  //               'title'         =>ucfirst($post['title']),
+              
+  //               'creation_date' =>date("Y-m-d H:i:s"),
+  //               'modified_date' =>date("Y-m-d H:i:s"), 
+  //               'photo_ids'     =>$photo_ids, 
+  //               'user_id'       =>$userinfo->user_id,
+  //               'url_album'     =>convertForUrl($post['title']),
+  //               'category_id'   =>$post['category'],
+  //               //@todo: get real representive image for album
+  //               'rept_photo_id' => isset($file_ids['0']) ? $file_ids['0'] : '',
+  //               'status'        => 1, 
+  //               'is_home'       => 0,
+  //               'view_count'    => '', 
+  //               'comment_count' => ''
+  //           );
+  //       $this->db->insert('albums', $data); 
+        //end save in albums table
+        //end upload album
+
+        // redirect(base_url());
+
+
+
 		return View::make('user.uploadAlbum');
 	}	
 	public function view($username){
