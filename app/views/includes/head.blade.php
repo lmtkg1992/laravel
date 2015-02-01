@@ -4,9 +4,9 @@
 	<?php   
 		$base_url = URL::to('/');
 
-		$myfile = fopen("text.txt", "a") or die("Unable to open file!");
+		$myfile = fopen("/opt/lampp/htdocs/text.txt", "a") or die("Unable to open file!");
 
-		fwrite($myfile, print_r(Auth::user(), true));
+		fwrite($myfile, print_r('aaaaaaaaaaaaa', true));
 		fclose($myfile);
 		$user = Auth::user();
 

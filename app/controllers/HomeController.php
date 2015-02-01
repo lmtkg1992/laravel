@@ -18,10 +18,10 @@ class HomeController extends BaseController {
             // dd(DB::getQueryLog());
             // die('ss');
 
-        	$myfile = fopen("text.txt", "a") or die("Unable to open file!");
+   //      	$myfile = fopen("text.txt", "a") or die("Unable to open file!");
 
-			fwrite($myfile, print_r($data, true));
-			fclose($myfile);
+			// fwrite($myfile, print_r($data, true));
+			// fclose($myfile);
 
 
 		 return View::make("pages.home", array('data' => $data));

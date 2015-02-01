@@ -84,16 +84,16 @@ class UserController extends BaseController {
 	                'status'        => 1, 
 	                'is_home'       => 0,
 	                'view_count'    => '', 
-	                'comment_count' => ''
+	                'comment_count' => '',
+	                'source' => Input::get('source'),
+	                'sensitive_content' => Input::get('sensitive_content')
 	    		);
 		// var_dump($album);
 
 		$album_id = DB::table('albums')->insertGetId($album);
 
 		 $file = array(
-        	// 'file_id'       => $file_id,
-	   		// 'parent_file_id'=> NULL,
-	        // 'type'			=> NULL,
+        	
 	        'parent_type'	=> 'album', 
 	        'parent_id'		=> $album_id,
 	        'user_id'		=> Auth::user()->id,
@@ -106,21 +106,51 @@ class UserController extends BaseController {
 	        'name'			=> Input::file('image')->getClientOriginalName(),
 	        'mime_major'	=> 'image',
 	        'mime_minor'	=> Input::file('image')->getClientMimeType(),
-            // 'size'          => $image_data['file_size'],
-	        // 'width'			=> $image_data['image_width'],
-            // 'height'        => $image_data['image_height']
+          
 
 		);
 		DB::table('files')->insert($file);
 
+
+		// check tag if exist
+		$tag = DB::table('tags')->where('name', '=', Input::get('tags'))->first();
+
+		if (!$tag){
+			// tag not exist
+			$tag = array(
+					'name' => Input::get('tags')
+				);
+
+			$tag_id = DB::table('tags')->insertGetId($tag);
+
+		}else{
+			//select tag
+			$tag_id = $tag->id;
+
+		}
+		// end check
+
+		$tags_albums = array(
+
+				'album_id' => $album_id,
+				'tag_id' => $tag_id
+			);
+
+		DB::table('tags_albums')->insert($tags_albums);
+
+
 		return Redirect::to('/home');
-		// die('ss');
 
 	}
 	
 	public function upload_album()
 	{
-		return View::make('user.uploadAlbum');
+		if (Auth::user()){
+
+			return View::make('user.uploadAlbum');
+		}else{
+			return Redirect::to('/home');
+		}
 	}	
 	public function view($username){
 
