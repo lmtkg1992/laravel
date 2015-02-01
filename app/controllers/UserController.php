@@ -31,7 +31,6 @@ class UserController extends BaseController
 		if (Auth::attempt(Input::only('email', 'password'))){
 
 			return Redirect::to('/home');
-			// return Auth::user();
 		}
 		return 'failed!';
 	}
@@ -42,7 +41,7 @@ class UserController extends BaseController
 		return Redirect::to('/login');
 	}
 
-	public function submit_album()
+	public function submit_photo()
 	{
 
 		
@@ -134,7 +133,72 @@ class UserController extends BaseController
 			return Redirect::to('/home');
 		}
 	}	
-	public function view($username){
+	public function upload_video()
+	{
+
+		if (Auth::user()){
+
+			return View::make('user.uploadVideo');
+		}else{
+			return Redirect::to('/home');	
+		}
+	}
+
+	public function submit_video()
+	{
+
+		$video = array(
+	                'title'         =>ucfirst(Input::get('title')),
+	              
+	                'creation_date' =>date("Y-m-d H:i:s"),
+	                'modified_date' =>date("Y-m-d H:i:s"), 
+	                // 'photo_ids'     =>$photo_ids, 
+	                'user_id'       =>Auth::user()->id,
+	                'url'     		=> Input::get('url'),
+	                // 'category_id'   =>$post['category'],
+	                //@todo: get real representive image for album
+	                // 'rept_photo_id' => isset($file_ids['0']) ? $file_ids['0'] : '',
+	                // 'status'        => 1, 
+	                // 'is_home'       => 0,
+	                'view_count'    => '', 
+	                'comment_count' => '',
+	                'source' => Input::get('source'),
+	                'sensitive_content' => Input::get('sensitive_content')
+	    		);
+
+		$video_id = DB::table('videos')->insertGetId($video);
+
+		// check tag if exist
+		$tag = DB::table('tags')->where('name', '=', Input::get('tags'))->first();
+
+		if (!$tag){
+			// tag not exist
+			$tag = array(
+					'name' => Input::get('tags')
+				);
+
+			$tag_id = DB::table('tags')->insertGetId($tag);
+
+		}else{
+			//select tag
+			$tag_id = $tag->id;
+
+		}
+		// end check
+
+		$tags_videos = array(
+
+				'video_id' => $video_id,
+				'tag_id' => $tag_id
+			);
+
+		DB::table('tags_videos')->insert($tags_videos);
+		
+		return Redirect::to('/home');
+
+	}
+	public function view($username)
+	{
 
 		$data = User::where('username', 'nguyenuit')->first(); 
 

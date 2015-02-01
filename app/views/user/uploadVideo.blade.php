@@ -49,12 +49,26 @@
 
 
 <div class="content form_photo  col-md-12">
-    <form  enctype="multipart/form-data" method="post" class="form-horizontal" action="<?php echo $base_url?>/submit-photo">
+    <form  enctype="multipart/form-data" method="post" class="form-horizontal" action="<?php echo $base_url?>/submit-video">
         <input name="type" value="Photo" type="hidden">
         <input id="post_type" name="post_type" value="Photo" type="hidden">
-        <h3>Đăng ảnh</h3>
+        <h3>Đăng Video</h3>
 
         <div class="form-group row">
+            <!-- <label> -->
+            <div class="col-xs-12 col-md-3">
+                <label class="control-label" for="title">Đường dẫn Youtube:</label>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                
+                <!-- <h4></h4> -->
+                <input id="photo_post_url" type="text" class="form-control" name="url" value="" style="display:block;">
+                <!-- <p class="info" style="visibility:hidden">Ví dụ: http://www.youtube.com/watch?v=9bZkp7q19f0</p> -->
+            </div>
+            <!-- </label> -->
+        </div>
+
+        <!-- <div class="form-group row">
             <div class="col-xs-12 col-md-3">
                 <label class="control-label" for="image">File ảnh:</label>
             </div>
@@ -62,7 +76,7 @@
                 
                 <input id="photo_file_upload" class="form-control" name="image" style="display:block;" type="file">
             </div>
-        </div>
+        </div> -->
 
         <div class="form-group row">
             <div class="col-xs-12 col-md-3">

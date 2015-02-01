@@ -12,6 +12,7 @@ class HomeController extends BaseController {
             ->select(array('*', 'v.id AS video_id'))
             ->skip(0)
             ->take(2)
+            ->orderBy('video_id', 'DESC')
             ->get();
 
 

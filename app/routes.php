@@ -26,7 +26,12 @@ Route::get("logout", "UserController@logout");
 
 Route::get("upload-photo", "UserController@upload_photo");
 
-Route::post("submit-album", "UserController@submit_album");
+Route::post("submit-photo", "UserController@submit_photo");
+
+
+
+Route::get("upload-video", "UserController@upload_video");
+Route::post("submit-video", "UserController@submit_video");
 
 
 Route::get("video/{id}", ['uses' =>'VideoController@index']);
