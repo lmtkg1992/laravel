@@ -24,7 +24,7 @@ Route::get("validate_login", "UserController@validate_login");
 
 Route::get("logout", "UserController@logout");
 
-Route::get("upload-album", "UserController@upload_album");
+Route::get("upload-photo", "UserController@upload_photo");
 
 Route::post("submit-album", "UserController@submit_album");
 

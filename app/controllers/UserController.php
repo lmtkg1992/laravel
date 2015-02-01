@@ -125,7 +125,7 @@ class UserController extends BaseController
 
 	}
 	
-	public function upload_album()
+	public function upload_photo()
 	{
 		if (Auth::user()){
 
