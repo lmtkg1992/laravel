@@ -27,7 +27,7 @@
                             </a>
                         </h1>
                         <div class="uinfo">
-                            bởi <a href="http://chatvl.com/user/beiber1280"><?= $video->displayname?></a>
+                            bởi <a href="<?php echo $base_url?>/user/<?php echo $video->username?>"><?= $video->displayname?></a>
                             <span>20 phút trước</span>
                         </div>
                         <div class="p-stats">
@@ -47,7 +47,7 @@
                 <div class="content">
                     
                     <img style="max-width:400px" src="<?php echo $base_url . '/'.$photo->storage_path?>" alt="<?php echo $photo->title?>"/>
-                    <div class="watermark-clear"></div>                        
+                    <!-- <div class="watermark-clear"></div>                         -->
                 </div>
                 <div class="post-info">
                     <div style="position: static; top: 55px;" class="info scriptolution-stop" id="action-174409">
@@ -58,7 +58,7 @@
                         	</a>
                         </h1>
                         <div class="uinfo">
-                        	bởi <a href="http://chatvl.com/user/beiber1280"><?= $photo->displayname?></a>
+                        	bởi <a href="<?php echo $base_url?>/user/<?php echo $video->username?>"><?= $photo->displayname?></a>
 							<span>20 phút trước</span>
 						</div>
                         <div class="p-stats">

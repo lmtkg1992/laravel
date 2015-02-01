@@ -45,27 +45,13 @@ class UserController extends BaseController
 	public function submit_album()
 	{
 
-		// var_dump(Auth::user());
-		// echo '<pre>';
-		// var_dump(Input::file('image')->getclienToriginalName());
-
-
-
+		
 		$destinationPath = 'uploads/photos';
 
 		$upload_success = Input::file('image')->move($destinationPath, Input::file('image')->getclienToriginalName());
 
-		 //start save in files table
-       
-		// echo '<pre>';
-
-		// var_dump($file);
-
-		// $this->db->insert('files', $data);
-
-
-
-		// die('ss');
+		
+		
 		$photo =  array(
 	                'title'         =>ucfirst(Input::get('title')),
 	              

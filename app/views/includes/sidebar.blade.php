@@ -19,23 +19,21 @@
     margin: 0px 0px 10px;
 }
 </style>
-
+<?php $base_url = URL::to('/'); ?>
 <div style="position: static;" id="moving-boxes">
-    <?php foreach ($sidebar as $item) { ?>
     <div class="s-300">
         <h3 class="image-box">Ảnh mới</h3>
+    <?php foreach ($photos as $photo) { ?>
         <div class="box darkBox randomBox">
             <div>                   
                 <div class="photoListItemSmall">
-                    <a target="_blank" href="http://thichvl.net/v/176133?ref=chatvl">
-                        <div class="img-wrap">
+                    <a target="_blank">
                        
-                             <iframe width="200" height="200" src="//www.youtube.com/embed/<?php echo $item->youtube_id;?>" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <div class="watermark-clear"></div> 
-                        <div class="info">
+                        <img style="max-width:150px; max-height:150px; float:left" src="<?php echo $base_url . '/'.$photo->storage_path?>" alt="<?php echo $photo->title?>"/>
+                    
+                        <div class="info" style="float:right; margin-left:0" >
                             <h3>
-                                <?php echo $item->title?>
+                                <?php echo $photo->title?>
                             </h3>
                             <div class="stats">
                                 <span title="Lượt xem" class="views">200</span>
@@ -43,7 +41,7 @@
                                 <span title="lượt thích" class="likes">3</span>
                             </div>
                             <div class="user">
-                                <span class="user-by">bởi</span> <span class="name">Beck Già</span>
+                                <span class="user-by">bởi</span> <span class="name"><?php echo $photo->displayname?></span>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -54,9 +52,9 @@
         </div>
 
        
-    </div>
+    <!-- </div> -->
     <?php }?>
-                                    
+    </div>                                
     <!-- <div class="s-300"></div> -->
 </div>
 
