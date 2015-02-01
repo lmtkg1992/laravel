@@ -1,12 +1,8 @@
 <?php
 
-class UserController extends BaseController {
-
-	public function __construct()
-    {
-      
-    }
-	
+class UserController extends BaseController 	
+{
+		
 	public function index(){
 		// $data = User::where ('email', 'nguyenuit@gmail.com')->get(); 
 		// return View::make('user.list')->with('users', $data);
@@ -70,7 +66,7 @@ class UserController extends BaseController {
 
 
 		// die('ss');
-		$album =  array(
+		$photo =  array(
 	                'title'         =>ucfirst(Input::get('title')),
 	              
 	                'creation_date' =>date("Y-m-d H:i:s"),
@@ -88,19 +84,19 @@ class UserController extends BaseController {
 	                'source' => Input::get('source'),
 	                'sensitive_content' => Input::get('sensitive_content')
 	    		);
-		// var_dump($album);
+		// var_dump($photo);
 
-		$album_id = DB::table('albums')->insertGetId($album);
+		$photo_id = DB::table('photos')->insertGetId($photo);
 
 		 $file = array(
         	
-	        'parent_type'	=> 'album', 
-	        'parent_id'		=> $album_id,
+	        'parent_type'	=> 'photo', 
+	        'parent_id'		=> $photo_id,
 	        'user_id'		=> Auth::user()->id,
 	        'creation_date'	=> date("Y-m-d H:i:s"),
 	        'modified_date'	=> date("Y-m-d H:i:s"),
 	       
-	        'storage_path'	=> 'public/photos/'. Input::file('image')->getClientOriginalName(),
+	        'storage_path'	=> 'uploads/photos/'. Input::file('image')->getClientOriginalName(),
 
 	        'extension'		=> Input::file('image')->getClientMimeType(),
 	        'name'			=> Input::file('image')->getClientOriginalName(),
@@ -130,13 +126,13 @@ class UserController extends BaseController {
 		}
 		// end check
 
-		$tags_albums = array(
+		$tags_photos = array(
 
-				'album_id' => $album_id,
+				'photo_id' => $photo_id,
 				'tag_id' => $tag_id
 			);
 
-		DB::table('tags_albums')->insert($tags_albums);
+		DB::table('tags_photos')->insert($tags_photos);
 
 
 		return Redirect::to('/home');

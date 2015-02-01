@@ -6,7 +6,7 @@ class HomeController extends BaseController {
 	public function index(){	
 
 
-		$data = DB::table('videos AS v')
+		$videos = DB::table('videos AS v')
             ->join('users AS u', 'v.user_id', '=', 'u.id')          
             
             ->select(array('*', 'v.id AS video_id'))
@@ -14,17 +14,20 @@ class HomeController extends BaseController {
             ->take(2)
             ->get();
 
-            // ->toSqL();
-            // dd(DB::getQueryLog());
-            // die('ss');
 
-   //      	$myfile = fopen("text.txt", "a") or die("Unable to open file!");
+		$photos = DB::table('photos AS p')
+            ->join('users AS u', 'p.user_id', '=', 'u.id')          
+            ->join('files AS f', 'f.parent_id', '=', 'p.id')          
+            
+            ->select(array('*', 'p.id AS photo_id'))
+            ->skip(0)
+            ->take(2)
+            ->get();
 
-			// fwrite($myfile, print_r($data, true));
-			// fclose($myfile);
-
-
-		 return View::make("pages.home", array('data' => $data));
+	 	return View::make("pages.home")
+	 		->with('videos', $videos)
+	 		->with ('photos', $photos)
+	 		;
 		  
 	}
 	
