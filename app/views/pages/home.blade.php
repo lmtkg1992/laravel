@@ -31,8 +31,8 @@
                             <span>20 phút trước</span>
                         </div>
                         <div class="p-stats">
-                            <span title="Lượt xem" class="views">817</span>
-                            <span class="comments">1</span>
+                            <span title="Lượt xem" class="views"><?php echo $video->view_count?></span>
+                            <span class="comments"><?php echo $video->comment_count?></span>
                         </div>
                        
                     </div>
@@ -58,12 +58,12 @@
                         	</a>
                         </h1>
                         <div class="uinfo">
-                        	bởi <a href="<?php echo $base_url?>/user/<?php echo $video->username?>"><?= $photo->displayname?></a>
+                        	bởi <a href="<?php echo $base_url?>/user/<?php echo $photo->username?>"><?= $photo->displayname?></a>
 							<span>20 phút trước</span>
 						</div>
                         <div class="p-stats">
-                        	<span title="Lượt xem" class="views">817</span>
-                    		<span class="comments">1</span>
+                        	<span title="Lượt xem" class="views"><?php echo $photo->view_count?></span>
+                    		<span class="comments"><?php echo $photo->comment_count?></span>
                         </div>
                        
                     </div>

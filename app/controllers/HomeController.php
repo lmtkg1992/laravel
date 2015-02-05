@@ -10,8 +10,8 @@ class HomeController extends BaseController {
             ->join('users AS u', 'v.user_id', '=', 'u.id')          
             
             ->select(array('*', 'v.id AS video_id'))
-            ->skip(0)
-            ->take(2)
+            // ->skip(0)
+            // ->take(2)
             ->orderBy('video_id', 'DESC')
             ->get();
 
@@ -21,8 +21,9 @@ class HomeController extends BaseController {
             ->join('files AS f', 'f.parent_id', '=', 'p.id')          
             
             ->select(array('*', 'p.id AS photo_id'))
-            ->skip(0)
-            ->take(2)
+            // ->skip(0)
+            // ->take(2)
+            ->orderBy('p.id', 'DESC')
             ->get();
 
 	 	return View::make("pages.home")

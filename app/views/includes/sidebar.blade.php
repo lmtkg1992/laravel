@@ -38,8 +38,8 @@
                                 <?php echo $photo->title?>
                             </h3>
                             <div class="stats">
-                                <span title="Lượt xem" class="views">200</span>
-                                <span title="lượt bình luận" class="comments">0</span>
+                                <span title="Lượt xem" class="views"><?php echo $photo->view_count?></span>
+                                <span title="lượt bình luận" class="comments"><?php echo $photo->comment_view?></span>
                                 <span title="lượt thích" class="likes">3</span>
                             </div>
                             <div class="user">
