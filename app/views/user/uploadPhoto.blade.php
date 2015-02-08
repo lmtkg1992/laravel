@@ -61,6 +61,7 @@
             <div class="col-xs-12 col-md-6">
                 
                 <input id="photo_file_upload" class="form-control" name="image" style="display:block;" type="file">
+                {{ $errors->first('image') }}
             </div>
         </div>
 
@@ -71,6 +72,7 @@
             <div class="col-xs-12 col-md-6">
                 
                 <input id="post_title" class="form-control" name="title" maxlength="150" value="" type="text">
+                {{ $errors->first('title') }}
             </div>
         </div>
         <div class="form-group row">

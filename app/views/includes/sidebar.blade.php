@@ -39,7 +39,7 @@
                             </h3>
                             <div class="stats">
                                 <span title="Lượt xem" class="views"><?php echo $photo->view_count?></span>
-                                <span title="lượt bình luận" class="comments"><?php echo $photo->comment_view?></span>
+                                <span title="lượt bình luận" class="comments"><?php echo $photo->comment_count?></span>
                                 <span title="lượt thích" class="likes">3</span>
                             </div>
                             <div class="user">
