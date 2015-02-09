@@ -15,7 +15,7 @@
           <div class="login_wait" style="display: none;"><span>Đang kết nối với tài khoản facebook. Vui lòng chờ ...</span></div>
           <div class="login_nt" style="display: block;">Click vào nút bên dưới để đăng nhập bằng tài khoản Facebook của bạn
            <a href="https://www.facebook.com/dialog/oauth?client_id=604212406308675&redirect_uri=<?= $base_url ?>callback_login&scope=email<?= isset($return) ? '&ref='.urlencode($return) : '' ?>">
-              <img src="<?= $base_url ?>images/facebook-login-button.png" alt='facebook login button' style='width:100px;height:25px' />
+              <img src="<?= $base_url ?>/images/facebook-login-button.png" alt='facebook login button' style='width:100px;height:25px' />
           </a>
          </div>
       </div>
@@ -47,7 +47,8 @@
                   </div>
                   <div class="form-group row">
                       <div class="col-xs-12 col-md-12 text-right">
-                          <button type="submit" class="btn btn-default">Dang nhap</button>
+                          <button type="submit" class="btn btn-default">Bo qua</button>
+                          <button type="submit" class="btn btn-primary">Dang nhap</button>
                       </div>
 
                   </div>

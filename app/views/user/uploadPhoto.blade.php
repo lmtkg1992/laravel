@@ -6,56 +6,25 @@
 <?php $base_url = URL::to('/') ?>
 
 <style type="text/css">
-   .head ul.switch li a {
-        font-size: 12px;
-        font-weight: bold;
-        color: #999;
-        text-shadow: 0 1px 0 #fff;
-        display: block;
-        line-height: 15px;
-        padding: 55px 0 15px;
-        width: 50px;
-        text-align: center;
-    }
-    .head ul.switch li a.photo {
-        background: url(images/sprite_v12.png) no-repeat -200px -1100px;
-    }
-    .head ul.switch li.current a.video {
-        background: url(images/sprite_v12.png) no-repeat -350px -1100px;
-    }
-    .head ul.switch li{
-        display: inline-block;
-    }    
-
-    .head {
-        background-color: #f4f4f4;
-        border-radius: 5px 5px 0 0;
-        -webkit-border-radius: 5px 5px 0 0;
-        -moz-border-radius: 5px 5px 0 0;
-        padding: 20px 20px 0;
-        position: relative;
-        box-shadow: 0 1px #fff inset, 0 -1px #DDD inset;
-        -moz-box-shadow: 0 1px #fff inset, 0 -1px #DDD inset;
-        -webkit-box-shadow: 0 1px #fff inset, 0 -1px #DDD inset;
-    }
+   
 
 </style>
-<!-- <div class="head">
+<div class="head col-xs-12 col-sm-12 col-md-12">
 <ul class="switch">
         <li class="tab_photo "><a class="photo" href="<?php echo $base_url?>/upload-photo">Ảnh</a></li>
         <li class="tab_video current"><a class="video" href="<?php echo $base_url?>/upload-video">Video</a></li>
     </ul>
-</div> -->
+</div>
 
 
-<div class="col-md-12">
+<div class="col-xs-12 col-sm-12 col-md-12">
     <form  enctype="multipart/form-data" method="post" class="form-horizontal" action="<?php echo $base_url?>/submit-photo">
         <input name="type" value="Photo" type="hidden">
         <input id="post_type" name="post_type" value="Photo" type="hidden">
         <h3>Đăng ảnh</h3>
 
         <div class="form-group row">
-            <div class="col-xs-12 col-md-3">
+            <div class="col-xs-12 col-md-4">
                 <label class="control-label" for="image">File ảnh:</label>
             </div>
             <div class="col-xs-12 col-md-6">
@@ -66,7 +35,7 @@
         </div>
 
         <div class="form-group row">
-            <div class="col-xs-12 col-md-3">
+            <div class="col-xs-12 col-md-4">
                 <label class="control-label" for="title">Tiêu đề:</label>
             </div>
             <div class="col-xs-12 col-md-6">
@@ -77,7 +46,7 @@
         </div>
         <div class="form-group row">
            
-            <div class="col-xs-12 col-md-3">
+            <div class="col-xs-12 col-md-4">
                 <label class="control-label" for="tag">Tags<span>(không bắt buộc)</span></label>
             </div>
             <div class="col-xs-12 col-md-6">
@@ -88,7 +57,7 @@
 
 
         <div class="form-group row">
-            <div class="col-xs-12 col-md-3">
+            <div class="col-xs-12 col-md-4">
 
                 <label class="control-label" for="source">Nguồn<span>(không bắt buộc)</span>:</label>
             </div>
@@ -108,7 +77,7 @@
         <div class="form-group">
             <div class="col-xs-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-default">Huy</button>
-                <button type="submit" class="btn btn-default">Dang Anh</button>
+                <button type="submit" class="btn btn-primary">Dang Anh</button>
             </div>
         </div>
     </form>
