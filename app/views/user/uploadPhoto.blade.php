@@ -61,7 +61,7 @@
             <div class="col-xs-12 col-md-6">
                 
                 <input id="photo_file_upload" class="form-control" name="image" style="display:block;" type="file">
-                {{ $errors->first('image') }}
+                <p class="error">{{ $errors->first('image') }}</p>
             </div>
         </div>
 
@@ -72,7 +72,7 @@
             <div class="col-xs-12 col-md-6">
                 
                 <input id="post_title" class="form-control" name="title" maxlength="150" value="" type="text">
-                {{ $errors->first('title') }}
+                <p class="error">{{ $errors->first('title') }}</p>
             </div>
         </div>
         <div class="form-group row">
@@ -82,7 +82,7 @@
             </div>
             <div class="col-xs-12 col-md-6">
                 <input id="photo_tag_input" type="text" class="form-control" name="tags" value="" placeholder="tag 1, tag 2, tag 3, tag 4, tag 5">
-                <!-- <p class="info" style="visibility: hidden;">Dùng dấu phẩy ',' để ngăn cách tag. Ví dụ: trẻ trâu, troll, độc thân.</p> -->
+              
             </div>
         </div>
 

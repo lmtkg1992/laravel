@@ -61,22 +61,13 @@
             </div>
             <div class="col-xs-12 col-md-6">
                 
-                <!-- <h4></h4> -->
+           
                 <input id="photo_post_url" type="text" class="form-control" name="url" value="" style="display:block;">
-                <!-- <p class="info" style="visibility:hidden">Ví dụ: http://www.youtube.com/watch?v=9bZkp7q19f0</p> -->
+                <p class="error">{{ $errors->first('url') }}</p>
+               
             </div>
-            <!-- </label> -->
+          
         </div>
-
-        <!-- <div class="form-group row">
-            <div class="col-xs-12 col-md-3">
-                <label class="control-label" for="image">File ảnh:</label>
-            </div>
-            <div class="col-xs-12 col-md-6">
-                
-                <input id="photo_file_upload" class="form-control" name="image" style="display:block;" type="file">
-            </div>
-        </div> -->
 
         <div class="form-group row">
             <div class="col-xs-12 col-md-3">
@@ -85,6 +76,7 @@
             <div class="col-xs-12 col-md-6">
                 
                 <input id="post_title" class="form-control" name="title" maxlength="150" value="" type="text">
+                <p class="error">{{ $errors->first('url') }}</p>
             </div>
         </div>
         <div class="form-group row">
@@ -120,7 +112,7 @@
         <div class="form-group">
             <div class="col-xs-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-default">Huy</button>
-                <button type="submit" class="btn btn-default">Dang Anh</button>
+                <button type="submit" class="btn btn-default">Dang Video</button>
             </div>
         </div>
     </form>

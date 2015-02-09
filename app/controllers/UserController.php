@@ -168,54 +168,76 @@ class UserController extends BaseController
 	public function submit_video()
 	{
 
-		$video = array(
-	                'title'         =>ucfirst(Input::get('title')),
-	              
-	                'creation_date' =>date("Y-m-d H:i:s"),
-	                'modified_date' =>date("Y-m-d H:i:s"), 
-	                // 'photo_ids'     =>$photo_ids, 
-	                'user_id'       =>Auth::user()->id,
-	                'url'     		=> Input::get('url'),
-	                // 'category_id'   =>$post['category'],
-	                //@todo: get real representive image for album
-	                // 'rept_photo_id' => isset($file_ids['0']) ? $file_ids['0'] : '',
-	                // 'status'        => 1, 
-	                // 'is_home'       => 0,
-	                'view_count'    => '', 
-	                'comment_count' => '',
-	                'source' => Input::get('source'),
-	                'sensitive_content' => Input::get('sensitive_content')
-	    		);
+		$rules = array(
+	        'title'       => 'required',                  
+	        'url'         => 'required'
+	       
+	    );
+	   	$validator = Validator::make(Input::all(), $rules);
 
-		$video_id = DB::table('videos')->insertGetId($video);
+		// check if the validator failed -----------------------
+		if ($validator->fails()) {
 
-		// check tag if exist
-		$tag = DB::table('tags')->where('name', '=', Input::get('tags'))->first();
+		    // get the error messages from the validator
+		    $messages = $validator->messages();
 
-		if (!$tag){
-			// tag not exist
-			$tag = array(
-					'name' => Input::get('tags')
+		    // redirect our user back to the form with the errors from the validator
+		    return Redirect::to('/upload-photo')
+		        ->withErrors($validator);
+
+		} 
+		else {
+
+
+			$video = array(
+                'title'         =>ucfirst(Input::get('title')),
+              
+                'creation_date' =>date("Y-m-d H:i:s"),
+                'modified_date' =>date("Y-m-d H:i:s"), 
+                // 'photo_ids'     =>$photo_ids, 
+                'user_id'       =>Auth::user()->id,
+                'url'     		=> Input::get('url'),
+                // 'category_id'   =>$post['category'],
+                //@todo: get real representive image for album
+                // 'rept_photo_id' => isset($file_ids['0']) ? $file_ids['0'] : '',
+                // 'status'        => 1, 
+                // 'is_home'       => 0,
+                'view_count'    => '', 
+                'comment_count' => '',
+                'source' => Input::get('source'),
+                'sensitive_content' => Input::get('sensitive_content')
+    		);
+
+			$video_id = DB::table('videos')->insertGetId($video);
+
+			// check tag if exist
+			$tag = DB::table('tags')->where('name', '=', Input::get('tags'))->first();
+
+			if (!$tag){
+				// tag not exist
+				$tag = array(
+						'name' => Input::get('tags')
+					);
+
+				$tag_id = DB::table('tags')->insertGetId($tag);
+
+			}else{
+				//select tag
+				$tag_id = $tag->id;
+
+			}
+			// end check
+
+			$tags_videos = array(
+
+					'video_id' => $video_id,
+					'tag_id' => $tag_id
 				);
 
-			$tag_id = DB::table('tags')->insertGetId($tag);
-
-		}else{
-			//select tag
-			$tag_id = $tag->id;
-
+			DB::table('tags_videos')->insert($tags_videos);
+			
+			return Redirect::to('/home');
 		}
-		// end check
-
-		$tags_videos = array(
-
-				'video_id' => $video_id,
-				'tag_id' => $tag_id
-			);
-
-		DB::table('tags_videos')->insert($tags_videos);
-		
-		return Redirect::to('/home');
 
 	}
 	public function view($username)
