@@ -40,15 +40,15 @@
     }
 
 </style>
-<div class="head">
+<!-- <div class="head">
 <ul class="switch">
         <li class="tab_photo "><a class="photo" href="<?php echo $base_url?>/upload-photo">Ảnh</a></li>
         <li class="tab_video current"><a class="video" href="<?php echo $base_url?>/upload-video">Video</a></li>
     </ul>
-</div>
+</div> -->
 
 
-<div class="content form_photo  col-md-12">
+<div class="col-md-12">
     <form  enctype="multipart/form-data" method="post" class="form-horizontal" action="<?php echo $base_url?>/submit-photo">
         <input name="type" value="Photo" type="hidden">
         <input id="post_type" name="post_type" value="Photo" type="hidden">
