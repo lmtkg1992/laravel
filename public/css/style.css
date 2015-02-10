@@ -270,3 +270,50 @@ p.error{
     position: absolute;
     z-index: 999;
 }
+
+.gag-link{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+
+#entries-content.list ul.col-1 li div.info a.fix,.post-meta-bar .info p a.report,a.fix
+    {
+    margin: 0px;
+    background: url(../images/sprite_v12.png) no-repeat 0 -2257px;
+    padding-left: 16px;
+    line-height: 14px;
+    margin: -16px 0 22px;
+    visibility: hidden;
+    color: #399A35
+}
+
+#entries-content.list ul.col-1 li div.info a.report {
+    margin: -16px 0 30px;
+    visibility: hidden
+}
+
+#entries-content.list ul.col-1 li:hover div.info a.report,#entries-content.list ul.col-1 li:hover div.info a.fix
+    {
+    visibility: visible
+}
+
+.post-meta-bar .info p a.report,div.info a.report:hover {
+    color: #ee5b8c;
+    text-decoration: underline
+}
+
+#entries-content.list ul.col-1 li div.info a.fix:hover {
+    color: #43b93f;
+    text-decoration: underline
+}
+.gag-link .post-info {
+position: relative;
+width: 200px;
+float: right;
+}
+.gag-link .content{
+    float: left;
+}
