@@ -79,7 +79,7 @@
 					                $src = 'http://graph.facebook.com/'.$user->id.'/picture?type=normal' ;
 					            
 					              ?>
-					              <img src="<?php echo $src; ?>" alt='profile avatar' style="height:40px"  /> 
+					              <img src="<?php echo $src; ?>" alt='profile avatar' style="height:50px;width:50px;border-radius:25px"  /> 
 					        	</a>
 					            <ul class='ul_info'>
 					            	
@@ -107,8 +107,8 @@
 $(document).ready(function(){
 
 
-	$('a.avatarLink').click(function(){
-		console.log('wtf');
+	$('a.avatarLink, ul.ul_info').hover(function(){
+		
 		if ($('ul.ul_info').is(':visible')){
 			$('ul.ul_info').hide();
 		}else{
