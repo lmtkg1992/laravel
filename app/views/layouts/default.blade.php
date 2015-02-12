@@ -30,6 +30,8 @@
 		    <!-- </div> -->
 		    <!-- </div> -->
 		    <div class="col-xs-12 col-sm-12 col-md-3">
+		    
+		    	@include('includes.topusers')
 		    	@include('includes.sidebar')
 
 		    	

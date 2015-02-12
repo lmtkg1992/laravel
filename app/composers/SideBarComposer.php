@@ -9,8 +9,8 @@ class SideBarComposer{
             ->join('files AS f', 'f.parent_id', '=', 'p.id')          
             
             ->select(array('*', 'p.id AS photo_id'))
-            // ->skip(0)
-            // ->take(2)
+            ->skip(0)
+            ->take(1)
             ->get();
 
 		$view->with('sidebar', $photos);

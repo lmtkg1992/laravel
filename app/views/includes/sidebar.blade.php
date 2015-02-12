@@ -21,11 +21,12 @@
 </style>
 <?php $base_url = URL::to('/'); ?>
 <div style="position: static;" id="moving-boxes">
+
     <div class="s-300">
         <h3 class="image-box">Ảnh mới</h3>
     <?php 
-    if(isset($photos))
-    foreach ($photos as $photo) { ?>
+    if(isset($sidebar))
+    foreach ($sidebar as $photo) { ?>
         <div class="box darkBox randomBox">
             <div>                   
                 <div class="photoListItemSmall">

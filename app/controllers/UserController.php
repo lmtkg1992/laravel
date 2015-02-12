@@ -78,7 +78,7 @@ class UserController extends BaseController
 		                'modified_date' =>date("Y-m-d H:i:s"), 
 		                // 'photo_ids'     =>$photo_ids, 
 		                'user_id'       =>Auth::user()->id,
-		                'url_album'     =>Str::slug(Input::get('title'), '-'),
+		                //'url_album'     =>Str::slug(Input::get('title'), '-'),
 		                // 'category_id'   =>$post['category'],
 		                //@todo: get real representive image for album
 		                // 'rept_photo_id' => isset($file_ids['0']) ? $file_ids['0'] : '',

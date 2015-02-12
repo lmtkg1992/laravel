@@ -277,6 +277,7 @@ p.error{
     width: 100%;
     float: left;
     margin-bottom: 10px;
+    list-style-type:none;
 }
 
 #entries-content.list ul.col-1 li div.info a.fix,.post-meta-bar .info p a.report,a.fix
@@ -316,4 +317,47 @@ float: right;
 }
 .gag-link .content{
     float: left;
+}
+
+div.topUsers .item {
+float: left;
+margin-bottom: 8px;
+width: 150px;
+}
+div.topUsers .item img {
+float: left;
+height: 50px;
+width: 50px;
+border-radius: 25px;
+}
+div.topUsers .item .info {
+margin-left: 52px;
+}
+div.topUsers .name {
+display: block;
+margin-bottom: 3px;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+width: 80px;
+}
+.info .views {
+line-height: 16px;
+font-size: 14px;
+}
+.views {
+background: url("../images/view_icon.png") no-repeat scroll 0 0 transparent;
+padding-left: 18px;
+}
+.clear{
+    clear: both;
+}
+a{
+    text-decoration: none;
+}
+
+#entries-content.list ul .info h1 a, #entries-content.list ul .info h1 {
+color: #000;
+font-size: 18px;
+line-height: 28px;
 }
