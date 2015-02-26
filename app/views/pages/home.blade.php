@@ -10,69 +10,72 @@
 
         foreach ($videos as $video) {
         ?>
-            <li class="gag-link" gagid="174409" itemtype="list" id="entry-174409">
-                <div class="content">
-                    <div class="img-wrap">
-                       
-                         <iframe width="450" height="300" src="//www.youtube.com/embed/<?php echo $video->youtube_id;?>" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="watermark-clear"></div>                        
-                </div>
-                <div class="post-info">
-                    <div style="position: static; top: 55px;" class="info scriptolution-stop" id="action-174409">
-                        <h1>
-                            <a target="_blank" href="<?= $base_url . '/video/' .$video->video_id; ?>" class="jump_focus">
-                                <?= $video->title ?>
-                       
-                            </a>
-                        </h1>
-                        <div class="uinfo">
-                            bởi <a href="<?php echo $base_url?>/user/<?php echo $video->username?>"><?= $video->displayname?></a>
-                            <span>20 phút trước</span>
-                        </div>
-                        <div class="p-stats">
-                            <span title="Lượt xem" class="views"><?php echo $video->view_count?></span>
-                            <span class="comments"><?php echo $video->comment_count?></span>
-                        </div>
-                       
-                    </div>
-                </div>
-            </li>
+            @include('pages.elements.video')
+        
         <?php }?> 
         <?php
 
         foreach ($photos as $photo) {
         ?>
-        	<li class="gag-link" gagid="174409" itemtype="list" id="entry-174409">
-                <div class="content">
-                    
-                    <img style="max-width:400px" src="<?php echo $base_url . '/'.$photo->storage_path?>" alt="<?php echo $photo->title?>"/>
-                    <!-- <div class="watermark-clear"></div>                         -->
-                </div>
-                <div class="post-info">
-                    <div style="position: static; top: 55px;" class="info scriptolution-stop" id="action-174409">
-                        <h1>
-                        	<a target="_blank" href="<?= $base_url . '/photo/' .$photo->photo_id; ?>" class="jump_focus">
-                       			<?= $photo->title ?>
-                       
-                        	</a>
-                        </h1>
-                        <div class="uinfo">
-                        	bởi <a href="<?php echo $base_url?>/user/<?php echo $photo->username?>"><?= $photo->displayname?></a>
-							<span>20 phút trước</span>
-						</div>
-                        <div class="p-stats">
-                        	<span title="Lượt xem" class="views"><?php echo $photo->view_count?></span>
-                    		<span class="comments"><?php echo $photo->comment_count?></span>
-                        </div>
-                       
-                    </div>
-                </div>
-            </li>
+    	   @include('pages.elements.photo')
         <?php }?>
             
         </ul>
     </div>
+
+    <script type="text/javascript">
+    window.home_page = 1;     
+    function last_msg_funtion() 
+    {
+       
+
+        window.home_page =  parseInt(window.home_page) + 1;
+       
+      
+
+        $.ajax({
+            url: '<?php echo $base_url?>/home/get_page',
+            // type:"POST",
+            data: { 
+               home_page: window.home_page
+            },
+            dataType    : 'html',
+            async:false,
+            
+            success:function(data){ 
+
+                console.log(data);
+                // var html = '';
+                // for(var idx in data.videos){
+
+                    // html += '<li class="gag-link" gagid="" itemtype="list">';
+                    // html += data.videos[idx].title;
+
+                    
+                    // html +='</li>';
+                    
+                // } 
+                // for(var idx in data.photos){
+
+                    // html += '<li>'+data.photos[idx].title+'</li>';
+                    
+                // }
+                // $('#entries-content-ul').append(html);
+            }
+        });
+    }
+
+    $(window).scroll(function(){    
+
+        if ($(window).scrollTop() >= $(document).height() - $(window).height() - 300){
+          
+          last_msg_funtion();
+
+        }
+
+    });
+
+    </script>
        
 @stop
 

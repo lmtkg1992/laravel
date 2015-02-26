@@ -13,6 +13,8 @@
 
 Route::get("home", "HomeController@index");
 
+Route::get("home/get_page", "HomeController@get_page");
+
 Route::get("user", "UserController");
 
 Route::get("user/{username}", "UserController@view");
