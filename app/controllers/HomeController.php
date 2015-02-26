@@ -5,6 +5,8 @@ class HomeController extends BaseController {
 
 	public function index(){	
 
+           
+
             $page = 1 - 1;
 
 		$videos = DB::table('videos AS v')
@@ -26,6 +28,14 @@ class HomeController extends BaseController {
             ->take(2)
             ->orderBy('p.id', 'DESC')
             ->get();
+
+            foreach ($photos as $key => &$value) {
+               
+                  $value->wtf = calculate_time_period($value->creation_date);
+            }
+            // echo '<pre>';
+            // var_dump($photos);
+            // die('ss');
 
 	 	return View::make("pages.home")
 	 		->with('videos', $videos)
@@ -68,6 +78,7 @@ class HomeController extends BaseController {
             // return json_encode(array('videos'=>$videos, 'photos'=>$photos));
 
       }
+     
 	
 	
 

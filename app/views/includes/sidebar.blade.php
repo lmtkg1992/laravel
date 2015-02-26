@@ -18,6 +18,33 @@
     font-size: 18px;
     margin: 0px 0px 10px;
 }
+.photoListItemSmall .thumbnail {
+    float: left;
+    max-height: 80px;
+    text-align: center;
+    width: 100px;
+}
+.photoListItemSmall .thumbnail img {
+    max-height: 75px;
+    width: 100px;
+}
+.photoListItemSmall .info {
+    margin-left: 105px;
+    float: right;
+    width: 111px;
+    margin-left: 0;
+    font-size: 14px;
+
+}
+.photoListItemSmall h3 {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.photoListItemSmall:hover h3 {
+    color: #0087F7;
+
+}
 </style>
 <?php $base_url = URL::to('/'); ?>
 <div style="position: static;" id="moving-boxes">
@@ -31,8 +58,10 @@
             <div>                   
                 <div class="photoListItemSmall">
                     <a target="_blank">
-                       
-                        <img style="max-width:150px; max-height:150px; float:left" src="<?php echo $base_url . '/'.$photo->storage_path?>" alt="<?php echo $photo->title?>"/>
+                        <div class="thumbnail">
+                            
+                            <img style="float:left" src="<?php echo $base_url . '/'.$photo->storage_path?>" alt="<?php echo $photo->title?>"/>
+                        </div>
                     
                         <div class="info" style="float:right; margin-left:0" >
                             <h3>
