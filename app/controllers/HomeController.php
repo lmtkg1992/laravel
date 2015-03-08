@@ -40,7 +40,7 @@ class HomeController extends BaseController {
 
 	 	return View::make("pages.home")
 	 		->with('videos', $videos)
-	 		->with ('photos', $photos)
+	 		->with('photos', $photos)
                   ->with('page', $page);
 	 		;
 		  

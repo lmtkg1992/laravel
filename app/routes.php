@@ -17,7 +17,7 @@ Route::get("home/{page?}", ['uses' => "HomeController@index"]);
 
 Route::get("user", "UserController");
 
-Route::get("user/{username}", "UserController@view");
+Route::get("user/{username}/{page?}", "UserController@profile");
 
 
 Route::get("login", "UserController@login");

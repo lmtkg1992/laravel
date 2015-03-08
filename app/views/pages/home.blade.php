@@ -2,7 +2,7 @@
 
 @section('content')
 
-<?php $base_url = URL::to('/'); ?>
+    <?php $base_url = URL::to('/'); ?>
 
     <div id="entries-content" class="list">
         <ul id="entries-content-ul" class="col-1"> 
@@ -24,8 +24,8 @@
         </ul>
     </div>
     <div id="paging-buttons" class="paging-buttons">
-        <a href="#" onclick="return false;" class="previous disabled">« Trang trước</a>
-        <a href="http://chatvl.com/hot/2" class="older">Trang sau »</a>
+        <a href="#" onclick="return false;" class="previous disabled" <?php if ($page ==1) echo 'style="opacity:0.1"' ?>>« Trang trước</a>
+        <a href="<?php echo $base_url . '/home/'.$page?>" class="older">Trang sau »</a>
     </div>
   
 @stop

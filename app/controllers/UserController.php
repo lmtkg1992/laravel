@@ -240,7 +240,7 @@ class UserController extends BaseController
 		}
 
 	}
-	public function view($username)
+	public function profile($username,$page = 1)
 	{
 
 		$data = User::where('username', 'nguyenuit')->first(); 
@@ -258,17 +258,47 @@ class UserController extends BaseController
         $like_count = $query->sum('v.like_count');
         $comment_count = $query->sum('v.comment_count');
             
-            // echo $sum;
-		// dd(DB::getQueryLog());
-            // die('ss');
+        $itemPerPage = 2;
+
+		$videos = DB::table('videos AS v')
+            ->join('users AS u', 'v.user_id', '=', 'u.id')          
+            
+            ->select(array('*', 'v.id AS video_id'))
+            ->skip(($page - 1) * $itemPerPage)
+            ->take($itemPerPage)
+            ->orderBy('video_id', 'DESC')
+            ->get();
+
+
+		$photos = DB::table('photos AS p')
+            ->join('users AS u', 'p.user_id', '=', 'u.id')          
+            ->join('files AS f', 'f.parent_id', '=', 'p.id')          
+            
+            ->select(array('*', 'p.id AS photo_id'))
+            ->skip(($page- 1) * $itemPerPage)
+            ->take($itemPerPage)
+            ->orderBy('p.id', 'DESC')
+            ->get();
+
+            foreach ($photos as $key => &$value) {
+               
+                  $value->time_interval = calculate_time_period($value->creation_date);
+            }
+            foreach ($videos as $key => &$value) {
+               
+                  $value->time_interval = calculate_time_period($value->creation_date);
+            }
 
 	
-		return View::make('user.view')
+		return View::make('user.profile')
 		->with('user', $data)
 		->with('post_count', $post_count)
 		->with('view_count', $view_count)
 		->with('like_count', $like_count)
 		->with('comment_count', $comment_count)
+		->with('videos', $videos)
+ 		->with('photos', $photos)
+      	->with('page', $page);
 		;
 
 	}
