@@ -2,10 +2,10 @@
     <div class="content">
         <div class="img-wrap">
             <a target="_blank" href="<?= $base_url . '/video/' .$video->video_id; ?>" class="jump_focus">
-                <img src="//i.ytimg.com/vi/<?php echo $video->youtube_id?>/mqdefault.jpg">
+                <img src="//i.ytimg.com/vi/<?php echo $video->youtube_id?>/mqdefault.jpg" width="450px">
             </a>
+            <img class="videoIndicator" src="<?php echo $base_url?>/images/play_icon.png">          
         </div>
-        <div class="watermark-clear"></div>                        
     </div>
     <div class="post-info">
         <div style="position: static; top: 55px;" class="info scriptolution-stop" id="action-174409">

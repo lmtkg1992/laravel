@@ -429,3 +429,11 @@ div.uploader div.info {
     float: left;
     margin-left: 10px;
 }
+.img-wrap .videoIndicator {
+    position: relative;
+    top: -150px;
+ 
+}
+#entries-content ul li img {
+    margin: 0 auto;
+}
