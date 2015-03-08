@@ -10,7 +10,7 @@ class SideBarComposer{
             
             ->select(array('*', 'p.id AS photo_id'))
             ->skip(0)
-            ->take(1)
+            ->take(3)
             ->get();
 
 		$view->with('sidebar', $photos);

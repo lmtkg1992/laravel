@@ -377,3 +377,37 @@ li.gag-link div.content {
     text-align: center;
     width: 68%;
 }
+
+#paging-buttons a {
+display: block;
+float: left;
+background-color: #00A5F0;
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+font-size: 12px;
+font-weight: bold;
+text-align: center;
+color: #fff;
+height: 36px;
+line-height: 36px;
+width: 100%;
+border: 1px solid rgba(0, 0, 0, .2);
+box-shadow: 0 0 0 1px rgba(255, 255, 255, .4) inset, 0 1px #fff;
+-moz-box-shadow: 0 0 0 1px rgba(255, 255, 255, .4) inset, 0 1px #fff;
+-webkit-box-shadow: 0 0 0 1px rgba(255, 255, 255, .4) inset, 0 1px #fff;
+text-shadow: 0 -1px rgba(0, 0, 0, .2);
+width: 45%;
+margin-left: 10px;
+}
+div.user{
+    font-size: 10px;
+    color: gray;
+}
+div.thumbnail{
+    border-width: 0;
+}
+
+#headerRight{
+    margin-top: 10px;
+}

@@ -11,9 +11,9 @@
 |
 */
 
-Route::get("home", "HomeController@index");
+Route::get("home/{page?}", ['uses' => "HomeController@index"]);
 
-Route::get("home/get_page", "HomeController@get_page");
+// Route::get("home/get_page", "HomeController@get_page");
 
 Route::get("user", "UserController");
 
