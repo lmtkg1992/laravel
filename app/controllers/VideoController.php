@@ -16,10 +16,27 @@ class VideoController extends BaseController {
 	            ->first();
 
 
-		return View::make('pages.video.detail', array('data' => $data));
+
+        $previous =  DB::table('videos')
+	            ->where('id', '<', $id)
+	            ->orderBy('id', 'desc')
+	            ->select('id')
+	            ->first();
+
+      	$next =  DB::table('videos')
+	            ->where('id', '>', $id)
+	            ->orderBy('id', 'desc')
+	            ->select('id')
+	            ->first(); 
+
+
+		return View::make('pages.video.detail')
+		->with('data', $data)
+		->with('previous', $previous ? $previous->id : null)
+		->with('next', $next ? $next->id : null)
+		;
 		
 	}
-	
 
 	
 }

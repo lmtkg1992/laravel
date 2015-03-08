@@ -437,3 +437,40 @@ div.uploader div.info {
 #entries-content ul li img {
     margin: 0 auto;
 }
+
+.prev-arrow {
+    border-top: 17px dashed transparent;
+    border-bottom: 17px dashed transparent;
+    border-right: 12px solid #ff3c1f;
+    position: absolute;
+}
+.post-next-prev .prev-label {
+    padding: 9px;
+    font-weight: bold;
+    height: 34px;
+    line-height: 34px;
+    background-color: #ff3c1f;
+    color: #fff;
+    border-radius: 3px 0 0 3px;
+    margin-left: 11px;
+}
+.post-next-prev .next-label {
+    padding: 9px;
+    font-weight: bold;
+    height: 34px;
+    line-height: 34px;
+    background-color: #ff3c1f;
+    color: #fff;
+    border-radius: 3px 0 0 3px;
+}
+.arrow {
+    border-top: 17px dashed transparent;
+    border-bottom: 17px dashed transparent;
+    border-left: 12px solid #ff3c1f;
+    position: absolute;
+}
+#post-control-bar{
+    text-align: right;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}

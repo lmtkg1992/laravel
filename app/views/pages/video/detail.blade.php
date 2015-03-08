@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+    <?php $base_url = URL::to('/'); ?>
     <div id="container">
     
 	<div id="main">
@@ -10,6 +10,18 @@
         <div id="content-holder">
 
             <div id="content">
+            <div id="post-control-bar" class="spread-bar-wrap">
+             
+                <div class="post-next-prev">
+                    <?php if ($previous){?>
+                    <a id="prev_post" class="prev-post" href="<?php echo $base_url .'/video/'.$previous?>"><span class="prev-arrow"></span><span class="prev-label"><script>b64_to_utf8("QsOgaSBUcsaw4bubYw==");</script>Bài Trước</span></a>
+                    <?php }?>
+                    <?php if ($next){?>
+                    <a id="next_post" class="next-post" href="<?php echo $base_url .'/video/'.$next?>"><span class="next-label"><script>b64_to_utf8("QsOgaSBTYXU=");</script>Bài Sau</span><span class="arrow"></span></a>
+                    <?php }?>
+                </div>
+            </div>
+
                 <div class="post-container">
                     <div class="img-wrap">
                         <div id="divVideoAds">
