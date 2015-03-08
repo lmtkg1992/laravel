@@ -37,6 +37,7 @@ Route::post("submit-video", "UserController@submit_video");
 
 
 Route::get("video/{id}", ['uses' =>'VideoController@index']);
+Route::get("photo/{id}", ['uses' =>'PhotoController@index']);
 
 	
 

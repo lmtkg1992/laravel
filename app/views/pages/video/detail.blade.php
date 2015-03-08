@@ -14,8 +14,7 @@
                     <div class="img-wrap">
                         <div id="divVideoAds">
                             <div id="video-container">
-                                <!-- <iframe id="video-iframe" class="video-iframe" src="http://www.youtube.com/embed/6w34zsEWNys?rel=0&amp;showinfo=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;nologo=1" allowfullscreen="1" frameborder="0" height="410" width="727"></iframe> -->
-                                 <iframe  height="410" width="727" src="//www.youtube.com/embed/<?php echo $data->youtube_id;?>" frameborder="0" allowfullscreen></iframe>
+                                 <iframe  height="400" width="700" src="//www.youtube.com/embed/<?php echo $data->youtube_id;?>" frameborder="0" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>

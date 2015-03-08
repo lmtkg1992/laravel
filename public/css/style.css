@@ -327,7 +327,7 @@ float: left;
 margin-bottom: 8px;
 width: 150px;
 }
-div.topUsers .item img {
+div.topUsers .item img, div.uploader .avatar img {
 float: left;
 height: 50px;
 width: 50px;
@@ -417,4 +417,15 @@ div.thumbnail{
 }
 .profile-info h3{
     margin-top: 0;
+}
+div.post-info{
+    float: right;
+}
+div.avatar {
+    width: 150px;
+}
+div.uploader div.info {
+    width: 100px;
+    float: left;
+    margin-left: 10px;
 }

@@ -1,8 +1,9 @@
 <li class="gag-link" gagid="" itemtype="list">
     <div class="content">
         <div class="img-wrap">
-           
-             <iframe width="450" height="300" src="//www.youtube.com/embed/<?php echo $video->youtube_id;?>" frameborder="0" allowfullscreen></iframe>
+            <a target="_blank" href="<?= $base_url . '/video/' .$video->video_id; ?>" class="jump_focus">
+                <img src="//i.ytimg.com/vi/<?php echo $video->youtube_id?>/mqdefault.jpg">
+            </a>
         </div>
         <div class="watermark-clear"></div>                        
     </div>

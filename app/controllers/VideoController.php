@@ -4,7 +4,7 @@ class VideoController extends BaseController {
 
 	
 
-	// protected $layout = 'layouts.master';
+
 
 	public function index($id){	
 

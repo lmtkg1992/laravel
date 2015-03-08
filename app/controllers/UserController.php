@@ -4,10 +4,9 @@ class UserController extends BaseController
 {
 		
 	public function index(){
-		// $data = User::where ('email', 'nguyenuit@gmail.com')->get(); 
-		// return View::make('user.list')->with('users', $data);
+		
 		return View::make('user.list');
-		// return $this->user->all();
+	
 	}
 	public function upload()
 	{
@@ -76,12 +75,9 @@ class UserController extends BaseController
 		              
 		                'creation_date' =>date("Y-m-d H:i:s"),
 		                'modified_date' =>date("Y-m-d H:i:s"), 
-		                // 'photo_ids'     =>$photo_ids, 
+		              
 		                'user_id'       =>Auth::user()->id,
-		                //'url_album'     =>Str::slug(Input::get('title'), '-'),
-		                // 'category_id'   =>$post['category'],
-		                //@todo: get real representive image for album
-		                // 'rept_photo_id' => isset($file_ids['0']) ? $file_ids['0'] : '',
+		                
 		                'status'        => 1, 
 		                'is_home'       => 0,
 		                'view_count'    => '', 
@@ -89,7 +85,7 @@ class UserController extends BaseController
 		                'source' => Input::get('source'),
 		                'sensitive_content' => Input::get('sensitive_content')
 		    		);
-			// var_dump($photo);
+			
 
 			$photo_id = DB::table('photos')->insertGetId($photo);
 
@@ -188,20 +184,18 @@ class UserController extends BaseController
 		} 
 		else {
 
+			$embed = explode("?v=", Input::get('url'));
 
 			$video = array(
                 'title'         =>ucfirst(Input::get('title')),
               
                 'creation_date' =>date("Y-m-d H:i:s"),
                 'modified_date' =>date("Y-m-d H:i:s"), 
-                // 'photo_ids'     =>$photo_ids, 
+                
                 'user_id'       =>Auth::user()->id,
                 'url'     		=> Input::get('url'),
-                // 'category_id'   =>$post['category'],
-                //@todo: get real representive image for album
-                // 'rept_photo_id' => isset($file_ids['0']) ? $file_ids['0'] : '',
-                // 'status'        => 1, 
-                // 'is_home'       => 0,
+                'youtube_id' 	=> $embed[1],
+               	
                 'view_count'    => '', 
                 'comment_count' => '',
                 'source' => Input::get('source'),
