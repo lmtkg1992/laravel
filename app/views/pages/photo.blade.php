@@ -9,9 +9,9 @@
 
         <?php
 
-        foreach ($videos as $video) {
+        foreach ($photos as $photo) {
         ?>
-            @include('pages.elements.video')
+            @include('pages.elements.photo')
         
         <?php }?> 
        

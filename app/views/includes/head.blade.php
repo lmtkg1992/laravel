@@ -47,10 +47,10 @@
 		  		<ul class="nav navbar-nav" style="display: block !important">
 		  
 
-						 <li class="current"><a href="<?= $base_url .'/home'?>">Home</a></li>
-						 <li class="current"><a href="<?= $base_url .'/hot'?>">Hot</a></li>
+					 	<li class="current"><a href="<?= $base_url .'/home'?>">Home</a></li>
+					 	<li class="current"><a href="<?= $base_url .'/hot'?>">Hot</a></li>
 						<li><a href="<?= $base_url?>/vote">Cho duyet</a>
-						<!-- <li><a href="<?= $base_url?>/video">Video</a></li>	 -->
+						<li><a href="<?= $base_url?>/photo">Anh</a></li>	
 						<li>
 							<a href="<?= $base_url?>/upload-photo">
 								<img src ='<?= $base_url?>/images/upload_icon.png' alt='Dang Anh' />Dang Anh
