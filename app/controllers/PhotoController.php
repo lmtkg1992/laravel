@@ -6,7 +6,7 @@ class PhotoController extends BaseController {
 	public function index($page = 1){	
 
 
-	 	$itemPerPage = 5;
+	 	$itemPerPage = 10;
 
 		$photos = DB::table('photos AS p')
         ->join('users AS u', 'p.user_id', '=', 'u.id')          

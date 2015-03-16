@@ -474,3 +474,12 @@ div.uploader div.info {
     padding-right: 10px;
     padding-bottom: 10px;
 }
+div.sensitive_content #sensitive_content{
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+    display: inline-block;
+}
+div.sensitive_content p{
+    display: inline-block;
+}

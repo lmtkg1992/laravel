@@ -43,10 +43,13 @@ class UserController extends BaseController
 	public function submit_photo()
 	{
 
-		
+		App::setLocale('vi');
+
 	 	$rules = array(
-	        'title'         => 'required',                  
-	        'image'         => 'required'
+	        'image'         => 'required|mimes:jpeg,bmp,png|max:2000',
+	        'title'         => 'required|max:100|min:10',  
+	        'tags' 			=> 'max:100|min:5',
+	        'source' 		=> 'max:100|min:5'	                
 	       
 	    );
 	   	$validator = Validator::make(Input::all(), $rules);
@@ -58,15 +61,18 @@ class UserController extends BaseController
 		    $messages = $validator->messages();
 
 		    // redirect our user back to the form with the errors from the validator
-		    return Redirect::to('/upload-photo')
-		        ->withErrors($validator);
+		    return Redirect::to('/upload-photo')->withErrors($validator);
 
 		} 
 		else {
 
 			$destinationPath = 'uploads/photos';
 
-			$upload_success = Input::file('image')->move($destinationPath, Input::file('image')->getclienToriginalName());
+			if (Input::hasfile('image') && Input::file('image')->isValid()){
+
+
+				$upload_success = Input::file('image')->move($destinationPath, Input::file('image')->getclienToriginalName());
+			}
 
 			
 			
@@ -145,7 +151,27 @@ class UserController extends BaseController
 	{
 		if (Auth::user()){
 
-			return View::make('user.uploadPhoto');
+			$db_tags = DB::table('tags')->get();
+
+			// echo '<pre>'; 
+
+			// var_dump($autocomplete_tags);
+
+			$autocomplete_tags = array();
+
+			foreach ($db_tags as $value) {
+
+				$autocomplete_tags[] = $value->name;
+			}
+			$autocomplete_tags = '["' . implode('","', $autocomplete_tags) . '"]';
+			$autocomplete_tags = htmlspecialchars($autocomplete_tags);
+			// var_dump($autocomplete_tags);
+			// die('ss');
+			// $autocomplete_tags = '';
+
+			return View::make('user.uploadPhoto')
+			->with('autocomplete_tags', $autocomplete_tags)
+			;
 		}else{
 			return Redirect::to('/login');
 		}
