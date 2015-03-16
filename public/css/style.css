@@ -483,3 +483,7 @@ div.sensitive_content #sensitive_content{
 div.sensitive_content p{
     display: inline-block;
 }
+div.form_photo, div.form_video{
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#f9fdff));
+    border: 1px solid rgb(240, 240, 240);
+}

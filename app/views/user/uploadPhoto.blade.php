@@ -5,6 +5,13 @@
 
 <?php $base_url = URL::to('/') ?>
 
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript" charset="utf-8"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/tag-it.js" type="text/javascript" charset="utf-8"></script>
+
+<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css">
+<link href="css/jquery.tagit.css" rel="stylesheet" type="text/css">
+
 <style type="text/css">
    
 
@@ -17,7 +24,7 @@
 </div>
 
 
-<div class="col-xs-12 col-sm-12 col-md-12">
+<div class="content form_photo col-xs-12 col-sm-12 col-md-12">
     <form  enctype="multipart/form-data" method="post" class="form-horizontal" action="<?php echo $base_url?>/submit-photo">
         <input name="type" value="Photo" type="hidden">
         <input id="post_type" name="post_type" value="Photo" type="hidden">
@@ -49,9 +56,11 @@
             <div class="col-xs-12 col-md-4">
                 <label class="control-label" for="tag">Tags<span>(không bắt buộc)</span></label>
             </div>
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-8">
            
-                <input type="text" class="form-control" name="tags" id="tags" value="" placeholder="" data-provide="typeahead" autocomplete="off" data-source="<?php echo $autocomplete_tags?>" />
+                <!-- <input type="text" class="form-control" name="tags" id="tags" value="" placeholder="" /> -->
+
+                <ul id="tags"></ul>
 
                 <p class="error">{{ $errors->first('tags') }}</p>
             </div>
@@ -89,8 +98,13 @@
     </form>
 </div>
 <script type="text/javascript">
-    
-    
+    $(document).ready(function() {
+        $("#tags").tagit({
+          allowSpaces: true,
 
+        });
+    });
 </script>
+
+
 @stop

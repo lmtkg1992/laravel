@@ -40,15 +40,48 @@ class UserController extends BaseController
 		return Redirect::to('/login');
 	}
 
+	public function upload_photo()
+	{
+		if (Auth::user()){
+
+			
+			$autocomplete_tags = $this->autocomplete_tags();
+
+			return View::make('user.uploadPhoto')
+			->with('autocomplete_tags', $autocomplete_tags)
+			;
+		}else{
+			return Redirect::to('/login');
+		}
+	}	
+	public function autocomplete_tags(){
+		$db_tags = DB::table('tags')->get();
+			
+
+		$autocomplete_tags = array();
+
+		foreach ($db_tags as $value) {
+
+			$autocomplete_tags[] = $value->name;
+		}
+		$autocomplete_tags = '["' . implode('","', $autocomplete_tags) . '"]';
+		$autocomplete_tags = htmlspecialchars($autocomplete_tags);	
+
+		return $autocomplete_tags;
+	}
+
 	public function submit_photo()
 	{
+
+		// var_dump(Input::get('tags'));
+		// die('ss');
 
 		App::setLocale('vi');
 
 	 	$rules = array(
 	        'image'         => 'required|mimes:jpeg,bmp,png|max:2000',
 	        'title'         => 'required|max:100|min:10',  
-	        'tags' 			=> 'max:100|min:5',
+	        // 'tags' 			=> 'max:100|min:5',
 	        'source' 		=> 'max:100|min:5'	                
 	       
 	    );
@@ -95,7 +128,7 @@ class UserController extends BaseController
 
 			$photo_id = DB::table('photos')->insertGetId($photo);
 
-			 $file = array(
+		 	$file = array(
 	        	
 		        'parent_type'	=> 'photo', 
 		        'parent_id'		=> $photo_id,
@@ -116,30 +149,39 @@ class UserController extends BaseController
 
 
 			// check tag if exist
-			$tag = DB::table('tags')->where('name', '=', Input::get('tags'))->first();
+			foreach (Input::get('tags') as $value) 
+			{
+			
+				$tag = DB::table('tags')->where('name', '=', $value )->first();
 
-			if (!$tag){
-				// tag not exist
-				$tag = array(
-						'name' => Input::get('tags')
-					);
+				if (!$tag){
+					// tag not exist
+					
 
-				$tag_id = DB::table('tags')->insertGetId($tag);
+					$tag_id = DB::table('tags')->insertGetId(array(
+							'name' => $value,
+							'rank' => '1'
+						));
 
-			}else{
-				//select tag
-				$tag_id = $tag->id;
+				}else{
+					//select tag
+					$tag_id = $tag->id;
 
+					// DB::table('tags')->update(array('votes' => 1));
+					DB::statement("update tags set rank = rank + 1 where id='$tag_id'"); 
+
+					// @todo update rank
+
+				}
+				// end check
+
+				DB::table('tags_photos')->insert(array(
+
+						'photo_id' => $photo_id,
+						'tag_id' => $tag_id
+				));
 			}
-			// end check
 
-			$tags_photos = array(
-
-					'photo_id' => $photo_id,
-					'tag_id' => $tag_id
-				);
-
-			DB::table('tags_photos')->insert($tags_photos);
 
 
 			return Redirect::to('/home');
@@ -147,41 +189,14 @@ class UserController extends BaseController
 
 	}
 	
-	public function upload_photo()
-	{
-		if (Auth::user()){
-
-			$db_tags = DB::table('tags')->get();
-
-			// echo '<pre>'; 
-
-			// var_dump($autocomplete_tags);
-
-			$autocomplete_tags = array();
-
-			foreach ($db_tags as $value) {
-
-				$autocomplete_tags[] = $value->name;
-			}
-			$autocomplete_tags = '["' . implode('","', $autocomplete_tags) . '"]';
-			$autocomplete_tags = htmlspecialchars($autocomplete_tags);
-			// var_dump($autocomplete_tags);
-			// die('ss');
-			// $autocomplete_tags = '';
-
-			return View::make('user.uploadPhoto')
-			->with('autocomplete_tags', $autocomplete_tags)
-			;
-		}else{
-			return Redirect::to('/login');
-		}
-	}	
+	
 	public function upload_video()
 	{
 
 		if (Auth::user()){
 
-			return View::make('user.uploadVideo');
+			$autocomplete_tags = $this->autocomplete_tags();
+			return View::make('user.uploadVideo')->with('autocomplete_tags', $autocomplete_tags);
 		}else{
 			return Redirect::to('/home');	
 		}
@@ -191,10 +206,14 @@ class UserController extends BaseController
 	{
 
 		$rules = array(
-	        'title'       => 'required',                  
-	        'url'         => 'required'
+         	'url'	=> 'required',
+	        'title' => 'required|max:100|min:10',  
+	        'tags' 	=> 'max:100|min:5',
+	        'source'=> 'max:100|min:5'	                
 	       
 	    );
+
+		
 	   	$validator = Validator::make(Input::all(), $rules);
 
 		// check if the validator failed -----------------------
