@@ -83,9 +83,9 @@
 					        	</a>
 					            <ul class='ul_info'>
 					            	
-					                <li><a href="<?= $base_url?>/photos/<?php echo $user->id;?>"/>Ảnh của bạn</a></li>
+					                <!-- <li><a href="<?= $base_url?>/photos/<?php echo $user->id;?>"/>Ảnh của bạn</a></li> -->
 					                <li>
-					                	<a href="<?= $base_url?>/user/<?php echo $user->username?>">Thông tin cá nhân</a>
+					                	<a href="<?= $base_url?>/user/<?php echo $user->username?>">Trang cá nhân</a>
 					                </li>
 					                <li><a href="<?= $base_url?>/user/changepassword">Đổi mật khẩu</a></li>
 					                <li><a href="<?= $base_url ?>/logout">Thoát</a></li>
