@@ -492,3 +492,10 @@ div.form_photo, div.form_video{
 li.gag-link div.content {
     position: relative;
 }
+span.tagit-label{
+    font-size: 12px;
+    color: black;
+}
+ul.tagit li.tagit-choice .tagit-close{
+    top: 48% !important;
+}

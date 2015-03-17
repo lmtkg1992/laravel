@@ -79,9 +79,9 @@ class UserController extends BaseController
 		App::setLocale('vi');
 
 	 	$rules = array(
-	        'image'         => 'required|mimes:jpeg,bmp,png|max:2000',
+	        'image'         => 'required|mimes:jpeg,gif,png|max:2000',
 	        'title'         => 'required|max:100|min:10',  
-	        // 'tags' 			=> 'max:100|min:5',
+	        'tags' 			=> 'max:20',
 	        'source' 		=> 'max:100|min:5'	                
 	       
 	    );
@@ -148,40 +148,7 @@ class UserController extends BaseController
 			DB::table('files')->insert($file);
 
 
-			// check tag if exist
-			foreach (Input::get('tags') as $value) 
-			{
-			
-				$tag = DB::table('tags')->where('name', '=', $value )->first();
-
-				if (!$tag){
-					// tag not exist
-					
-
-					$tag_id = DB::table('tags')->insertGetId(array(
-							'name' => $value,
-							'rank' => '1'
-						));
-
-				}else{
-					//select tag
-					$tag_id = $tag->id;
-
-					// DB::table('tags')->update(array('votes' => 1));
-					DB::statement("update tags set rank = rank + 1 where id='$tag_id'"); 
-
-					// @todo update rank
-
-				}
-				// end check
-
-				DB::table('tags_photos')->insert(array(
-
-						'photo_id' => $photo_id,
-						'tag_id' => $tag_id
-				));
-			}
-
+			$this->update_tags(Input::get('tags'), $photo_id, 'photo');
 
 
 			return Redirect::to('/home');
@@ -189,7 +156,54 @@ class UserController extends BaseController
 
 	}
 	
-	
+	public function update_tags($tags, $id, $type)
+	{
+		// check tag if exist
+		foreach ($tags as $value) 
+		{
+		
+			$tag = DB::table('tags')->where('name', '=', $value )->first();
+
+			if (!$tag){
+				// tag not exist
+				
+
+				$tag_id = DB::table('tags')->insertGetId(array(
+						'name' => $value,
+						'rank' => '1'
+					));
+
+			}else{
+				//select tag
+				$tag_id = $tag->id;
+
+				
+				DB::statement("update tags set rank = rank + 1 where id='$tag_id'"); 
+
+				// @todo update rank
+
+			}
+			// end check
+			if ($type == 'photo'){
+
+				DB::table('tags_photos')->insert(array(
+
+					'photo_id' => $id,
+					'tag_id' => $tag_id
+				));
+			}
+			else{
+				DB::table('tags_videos')->insert(array(
+
+					'video_id' => $id,
+					'tag_id' => $tag_id
+				));
+			}
+
+			
+		}
+
+	}
 	public function upload_video()
 	{
 
@@ -208,7 +222,7 @@ class UserController extends BaseController
 		$rules = array(
          	'url'	=> 'required',
 	        'title' => 'required|max:100|min:10',  
-	        'tags' 	=> 'max:100|min:5',
+	        'tags' 	=> 'max:20',
 	        'source'=> 'max:100|min:5'	                
 	       
 	    );
@@ -249,32 +263,8 @@ class UserController extends BaseController
 
 			$video_id = DB::table('videos')->insertGetId($video);
 
-			// check tag if exist
-			$tag = DB::table('tags')->where('name', '=', Input::get('tags'))->first();
-
-			if (!$tag){
-				// tag not exist
-				$tag = array(
-						'name' => Input::get('tags')
-					);
-
-				$tag_id = DB::table('tags')->insertGetId($tag);
-
-			}else{
-				//select tag
-				$tag_id = $tag->id;
-
-			}
-			// end check
-
-			$tags_videos = array(
-
-					'video_id' => $video_id,
-					'tag_id' => $tag_id
-				);
-
-			DB::table('tags_videos')->insert($tags_videos);
-			
+			$this->update_tags(Input::get('tags'), $video_id, 'video');
+				
 			return Redirect::to('/home');
 		}
 

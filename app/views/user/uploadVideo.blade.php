@@ -25,7 +25,7 @@
             <div class="col-xs-12 col-md-4">
                 <label class="control-label" for="title">Đường dẫn Youtube:</label>
             </div>
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-8">
                 
            
                 <input id="photo_post_url" type="text" class="form-control" name="url" value="" style="display:block;">
@@ -39,7 +39,7 @@
             <div class="col-xs-12 col-md-4">
                 <label class="control-label" for="title">Tiêu đề:</label>
             </div>
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-8">
                 
                 <input id="post_title" class="form-control" name="title" maxlength="150" value="" type="text">
                 <p class="error">{{ $errors->first('url') }}</p>
@@ -48,11 +48,10 @@
         <div class="form-group row">
            
             <div class="col-xs-12 col-md-4">
-                <label class="control-label" for="tag">Tags<span>(không bắt buộc)</span></label>
+                <label class="control-label" for="tag">Tags<span>(không bắt buộc):</span></label>
             </div>
-            <div class="col-xs-12 col-md-6">
-                <input type="text" class="form-control" name="tags" id="tags" value="" placeholder="" data-provide="typeahead" autocomplete="off" data-source="<?php echo $autocomplete_tags?>" />
-
+            <div class="col-xs-12 col-md-8">
+                <ul id="tags"></ul>
                 <p class="error">{{ $errors->first('tags') }}</p>
             </div>
         </div>
@@ -61,9 +60,9 @@
         <div class="form-group row">
             <div class="col-xs-12 col-md-4">
 
-                <label class="control-label" for="source">Nguồn<span>(không bắt buộc)</span>:</label>
+                <label class="control-label" for="source">Nguồn<span>(không bắt buộc):</span></label>
             </div>
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-8">
                 <input class="form-control" name="source" value="" maxlength="300" type="text">
                 <p class="error">{{ $errors->first('source') }}</p>
             </div>
@@ -88,4 +87,12 @@
         </div>
     </form>
 </div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#tags").tagit({
+          allowSpaces: true,
+
+        });
+    });
+</script>
 @stop

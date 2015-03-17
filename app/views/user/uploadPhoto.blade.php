@@ -5,17 +5,13 @@
 
 <?php $base_url = URL::to('/') ?>
 
-<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript" charset="utf-8"></script> -->
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/tag-it.js" type="text/javascript" charset="utf-8"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script> -->
+<!-- <script src="js/tag-it.js" type="text/javascript" charset="utf-8"></script> -->
 
-<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css">
-<link href="css/jquery.tagit.css" rel="stylesheet" type="text/css">
+<!-- <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css"> -->
+<!-- <link href="css/jquery.tagit.css" rel="stylesheet" type="text/css"> -->
 
-<style type="text/css">
-   
 
-</style>
 <div class="head col-xs-12 col-sm-12 col-md-12">
 <ul class="switch">
         <li class="tab_photo "><a class="photo" href="<?php echo $base_url?>/upload-photo">Ảnh</a></li>
@@ -37,6 +33,7 @@
             <div class="col-xs-12 col-md-6">
                 
                 <input id="photo_file_upload" class="form-control" name="image" style="display:block;" type="file">
+                <span style="font-size:10px">Dinh dang cho phep la JPEG, GIF hoac PNG.</span>
                 <p class="error">{{ $errors->first('image') }}</p>
             </div>
         </div>
@@ -45,7 +42,7 @@
             <div class="col-xs-12 col-md-4">
                 <label class="control-label" for="title">Tiêu đề:</label>
             </div>
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-8">
                 
                 <input id="post_title" class="form-control" name="title" maxlength="150" value="" type="text">
                 <p class="error">{{ $errors->first('title') }}</p>
@@ -54,11 +51,10 @@
         <div class="form-group row">
            
             <div class="col-xs-12 col-md-4">
-                <label class="control-label" for="tag">Tags<span>(không bắt buộc)</span></label>
+                <label class="control-label" for="tag">Tags<span>(không bắt buộc):</span></label>
             </div>
             <div class="col-xs-12 col-md-8">
            
-                <!-- <input type="text" class="form-control" name="tags" id="tags" value="" placeholder="" /> -->
 
                 <ul id="tags"></ul>
 
@@ -72,7 +68,7 @@
 
                 <label class="control-label" for="source">Nguồn<span>(không bắt buộc)</span>:</label>
             </div>
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-8">
                 <input class="form-control" name="source" value="" maxlength="300" type="text">
                 <p class="error">{{ $errors->first('source') }}</p>
             </div>
