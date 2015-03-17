@@ -14,8 +14,14 @@
 
 <div class="head col-xs-12 col-sm-12 col-md-12">
 <ul class="switch">
-        <li class="tab_photo "><a class="photo" href="<?php echo $base_url?>/upload-photo">Ảnh</a></li>
-        <li class="tab_video current"><a class="video" href="<?php echo $base_url?>/upload-video">Video</a></li>
+        <li class="tab_photo ">
+            <span ><img src="<?php echo $base_url?>/images/photo.png"></span>
+            <a class="photo" href="<?php echo $base_url?>/upload-photo">Ảnh</a>
+        </li>
+        <li class="tab_video current">
+             <span ><img src="<?php echo $base_url?>/images/video.png"></span>
+            <a class="video" href="<?php echo $base_url?>/upload-video">Video</a>
+        </li>
     </ul>
 </div>
 
@@ -87,7 +93,7 @@
 
         <div class="form-group">
             <div class="col-xs-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-default">Huy</button>
+                <button type="submit" class="btn btn-default">Quay Lai</button>
                 <button type="submit" class="btn btn-primary">Dang Anh</button>
             </div>
         </div>

@@ -81,7 +81,7 @@
 
         <div class="form-group">
             <div class="col-xs-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-default">Huy</button>
+                <button type="submit" class="btn btn-default">Quay Lai</button>
                 <button type="submit" class="btn btn-primary">Dang Video</button>
             </div>
         </div>

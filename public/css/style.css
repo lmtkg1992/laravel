@@ -236,17 +236,18 @@ p.error{
     text-shadow: 0 1px 0 #fff;
     display: block;
     line-height: 15px;
-    padding: 55px 0 15px;
+    padding: 20px 0 15px;
     width: 50px;
     text-align: center;
 }
 .head ul.switch li a.photo {
-    background: url(../images/sprite_v12.png) no-repeat -200px -1100px;
+   
 }
 .head ul.switch li.current a.video {
-    background: url(../images/sprite_v12.png) no-repeat -350px -1100px;
+ 
 }
 .head ul.switch li{
+    margin-left: 5px;   
     display: inline-block;
 }    
 
