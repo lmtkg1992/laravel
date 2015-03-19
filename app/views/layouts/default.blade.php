@@ -36,13 +36,13 @@
 		<div class="row">
 
 	    	<!-- <div id="content-holder">         -->
-	        <div class="col-xs-12 col-sm-12 col-md-9">   
+	        <div class="col-xs-12 col-sm-12 col-md-8">   
 		
 				    @yield('content')
 		    </div>
 		    <!-- </div> -->
 		    <!-- </div> -->
-		    <div class="col-xs-12 col-sm-12 col-md-3">
+		    <div class="col-xs-12 col-sm-12 col-md-4">
 		    
 		    	@include('includes.topusers')
 		    	@include('includes.sidebar')

@@ -325,11 +325,14 @@ float: right;
 .gag-link .content{
     float: left;
 }
+div.topUsers{
+    overflow: hidden;
+}
 
 div.topUsers .item {
 float: left;
 margin-bottom: 8px;
-width: 150px;
+width: 140px;
 }
 div.topUsers .item img, div.uploader .avatar img {
 float: left;
@@ -347,6 +350,7 @@ overflow: hidden;
 text-overflow: ellipsis;
 white-space: nowrap;
 width: 80px;
+font-size: 11px;
 }
 .info .views {
 line-height: 16px;
@@ -499,4 +503,37 @@ span.tagit-label{
 }
 ul.tagit li.tagit-choice .tagit-close{
     top: 48% !important;
+}
+.photoListItemSmall .info{
+    float: left !important;
+}
+#moving-boxes{
+    width: 80%;
+}
+ul.topUsersSort li {
+display: inline;
+font-size: 13px;
+font-style: italic;
+font-weight: bold;
+}
+ul.topUsersSort {
+float: right;
+}
+
+h3.topUsers{
+    float: left;
+color: #222222;
+font-size: 17px;
+line-height: 1.2em;
+margin: 0 0 5px;
+}
+.topUsersSort a{
+    color: #333;
+}
+
+.topUsersSort a.selected, .infoBox a {
+color: #00A5F0;
+}
+#topUserContent{
+    width: 80%;
 }
