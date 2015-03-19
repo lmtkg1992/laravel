@@ -537,3 +537,13 @@ color: #00A5F0;
 #topUserContent{
     width: 80%;
 }
+.head ul.switch li a {
+    padding-top: 5px;
+    display: inline;
+}
+.head{
+    height: 60px;
+}
+.head ul.switch li {
+    width: 150px;
+}

@@ -5,25 +5,10 @@
 
 <?php $base_url = URL::to('/') ?>
 
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script> -->
-<!-- <script src="js/tag-it.js" type="text/javascript" charset="utf-8"></script> -->
-
-<!-- <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css"> -->
-<!-- <link href="css/jquery.tagit.css" rel="stylesheet" type="text/css"> -->
 
 
-<div class="head col-xs-12 col-sm-12 col-md-12">
-<ul class="switch">
-        <li class="tab_photo ">
-            <span ><img src="<?php echo $base_url?>/images/photo.png"></span>
-            <a class="photo" href="<?php echo $base_url?>/upload-photo">Ảnh</a>
-        </li>
-        <li class="tab_video current">
-             <span ><img src="<?php echo $base_url?>/images/video.png"></span>
-            <a class="video" href="<?php echo $base_url?>/upload-video">Video</a>
-        </li>
-    </ul>
-</div>
+
+ @include('pages.elements.switchPhotoVideo')
 
 
 <div class="content form_photo col-xs-12 col-sm-12 col-md-12">
@@ -38,7 +23,7 @@
             </div>
             <div class="col-xs-12 col-md-6">
                 
-                <input id="photo_file_upload" class="form-control" name="image" style="display:block;" type="file">
+                <input id="photo_file_upload" name="image" style="display:block;" type="file">
                 <span style="font-size:10px">Dinh dang cho phep la JPEG, GIF hoac PNG.</span>
                 <p class="error">{{ $errors->first('image') }}</p>
             </div>
@@ -105,6 +90,7 @@
           allowSpaces: true,
 
         });
+        $('input[type=file]').bootstrapFileInput();
     });
 </script>
 

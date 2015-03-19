@@ -13,6 +13,8 @@
    {{ HTML::script('js/jquery-ui.min.js') }}
 
    {{ HTML::script('js/tag-it.js') }}
+   
+  <!--  {{ HTML::script('js/bootstrap.file-input.js') }} -->
 
    {{ HTML::script('js/bootstrap-typeahead.js') }}
 

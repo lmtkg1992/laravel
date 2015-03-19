@@ -6,13 +6,7 @@
 <?php $base_url = URL::to('/') ?>
 
 
-<div class="head">
-<ul class="switch">
-        <li class="tab_photo "><a class="photo" href="<?php echo $base_url?>/upload-photo">Ảnh</a></li>
-        <li class="tab_video current"><a class="video" href="<?php echo $base_url?>/upload-video">Video</a></li>
-    </ul>
-</div>
-
+ @include('pages.elements.switchPhotoVideo')
 
 <div class="content form_video  col-md-12">
     <form  enctype="multipart/form-data" method="post" class="form-horizontal" action="<?php echo $base_url?>/submit-video">
