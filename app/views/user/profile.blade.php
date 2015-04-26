@@ -101,8 +101,8 @@
         <div id="content" listpage="">
                 <?php $base_url = URL::to('/'); ?>
 
-                <div id="entries-content" class="list">
-                    <ul id="entries-content-ul" class="col-1"> 
+                <div id="items-content" class="list">
+                    <ul id="items-content-ul" class="col-1"> 
 
                     <?php
 

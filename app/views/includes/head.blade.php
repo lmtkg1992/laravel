@@ -1,72 +1,48 @@
 <style type="text/css">
 
 </style>
-<?php   
-		$base_url = URL::to('/');
+	<?php   				
+	$base_url = URL::to('/');
 
 	
-		$user = Auth::user();
+	$user = Auth::user();
 
-		 ?>
+ 	?>
 	<nav id="navbar" class="navbar navbar-default" role="navigation">
  		<div class="container">
- 		  <div class="btn-toolbar col-3 col-sm-12 col-md-12 col-lg-4 col" style="">
-	  		 	
-	           
-            </div>
+ 		
 	 		<div class="navbar-header">
 	 		
-		      <button type="button" class="navbar-toggle btn btn-primary" data-toggle="modal" data-target="#menu_popup">
 		     
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		       
-		        <!-- Choose Category -->
-		      </button>
-	         <div class="modal fade modal-sm" id="menu_popup" tabindex="-1" role="dialog" aria-labelledby="Choose Category" aria-hidden="true">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title">Choose Category</h4>
-                </div>
-                
-                    <div class="list-group">
-                              <a class="list-group-item" href="#snap_0"><i class=""></i> Dining / Retails</a> 
-         
-                              <a class="list-group-item" href="#snap_1"><i class=""></i> Hotel</a> 
-         
-                              <a class="list-group-item" href="#snap_2"><i class=""></i> Air</a> 
-         
-                         
-                    </div>
-                </div>
-		    </div>
-		  
 
-			<div class="collapse navbar-collapse col-9 col-sm-12 col-md-12 col-lg-8 col" id="bs-navbar-collapse" style="padding-left: 0px;">
-		  		<ul class="nav navbar-nav" style="display: block !important">
-		  
+				<div class="collapse navbar-collapse col-9 col-sm-12 col-md-12 col-lg-8 col" id="bs-navbar-collapse" style="padding-left: 0px;">
+					<div class="head-logo"><a href="http://chatvl.com/">Chất VL</a></div>
+			  		<ul class="nav navbar-nav" style="display: block !important">
+			  
 
-					 	<li class="current"><a href="<?= $base_url .'/home'?>">Home</a></li>
-					 	<li class="current"><a href="<?= $base_url .'/hot'?>">Hot</a></li>
-						<li><a href="<?= $base_url?>/vote">Cho duyet</a>
-						<li><a href="<?= $base_url?>/photo">Anh</a></li>	
-						<li>
-							<a href="<?= $base_url?>/upload-photo">
-								<img src ='<?= $base_url?>/images/upload_icon.png' alt='Dang Anh' />Dang Anh
-							</a>
-						</li>
-			  	</ul>
-			  	<div id="headerRight">
+						 	<li class="current"><a href="<?= $base_url .'/home'?>">Home</a></li>
+						 	<li class="current"><a href="<?= $base_url .'/hot'?>">Hot</a></li>
+							<li><a href="<?= $base_url?>/vote">Cho duyet</a>
+							<li><a href="<?= $base_url?>/photo">Anh</a></li>	
+							<li>
+								<a href="<?= $base_url?>/upload-photo">
+									<img src ='<?= $base_url?>/images/upload_icon.png' alt='Dang Anh' />Dang Anh
+								</a>
+							</li>
+				  	</ul>
+				  	<div id="headerRight">
 						<?php
 						if (
 							
 							!$user
 							){
 					 	?>
-					        <div class="login">
+					        <div id="login">
 					            <a href="<?= $base_url?>/login">Đăng nhập</a>
 					        </div>
+					        <div id="upload">
+					        	<a href="http://chatvl.com/submit">Đăng bài</a>
+			        		</div>
 						
 						<?php
 						}else{
@@ -83,7 +59,6 @@
 					        	</a>
 					            <ul class='ul_info'>
 					            	
-					                <!-- <li><a href="<?= $base_url?>/photos/<?php echo $user->id;?>"/>Ảnh của bạn</a></li> -->
 					                <li>
 					                	<a href="<?= $base_url?>/user/<?php echo $user->username?>">Trang cá nhân</a>
 					                </li>
@@ -94,8 +69,8 @@
 
 						<?php } ?>
 					</div>
-
-			  	<!-- <div id="block"></div> -->
+					<!-- end header right -->
+				</div>
 		  		
 	  		</div>
 	  	</div>

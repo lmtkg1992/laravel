@@ -6,10 +6,64 @@ a{
 }
 
 /*navigation*/
-#nav {
-    width: 70%;
-    margin: 0;
-    padding: 7px 6px 0;
+#navbar {
+    min-height: 46px;
+    height: 46px;
+    .navbar-header{
+        width: 100%;
+        .collapse.navbar-collapse{
+            .head-logo {
+                float: left;
+                margin-left: 0;
+                a {
+                  background: url("../images/logo-white.png") no-repeat;
+                  display: block;
+                  text-indent: -9999px;
+                  width: 150px;
+                  height: 30px;
+                  margin: 8px 0;
+                }
+            }
+            padding-right: 0;
+           
+            width: 100%;
+            ul{
+                width: 500px;
+            }
+            > #headerRight {
+                float: right;
+                width: 300px;
+                height: 50px;
+                #login{
+                    margin-top: 15px;
+                    display: inline-block;
+                }
+                #upload{
+                    display: inline-block;
+                    /*line-height: 30px;*/
+                    border-radius: 3px;
+                    font-size: 13px;
+                    background-color: #ff3c1f;
+                    font-weight: bold;
+                    width: 90px;
+                    a{
+                        color: #fff;
+                        padding: 10px 12px;
+                    }
+                }
+                .ul_info{
+                    position: absolute;
+                    z-index: 999;
+                    background-color: rgb(248, 248, 248);
+                    padding-left: 5px;
+                    width: 125px;
+                    border: 1px solid rgb(231, 227, 227);
+                    border-radius: 0 0 5px 5px;
+                    border-top-width: 0;
+                }
+            }
+        }
+    }
     
     li {
         margin: 0 5px;
@@ -17,134 +71,38 @@ a{
         float: left;
        
         list-style: none;
+        .current {
+            border-bottom: 3px solid transparent;
+            border-color: #ee0005;
+            a {
+                color: #ee0005;
+                font-weight: bold;
+            }      
+        }
+        a{
+            color: #777;
+            -webkit-transition: color .2s linear;
+            &:hover{
+                color: #000;
+            }
+        }
         &:hover > ul {
             display: block;
         }
     }
     &:hover {
         &> a {
-             /*background: #666 url(../images/gradient.png) repeat-x 0 -40px;*/
-            color: #FFFFFF;
-            /*border-top: solid 1px #f8f8f8;*/
-
+         /*   color: #FFFFFF;
             -webkit-box-shadow: 0 1px 1px rgba(0,0,0, .2);
             -moz-box-shadow: 0 1px 1px rgba(0,0,0, .2);
-            /*box-shadow: 0 1px 1px rgba(0,0,0, .2);*/
-
-            /*text-shadow: 0 1px 0 rgba(255,255,255, 1);*/
-            text-shadow: 1px 1px 1px #FFFFFF;
+            text-shadow: 1px 1px 1px #FFFFFF;*/
         }
 
-    }
-    a {
-        font-weight: bold;
-        color: #e7e5e5;
-        text-decoration: none;
-        display: block;
-        padding:  8px 20px;
-        margin: 0;
-
-        -webkit-border-radius: 1.6em;
-        -moz-border-radius: 1.6em;
-        
-        text-shadow: 0 1px 1px rgba(0,0,0, .3);
-
-        img{
-
-            vertical-align: middle;
-        }
-        &:hover{
-            color: #fff;
-        }
-    }
-    .current a {
-        /*background: #666 url(../images/gradient.png) repeat-x 0 -40px;*/
-        color: #FFFFFF;
-        /*border-top: solid 1px #f8f8f8;*/
-
-        -webkit-box-shadow: 0 1px 1px rgba(0,0,0, .2);
-        -moz-box-shadow: 0 1px 1px rgba(0,0,0, .2);
-        /*box-shadow: 0 1px 1px rgba(0,0,0, .2);*/
-
-        /*text-shadow: 0 1px 0 rgba(255,255,255, 1);*/
-        text-shadow: 1px 1px 1px #FFFFFF;
-    }
-    ul {
-        a:hover {
-            background: #0078ff url(../images/gradient.png) repeat-x 0 -100px !important;
-            color: #fff !important;
-
-            -webkit-border-radius: 0;
-            -moz-border-radius: 0;
-
-            text-shadow: 0 1px 1px rgba(0,0,0, .1);
-        }
-
-        display: none;
-
-        margin: 0;
-        padding: 0;
-        width: 185px;
-        position: absolute;
-        top: 35px;
-        left: 0;
-        background: #ddd url(../images/gradient.png) repeat-x 0 0;
-        border: solid 1px #b4b4b4;
-
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
-
-        -webkit-box-shadow: 0 1px 3px rgba(0,0,0, .3);
-        -moz-box-shadow: 0 1px 3px rgba(0,0,0, .3);
-        box-shadow: 0 1px 3px rgba(0,0,0, .3);
-        li {
-            float: none;
-            margin: 0;
-            padding: 0;
-            &:first-child > a {
-                -webkit-border-top-left-radius: 9px;
-                -moz-border-radius-topleft: 9px;
-
-                -webkit-border-top-right-radius: 9px;
-                -moz-border-radius-topright: 9px;
-            }
-            &:last-child > a {
-                -webkit-border-bottom-left-radius: 9px;
-                -moz-border-radius-bottomleft: 9px;
-
-                -webkit-border-bottom-right-radius: 9px;
-                -moz-border-radius-bottomright: 9px;
-            }
-
-        }
-        a {
-            font-weight: normal;
-            text-shadow: 0 1px 0 #fff;
-        }
-        ul {
-            left: 181px;
-            top: -3px;
-        }
-
-
-    }
-
-}
-
-.collapse.navbar-collapse{
-    width: 100%;
-    > #headerRight .ul_info{
-        position: absolute;
-        z-index: 999;
-        background-color: rgb(248, 248, 248);
-        padding-left: 5px;
-        width: 125px;
-        border: 1px solid rgb(231, 227, 227);
-        border-radius: 0 0 5px 5px;
-        border-top-width: 0;
     }
 }
+/*end navigation*/
+
+
 
 /*switch dang anh & video*/
 .head {
@@ -187,7 +145,7 @@ a{
 
 
 /*videos list*/
-#entries-content.list { 
+#items-content.list { 
     ul {
         .col-1 li {
             div.info {
