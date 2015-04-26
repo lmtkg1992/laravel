@@ -41,7 +41,7 @@
 					            <a href="<?= $base_url?>/login">Đăng nhập</a>
 					        </div>
 					        <div id="upload">
-					        	<a href="http://chatvl.com/submit">Đăng bài</a>
+					        	<a href="<?php echo $base_url?>/upload-video">Đăng bài</a>
 			        		</div>
 						
 						<?php

@@ -253,7 +253,7 @@ class UserController extends BaseController
                 
                 'user_id'       =>Auth::user()->id,
                 'url'     		=> Input::get('url'),
-                'youtube_id' 	=> $embed[1],
+                'youtube_id' 	=> isset($embed[1]) ? $embed[1] : '',
                	
                 'view_count'    => '', 
                 'comment_count' => '',

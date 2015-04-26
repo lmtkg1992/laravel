@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
+-- version 4.3.11
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Mar 10, 2015 at 03:24 PM
--- Server version: 5.6.21
--- PHP Version: 5.5.19
+-- Host: 127.0.0.1
+-- Generation Time: Apr 26, 2015 at 05:48 PM
+-- Server version: 5.6.24
+-- PHP Version: 5.6.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `entertainment`
+-- Database: `social_network`
 --
 
 -- --------------------------------------------------------
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `files` (
-`file_id` int(50) NOT NULL,
+  `file_id` int(50) NOT NULL,
   `parent_type` varchar(32) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
   `parent_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `user_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -504,7 +504,7 @@ INSERT INTO `files` (`file_id`, `parent_type`, `parent_id`, `user_id`, `creation
 --
 
 CREATE TABLE IF NOT EXISTS `messages` (
-`mes_id` int(11) NOT NULL,
+  `mes_id` int(11) NOT NULL,
   `msg` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
 
@@ -567,7 +567,7 @@ INSERT INTO `messages` (`mes_id`, `msg`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `photos` (
-`id` int(11) unsigned NOT NULL,
+  `id` int(11) unsigned NOT NULL,
   `title` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
   `user_id` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `url` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
@@ -645,24 +645,25 @@ INSERT INTO `photos` (`id`, `title`, `user_id`, `url`, `creation_date`, `modifie
 --
 
 CREATE TABLE IF NOT EXISTS `tags` (
-`id` int(11) NOT NULL,
-  `name` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+  `id` int(11) NOT NULL,
+  `name` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `rank` int(11) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tags`
 --
 
-INSERT INTO `tags` (`id`, `name`) VALUES
-(12, 'gau'),
-(13, 'cuộc sống'),
-(14, ''),
-(15, 'thể thao'),
-(16, 'dien vien'),
-(17, 'phu nua'),
-(18, 'thien than'),
-(19, 'sieu xe'),
-(20, 'duong yen');
+INSERT INTO `tags` (`id`, `name`, `rank`) VALUES
+(12, 'gau', 0),
+(13, 'cuộc sống', 0),
+(14, '', 0),
+(15, 'thể thao', 0),
+(16, 'dien vien', 0),
+(17, 'phu nua', 0),
+(18, 'thien than', 0),
+(19, 'sieu xe', 0),
+(20, 'duong yen', 0);
 
 -- --------------------------------------------------------
 
@@ -671,7 +672,7 @@ INSERT INTO `tags` (`id`, `name`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `tags_photos` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `photo_id` int(11) NOT NULL,
   `tag_id` int(11) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
@@ -766,7 +767,7 @@ INSERT INTO `users` (`id`, `email`, `username`, `displayname`, `photo_id`, `stat
 --
 
 CREATE TABLE IF NOT EXISTS `videos` (
-`id` int(50) NOT NULL,
+  `id` int(50) NOT NULL,
   `title` varchar(128) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `user_id` varchar(250) NOT NULL,
   `url` text NOT NULL,
@@ -938,7 +939,7 @@ INSERT INTO `votes` (`vote_id`, `user_id`, `album_id`, `result_vote`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `wishlists` (
-`wishlist_id` int(11) unsigned NOT NULL,
+  `wishlist_id` int(11) unsigned NOT NULL,
   `user_id` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `creation_date` datetime NOT NULL,
   `modified_date` datetime NOT NULL,
@@ -953,49 +954,49 @@ CREATE TABLE IF NOT EXISTS `wishlists` (
 -- Indexes for table `files`
 --
 ALTER TABLE `files`
- ADD PRIMARY KEY (`file_id`), ADD KEY `PARENT` (`parent_type`,`parent_id`), ADD KEY `user_id` (`user_id`);
+  ADD PRIMARY KEY (`file_id`), ADD KEY `PARENT` (`parent_type`,`parent_id`), ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `messages`
 --
 ALTER TABLE `messages`
- ADD PRIMARY KEY (`mes_id`);
+  ADD PRIMARY KEY (`mes_id`);
 
 --
 -- Indexes for table `photos`
 --
 ALTER TABLE `photos`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tags`
 --
 ALTER TABLE `tags`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tags_photos`
 --
 ALTER TABLE `tags_photos`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `videos`
 --
 ALTER TABLE `videos`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `wishlists`
 --
 ALTER TABLE `wishlists`
- ADD PRIMARY KEY (`wishlist_id`);
+  ADD PRIMARY KEY (`wishlist_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -1005,37 +1006,37 @@ ALTER TABLE `wishlists`
 -- AUTO_INCREMENT for table `files`
 --
 ALTER TABLE `files`
-MODIFY `file_id` int(50) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=465;
+  MODIFY `file_id` int(50) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=465;
 --
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-MODIFY `mes_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=47;
+  MODIFY `mes_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=47;
 --
 -- AUTO_INCREMENT for table `photos`
 --
 ALTER TABLE `photos`
-MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=73;
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=73;
 --
 -- AUTO_INCREMENT for table `tags`
 --
 ALTER TABLE `tags`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `tags_photos`
 --
 ALTER TABLE `tags_photos`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `videos`
 --
 ALTER TABLE `videos`
-MODIFY `id` int(50) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=28;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT for table `wishlists`
 --
 ALTER TABLE `wishlists`
-MODIFY `wishlist_id` int(11) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `wishlist_id` int(11) unsigned NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
