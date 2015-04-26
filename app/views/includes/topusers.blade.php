@@ -12,6 +12,7 @@
   </div>
 <div class="topUsers">
 <?php 
+if (0)
 	foreach ($topusers as $key => $item) {
 ?>
 
