@@ -4,8 +4,8 @@
 
     <?php $base_url = URL::to('/'); ?>
 
-    <div id="entries-content" class="list">
-        <ul id="entries-content-ul" class="col-1"> 
+    <div id="items-content" class="list">
+        <ul id="items-content-ul" class="col-1"> 
 
         <?php
 
@@ -22,16 +22,29 @@
         <a href="#" onclick="return false;" class="previous disabled" <?php if ($page ==1) echo 'style="opacity:0.1"' ?>>« Trang trước</a>
         <a href="<?php echo $base_url . '/home/'.($page + 1)?>" class="older">Trang sau »</a>
     </div>
-<script type="text/javascript">
+  <script type="text/javascript">
     jQuery( document ).ready( function( $ ) {
-        $('.vote-video').on( 'click', function() {
+        $('.vote-action-video').on( 'click', function() {
+            vid = $(this).attr('data-video-id');
+            vvote = $(this).attr('data-value');
             $.post(
                 "voteAjax",
                 {
-                    "setting_value": '123'
+                    "vid":vid ,
+                    "vvote":vvote ,
                 },
-                function( data ) {
+                function(data) {
                     //do something with data/response returned by server
+                    if(data.error == false){
+                        $('ul.vote-'+vid+' li').removeClass('highlight-vote');
+                        if(data.result == 1){
+                            $('ul.actions li.vote-up-'+vid).addClass('highlight-vote');
+                        }
+                        else
+                        if(data.result == -1){
+                            $('ul.actions li.vote-down-'+vid).addClass('highlight-vote');
+                        }
+                    }
                 },
                 'json'
             );

@@ -23,15 +23,15 @@
                 <span title="Lượt xem" class="views"><?php echo $video->view_count?></span>
                 <span class="comments"><?php echo $video->comment_count?></span>
             </div>
-            <div>
-                <div id='votedown' data-video-id='<?= $video->video_id?>' data-value='1' class="vote-action-video">
-                    Chan
-                </div>
-                <div id='voteup' data-video-id='<?= $video->video_id?>' data-value='-1' class="vote-action-video">
-                    Hay
-                </div>
-            </div>
-           
-        </div>
+                <ul class="actions vote-<?= $video->video_id?>">
+                    <li class="vote-down-<?= $video->video_id?>">
+                        <a id="vote-down-btn-<?= $video->video_id?>" data-video-id='<?= $video->video_id?>' data-value='-1' class="vote-action-video" href="javascript:void(0);"><span>Chán</span></a>
+                    </li>
+                    <li class="vote-up-<?= $video->video_id?>">
+                        <a id="vote-up-btn-<?= $video->video_id?>" data-video-id='<?= $video->video_id?>' data-value='1' class="vote-action-video" href="javascript:void(0);"><span>Chất</span></a>
+                    </li>
+                </ul>
+
+      </div>
     </div>
 </li> 

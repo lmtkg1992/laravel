@@ -23,7 +23,6 @@
                 <span title="Lượt xem" class="views"><?php echo $video->view_count?></span>
                 <span class="comments"><?php echo $video->comment_count?></span>
             </div>
-           
         </div>
     </div>
 </li> 
