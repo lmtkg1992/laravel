@@ -12,6 +12,9 @@
 */
 
 Route::get("home/{page?}", ['uses' => "HomeController@index"]);
+Route::get("vote/{page?}", ['uses' => "VoteController@index"]);
+
+Route::post("voteAjax", ['uses' => "VoteController@voteAjax"]);
 
 Route::get("photo/{page?}", ['uses' => "PhotoController@index"]);
 
