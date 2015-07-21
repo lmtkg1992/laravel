@@ -22,11 +22,11 @@
 
 						 	<li class="current"><a href="<?= $base_url .'/home'?>">Home</a></li>
 						 	<li class="current"><a href="<?= $base_url .'/hot'?>">Hot</a></li>
-							<li><a href="<?= $base_url?>/vote">Cho duyet</a>
-							<li><a href="<?= $base_url?>/photo">Anh</a></li>	
+							<li><a href="<?= $base_url?>/vote">Chờ duyệt</a>
+							<li><a href="<?= $base_url?>/photo">Ảnh</a></li>
 							<li>
 								<a href="<?= $base_url?>/upload-photo">
-									<img src ='<?= $base_url?>/images/upload_icon.png' alt='Dang Anh' />Dang Anh
+									<img src ='<?= $base_url?>/images/upload_icon.png' alt='Dang Anh' />Đăng Ảnh
 								</a>
 							</li>
 				  	</ul>
@@ -38,7 +38,7 @@
 							){
 					 	?>
 					        <div id="login">
-					            <a href="<?= $base_url?>/login">Đăng nhập</a>
+					            <a href="<?= $base_url?>/login">Đăng nhậ̣p</a>
 					        </div>
 					        <div id="upload">
 					        	<a href="<?php echo $base_url?>/upload-video">Đăng bài</a>

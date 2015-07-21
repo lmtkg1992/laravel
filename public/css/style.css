@@ -100,7 +100,7 @@ a:hover {
 /*end navigation*/
 /*switch dang anh & video*/
 .head {
-  background-color: #f4f4f4;
+  background-color: #E8E8E8;
   border-radius: 5px 5px 0 0;
   -webkit-border-radius: 5px 5px 0 0;
   -moz-border-radius: 5px 5px 0 0;
@@ -120,6 +120,14 @@ a:hover {
   margin-left: 5px;
   display: inline-block;
 }
+.head ul.switch li .arrow-up {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid white;
+}
 .head ul.switch li a {
   font-size: 12px;
   font-weight: bold;
@@ -132,6 +140,9 @@ a:hover {
   text-align: center;
   padding-top: 5px;
   display: inline;
+}
+.head ul.switch li.tab_photo .arrow-up {
+  margin-top: 2px;
 }
 .head ul.switch li.tab_video img {
   height: 40px;
@@ -388,4 +399,7 @@ h3.topUsers {
 }
 .darkBox {
   height: 108px;
+}
+.error {
+  color: red;
 }

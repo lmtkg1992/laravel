@@ -10,8 +10,8 @@
 
 <div class="content form_video  col-md-12">
     <form  enctype="multipart/form-data" method="post" class="form-horizontal" action="<?php echo $base_url?>/submit-video">
-        <input name="type" value="Photo" type="hidden">
-        <input id="post_type" name="post_type" value="Photo" type="hidden">
+        <input name="type" value="Video" type="hidden">
+        <input id="post_type" name="post_type" value="Video" type="hidden">
         <h3>Đăng Video</h3>
 
         <div class="form-group row">
@@ -22,7 +22,7 @@
             <div class="col-xs-12 col-md-8">
                 
            
-                <input id="photo_post_url" type="text" class="form-control" name="url" value="" style="display:block;">
+                <input id="video_post_url" type="text" class="form-control" name="url" value="" style="display:block;">
                 <p class="error">{{ $errors->first('url') }}</p>
                
             </div>
@@ -36,7 +36,7 @@
             <div class="col-xs-12 col-md-8">
                 
                 <input id="post_title" class="form-control" name="title" maxlength="150" value="" type="text">
-                <p class="error">{{ $errors->first('url') }}</p>
+                <p class="error">{{ $errors->first('title') }}</p>
             </div>
         </div>
         <div class="form-group row">
@@ -75,13 +75,18 @@
 
         <div class="form-group">
             <div class="col-xs-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-default">Quay Lai</button>
-                <button type="submit" class="btn btn-primary">Dang Video</button>
+                <button type="submit" class="btn btn-default">Quay Lại</button>
+                <button type="submit" class="btn btn-primary">Đăng Video</button>
             </div>
         </div>
     </form>
 </div>
 <script type="text/javascript">
+    var upload_url = '<?php echo Request::url()?>';
+    if (upload_url.search('upload-video') !== -1){
+        $('ul.switch .tab_video .arrow-up').show();
+        $('ul.switch .tab_photo .arrow-up').hide();
+    }
     $(document).ready(function() {
         $("#tags").tagit({
           allowSpaces: true,

@@ -5,11 +5,7 @@
 
 <?php $base_url = URL::to('/')?>
 
-
-
-
  @include('pages.elements.switchPhotoVideo')
-
 
 <div class="content form_photo col-xs-12 col-sm-12 col-md-12">
     <form  enctype="multipart/form-data" method="post" class="form-horizontal" action="<?php echo $base_url?>/submit-photo">
@@ -85,12 +81,19 @@
     </form>
 </div>
 <script type="text/javascript">
+
+
+    var upload_url = '<?php echo Request::url()?>';
+    if (upload_url.search('upload-photo') !== -1){
+        $('ul.switch .tab_photo .arrow-up').show();
+        $('ul.switch .tab_video .arrow-up').hide();
+    }
     $(document).ready(function() {
         $("#tags").tagit({
           allowSpaces: true,
 
         });
-        $('input[type=file]').bootstrapFileInput();
+//        $('input[type=file]').bootstrapFileInput();
     });
 </script>
 

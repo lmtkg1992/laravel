@@ -3,10 +3,12 @@
         <li class="tab_photo ">
             <span ><img src="<?php echo $base_url?>/images/photo.png"></span>
             <a class="photo" href="<?php echo $base_url?>/upload-photo">Đăng Ảnh</a>
+            <span class="arrow-up"></span>
         </li>
         <li class="tab_video current">
              <span ><img src="<?php echo $base_url?>/images/video.png"></span>
             <a class="video" href="<?php echo $base_url?>/upload-video">Đăng Video</a>
+            <span class="arrow-up"></span>
         </li>
     </ul>
 </div>

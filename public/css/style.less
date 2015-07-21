@@ -110,7 +110,7 @@ a{
 
 /*switch dang anh & video*/
 .head {
-    background-color: #f4f4f4;
+    background-color: #E8E8E8;
     border-radius: 5px 5px 0 0;
     -webkit-border-radius: 5px 5px 0 0;
     -moz-border-radius: 5px 5px 0 0;
@@ -126,8 +126,18 @@ a{
         li {
 
             width: 150px;
-            margin-left: 5px;   
+            margin-left: 5px;
             display: inline-block;
+            .arrow-up {
+                display: block;
+                width: 0;
+                height: 0;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+
+                border-bottom: 20px solid white;
+            }
+
     
             a {
                 font-size: 12px;
@@ -141,6 +151,11 @@ a{
                 text-align: center;
                 padding-top: 5px;
                 display: inline;
+            }
+            &.tab_photo{
+                .arrow-up {
+                    margin-top: 2px;
+                }
             }
             &.tab_video {
                 img{
@@ -455,4 +470,7 @@ h3.topUsers{
 }
 .darkBox{
     height: 108px;
+}
+.error{
+    color: red;
 }
