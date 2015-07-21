@@ -42,7 +42,7 @@
         <div class="form-group row">
 
             <div class="col-xs-12 col-md-4">
-                <label class="control-label" for="tag">Tags<span>(không bắt buộc):</span></label>
+                <label class="control-label" for="tag">Tags <span>(không bắt buộc):</span></label>
             </div>
             <div class="col-xs-12 col-md-8">
 
@@ -57,7 +57,7 @@
         <div class="form-group row">
             <div class="col-xs-12 col-md-4">
 
-                <label class="control-label" for="source">Nguồn<span>(không bắt buộc)</span>:</label>
+                <label class="control-label" for="source">Nguồn <span>(không bắt buộc)</span>:</label>
             </div>
             <div class="col-xs-12 col-md-8">
                 <input class="form-control" name="source" value="" maxlength="300" type="text">

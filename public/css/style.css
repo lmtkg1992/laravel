@@ -133,6 +133,9 @@ a:hover {
   padding-top: 5px;
   display: inline;
 }
+.head ul.switch li.tab_video img {
+  height: 40px;
+}
 /*videos list*/
 #items-content.list ul .col-1 li div.info a.fix {
   margin: 0px;
@@ -386,26 +389,3 @@ h3.topUsers {
 .darkBox {
   height: 108px;
 }
-
-li.gag-link div.post-info ul.actions{
-  list-style: none outside none;
-  margin: 10px 0 0 0;
-  padding: 0;
-}
-
-li.gag-link div.post-info ul.actions li{
-  float: left;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  padding: 5px 15px 5px 15px;
-  margin-left: 8px;
-}
-
-li.gag-link div.post-info ul.actions li a{
-  font-size: large;
-}
-
-.highlight-vote{
-    background-color: yellow;
-}
-
