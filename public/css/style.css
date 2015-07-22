@@ -116,7 +116,7 @@ a:hover {
   margin-bottom: 0;
 }
 .head ul.switch li {
-  width: 150px;
+  width: 128px;
   margin-left: 5px;
   display: inline-block;
 }
@@ -148,6 +148,9 @@ a:hover {
   height: 40px;
 }
 /*videos list*/
+#items-content.list ul {
+  padding-left: 0;
+}
 #items-content.list ul .col-1 li div.info a.fix {
   margin: 0px;
   background: url(../images/sprite_v12.png) no-repeat 0 -2257px;
@@ -192,7 +195,7 @@ a:hover {
   padding-bottom: 20px;
   border-bottom: 1px solid #ddd;
   width: 100%;
-  float: left;
+  /*float: left;*/
   margin-bottom: 10px;
   list-style-type: none;
   height: 415px;
@@ -203,18 +206,19 @@ a:hover {
   float: right;
 }
 .gag-link .content {
-  float: left;
   text-align: center;
-  width: 68%;
-  position: relative;
 }
-.gag-link .img-wrap a img {
-  width: 460px;
-  height: 345px;
+.gag-link .content .img-wrap {
+  /*.videoIndicator{
+                position: relative;
+                top: -200px;
+            }*/
 }
-.gag-link .img-wrap .videoIndicator {
-  position: relative;
-  top: -200px;
+.gag-link .content .img-wrap a img {
+  /* min-width: 270px;
+                width: 100%;
+                max-width: 460px;
+                max-height: 345px;*/
 }
 /*top users*/
 div.topUsers {
@@ -352,7 +356,6 @@ div.sensitive_content p {
 }
 div.form_photo,
 div.form_video {
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#f9fdff));
   border: 1px solid #f0f0f0;
 }
 span.tagit-label {
@@ -402,4 +405,30 @@ h3.topUsers {
 }
 .error {
   color: red;
+}
+/*laptop*/
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .gag-link .img-wrap a img {
+    width: 460px;
+    height: 345px;
+  }
+  .gag-link .img-wrap .videoIndicator {
+    position: relative;
+    top: -200px;
+  }
+}
+/*phone*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  #navbar .navbar-header .collapse {
+    display: block;
+    visibility: visible;
+  }
+  .gag-link .img-wrap a img {
+    width: 270px;
+    height: 203px;
+  }
+  .gag-link .img-wrap .videoIndicator {
+    position: relative;
+    top: -125px;
+  }
 }

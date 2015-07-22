@@ -125,7 +125,7 @@ a{
         margin-bottom: 0;
         li {
 
-            width: 150px;
+            width: 128px;
             margin-left: 5px;
             display: inline-block;
             .arrow-up {
@@ -171,6 +171,8 @@ a{
 /*videos list*/
 #items-content.list { 
     ul {
+        padding-left: 0;
+
         .col-1 li {
             div.info {
                 a{
@@ -231,7 +233,7 @@ a{
     padding-bottom: 20px;
     border-bottom: 1px solid #ddd;
     width: 100%;
-    float: left;
+    /*float: left;*/
     margin-bottom: 10px;
     list-style-type:none;
     height: 415px;
@@ -241,24 +243,27 @@ a{
         float: right;
     }
     .content{
-        float: left;
         text-align: center;
-        width: 68%;
-        position: relative;
-    }
-    .img-wrap{
+    
+        .img-wrap{
 
-        a img{
-            width: 460px;
-            height: 345px;
-        }
-        .videoIndicator{
-            position: relative;
-            top: -200px;
+            a img{
+               /* min-width: 270px;
+                width: 100%;
+                max-width: 460px;
+                max-height: 345px;*/
+            }
+            /*.videoIndicator{
+                position: relative;
+                top: -200px;
+            }*/
         }
     }
     
 }
+
+
+
 /*top users*/
 
 div.topUsers{
@@ -474,3 +479,54 @@ h3.topUsers{
 .error{
     color: red;
 }
+
+/*laptop*/
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    .gag-link{
+        .img-wrap{
+
+            a img{
+                width: 460px;
+                height: 345px;
+            }
+            .videoIndicator {
+               
+                position: relative;
+                top: -200px;
+            }
+        }
+    }
+}
+
+
+/*phone*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px){
+
+    #navbar .navbar-header .collapse {
+       
+        display: block;
+        visibility: visible;
+    }
+
+    .gag-link{
+        .img-wrap{
+            a img{
+                width: 270px;
+                height: 203px;
+            }
+
+            .videoIndicator {
+               
+                position: relative;
+                top: -125px;
+            }
+        }
+    }
+}
+

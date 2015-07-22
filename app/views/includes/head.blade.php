@@ -12,23 +12,20 @@
  		<div class="container">
  		
 	 		<div class="navbar-header">
-	 		
-		     
 
-				<div class="collapse navbar-collapse col-9 col-sm-12 col-md-12 col-lg-8 col" id="bs-navbar-collapse" style="padding-left: 0px;">
+				<div class="collapse navbar-collapse col-xs-12 col-sm-12 col-md-12 col-lg-8 col" id="bs-navbar-collapse">
 					<div class="head-logo"><a href="http://chatvl.com/">Chất VL</a></div>
-			  		<ul class="nav navbar-nav" style="display: block !important">
-			  
+			  		<ul class="nav navbar-nav">
 
-						 	<li class="current"><a href="<?= $base_url .'/home'?>">Home</a></li>
-						 	<li class="current"><a href="<?= $base_url .'/hot'?>">Hot</a></li>
-							<li><a href="<?= $base_url?>/vote">Chờ duyệt</a>
-							<li><a href="<?= $base_url?>/photo">Ảnh</a></li>
-							<li>
-								<a href="<?= $base_url?>/upload-photo">
-									<img src ='<?= $base_url?>/images/upload_icon.png' alt='Dang Anh' />Đăng Ảnh
-								</a>
-							</li>
+					 	<li class="current"><a href="<?= $base_url .'/home'?>">Home</a></li>
+					 	<li class="current"><a href="<?= $base_url .'/hot'?>">Hot</a></li>
+						<li><a href="<?= $base_url?>/vote">Chờ duyệt</a>
+						<li><a href="<?= $base_url?>/photo">Ảnh</a></li>
+						<li>
+							<a href="<?= $base_url?>/upload-photo">
+								<img src ='<?= $base_url?>/images/upload_icon.png' alt='Dang Anh' />Đăng Ảnh
+							</a>
+						</li>
 				  	</ul>
 				  	<div id="headerRight">
 						<?php
