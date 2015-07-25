@@ -148,10 +148,10 @@ a:hover {
   height: 40px;
 }
 /*videos list*/
-#items-content.list ul {
+#video-content.list ul {
   padding-left: 0;
 }
-#items-content.list ul .col-1 li div.info a.fix {
+#video-content.list ul .col-1 li div.info a.fix {
   margin: 0px;
   background: url(../images/sprite_v12.png) no-repeat 0 -2257px;
   padding-left: 16px;
@@ -160,37 +160,37 @@ a:hover {
   visibility: hidden;
   color: #399A35;
 }
-#items-content.list ul .col-1 li div.info a.fix:hover {
+#video-content.list ul .col-1 li div.info a.fix:hover {
   color: #43b93f;
   text-decoration: underline;
 }
-#items-content.list ul .col-1 li div.info a.report {
+#video-content.list ul .col-1 li div.info a.report {
   margin: -16px 0 30px;
   visibility: hidden;
 }
-#items-content.list ul .col-1 li div.info a.report:hover {
+#video-content.list ul .col-1 li div.info a.report:hover {
   color: #ee5b8c;
   text-decoration: underline;
 }
-#items-content.list ul .info h1 {
+#video-content.list ul .info h1 {
   margin-top: 0;
   color: #000;
   font-size: 18px;
   line-height: 28px;
 }
-#items-content.list ul .info h1 a {
+#video-content.list ul .info h1 a {
   color: #000;
   font-size: 18px;
   line-height: 28px;
 }
-#items-content.list ul .info a:hover {
+#video-content.list ul .info a:hover {
   color: #0087F7;
   text-decoration: none;
 }
-#items-content.list ul li img {
+#video-content.list ul li img {
   margin: 0 auto;
 }
-.item {
+#video-content.list ul .video {
   padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #ddd;
@@ -200,25 +200,25 @@ a:hover {
   list-style-type: none;
   height: 415px;
 }
-.item .post-info {
+#video-content.list ul .video .post-info {
   position: relative;
   width: 200px;
   float: right;
 }
-.item .content {
+#video-content.list ul .video .content {
   text-align: center;
 }
-.item .content .img-wrap {
+#video-content.list ul .video .content .img-wrap {
   /*.videoIndicator{
-                position: relative;
-                top: -200px;
-            }*/
+                        position: relative;
+                        top: -200px;
+                    }*/
 }
-.item .content .img-wrap a img {
+#video-content.list ul .video .content .img-wrap a img {
   /* min-width: 270px;
-                width: 100%;
-                max-width: 460px;
-                max-height: 345px;*/
+                        width: 100%;
+                        max-width: 460px;
+                        max-height: 345px;*/
 }
 /*top users*/
 div.topUsers {

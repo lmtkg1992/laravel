@@ -5,7 +5,7 @@
     <?php $base_url = URL::to('/'); ?>
 
     <div id="items-content" class="list">
-        <ul id="items-content-ul" class="col-1"> 
+        <ul id="items-content-ul"> 
 
         <?php
 

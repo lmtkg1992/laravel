@@ -73,9 +73,7 @@ class UserController extends BaseController
 	public function submit_photo()
 	{
 
- $file=fopen("d:/text.txt", "a");
- $write=fwrite($file,print_r("submit photo", true));
- fclose($file);
+
 
 		// var_dump(Input::get('tags'));
 		// die('ss');
