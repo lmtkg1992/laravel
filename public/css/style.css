@@ -24,10 +24,8 @@ a:hover {
   margin-left: 0;
 }
 #navbar .navbar-header .collapse.navbar-collapse .head-logo a {
-  background: url("../images/logo-white.png") no-repeat;
   display: block;
   text-indent: -9999px;
-  width: 150px;
   height: 30px;
   margin: 8px 0;
 }
@@ -174,6 +172,7 @@ a:hover {
 }
 #video-content.list ul .info h1 {
   margin-top: 0;
+  margin-bottom: 0;
   color: #000;
   font-size: 18px;
   line-height: 28px;
@@ -193,14 +192,16 @@ a:hover {
   border-bottom: 1px solid #ddd;
   width: 100%;
   /*float: left;*/
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
   list-style-type: none;
-  height: 415px;
+  /*height: 415px;*/
+  height: auto;
+  overflow: hidden;
 }
 #video-content.list ul li.video .post-info {
-  position: relative;
-  width: 200px;
-  float: right;
+  position: relative
+  /*width: 200px;*/
+  /*float: right;*/
 }
 #video-content.list ul li.video div.content {
   height: auto;
@@ -402,6 +403,15 @@ img.videoIndicator {
 }
 /*laptop*/
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  #navbar .head-logo a {
+    width: 150px;
+  }
+  #navbar .head-logo a #logo {
+    display: block;
+  }
+  #navbar .head-logo a #small-logo {
+    display: none;
+  }
   .video a img {
     width: 460px;
     height: 345px;
@@ -412,6 +422,25 @@ img.videoIndicator {
   #navbar .navbar-header .collapse {
     display: block;
     visibility: visible;
+  }
+  #navbar .head-logo a {
+    width: auto;
+  }
+  #navbar .head-logo a #logo {
+    display: none;
+  }
+  #navbar .head-logo a #small-logo {
+    display: block;
+  }
+  #navbar #headerRight {
+    display: none;
+  }
+  #navbar ul li:last-child {
+    display: none;
+  }
+  #navbar ul li a {
+    padding-left: 5px;
+    padding-right: 5px;
   }
   .video a img {
     width: 270px;
