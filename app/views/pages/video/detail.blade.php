@@ -26,7 +26,8 @@
                     <div class="img-wrap">
                         <div id="divVideoAds">
                             <div id="video-container">
-                                 <iframe  height="400" width="700" src="//www.youtube.com/embed/<?php echo $data->youtube_id;?>" frameborder="0" allowfullscreen></iframe>
+                                 <iframe  height="400" width="700" src="//www.youtube.com/embed/<?php echo $data->youtube_id;?>" frameborder="0" allowfullscreen>
+                                 </iframe>
                             </div>
                         </div>
                     </div>

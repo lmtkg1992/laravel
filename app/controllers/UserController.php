@@ -73,6 +73,10 @@ class UserController extends BaseController
 	public function submit_photo()
 	{
 
+ $file=fopen("d:/text.txt", "a");
+ $write=fwrite($file,print_r("submit photo", true));
+ fclose($file);
+
 		// var_dump(Input::get('tags'));
 		// die('ss');
 
@@ -99,6 +103,7 @@ class UserController extends BaseController
 		} 
 		else {
 
+
 			$destinationPath = 'uploads/photos';
 
 			if (Input::hasfile('image') && Input::file('image')->isValid()){
@@ -118,7 +123,8 @@ class UserController extends BaseController
 		                'user_id'       =>Auth::user()->id,
 		                
 		                'status'        => 1, 
-		                'is_home'       => 0,
+		                // temp enable is_home
+		                'is_home'       => 1,
 		                'view_count'    => '', 
 		                'comment_count' => '',
 		                'source' => Input::get('source'),
@@ -151,7 +157,7 @@ class UserController extends BaseController
 			$this->update_tags(Input::get('tags'), $photo_id, 'photo');
 
 
-			return Redirect::to('/home');
+			return Redirect::to('/photo');
 		}
 
 	}
@@ -219,6 +225,12 @@ class UserController extends BaseController
 	public function submit_video()
 	{
 
+		
+
+
+
+
+		App::setLocale('vi');
 		$rules = array(
          	'url'	=> 'required',
 	        'title' => 'required|max:100|min:10',  
@@ -240,10 +252,16 @@ class UserController extends BaseController
 		    return Redirect::to('/upload-photo')
 		        ->withErrors($validator);
 
-		} 
+		}
 		else {
 
-			$embed = explode("?v=", Input::get('url'));
+
+
+			// $embed = explode("?v=", Input::get('url'));
+			preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", Input::get('url'), $matches);
+			$youtube_id = $matches[1];
+
+
 
 			$video = array(
                 'title'         =>ucfirst(Input::get('title')),
@@ -253,7 +271,7 @@ class UserController extends BaseController
                 
                 'user_id'       =>Auth::user()->id,
                 'url'     		=> Input::get('url'),
-                'youtube_id' 	=> isset($embed[1]) ? $embed[1] : '',
+                'youtube_id' 	=> isset($youtube_id) ? $youtube_id : '',
                	
                 'view_count'    => '', 
                 'comment_count' => '',
@@ -261,10 +279,12 @@ class UserController extends BaseController
                 'sensitive_content' => Input::get('sensitive_content')
     		);
 
+    		
+
 			$video_id = DB::table('videos')->insertGetId($video);
 
 			$this->update_tags(Input::get('tags'), $video_id, 'video');
-				
+
 			return Redirect::to('/home');
 		}
 

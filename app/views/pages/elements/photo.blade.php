@@ -1,4 +1,4 @@
-<li class="gag-link" gagid="" itemtype="list">
+<li class="item">
     <div class="content">
         
         <img style="max-width:400px" src="<?php echo $base_url . '/'.$photo->storage_path?>" alt="<?php echo $photo->title?>"/>

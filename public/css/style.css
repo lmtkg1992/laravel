@@ -190,7 +190,7 @@ a:hover {
 #items-content.list ul li img {
   margin: 0 auto;
 }
-.gag-link {
+.item {
   padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #ddd;
@@ -200,21 +200,21 @@ a:hover {
   list-style-type: none;
   height: 415px;
 }
-.gag-link .post-info {
+.item .post-info {
   position: relative;
   width: 200px;
   float: right;
 }
-.gag-link .content {
+.item .content {
   text-align: center;
 }
-.gag-link .content .img-wrap {
+.item .content .img-wrap {
   /*.videoIndicator{
                 position: relative;
                 top: -200px;
             }*/
 }
-.gag-link .content .img-wrap a img {
+.item .content .img-wrap a img {
   /* min-width: 270px;
                 width: 100%;
                 max-width: 460px;
@@ -408,11 +408,11 @@ h3.topUsers {
 }
 /*laptop*/
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
-  .gag-link .img-wrap a img {
+  .item .img-wrap a img {
     width: 460px;
     height: 345px;
   }
-  .gag-link .img-wrap .videoIndicator {
+  .item .img-wrap .videoIndicator {
     position: relative;
     top: -200px;
   }
@@ -423,11 +423,11 @@ h3.topUsers {
     display: block;
     visibility: visible;
   }
-  .gag-link .img-wrap a img {
+  .item .img-wrap a img {
     width: 270px;
     height: 203px;
   }
-  .gag-link .img-wrap .videoIndicator {
+  .item .img-wrap .videoIndicator {
     position: relative;
     top: -125px;
   }

@@ -1,4 +1,4 @@
-<li class="gag-link" gagid="" itemtype="list">
+<li class="item">
     <div class="content col-xs-12 col-sm-8 col-md-8">
         <div class="img-wrap">
             <a target="_blank" href="<?= $base_url . '/video/' .$video->video_id; ?>" class="jump_focus">
