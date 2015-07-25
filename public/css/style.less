@@ -221,10 +221,8 @@ a{
             }
 
         }
-        li img{
-            margin: 0 auto;
-        }
-        .video{
+        
+        li.video{
             padding-top: 20px;
             padding-bottom: 20px;
             border-bottom: 1px solid #ddd;
@@ -238,22 +236,10 @@ a{
                 width: 200px;
                 float: right;
             }
-            .content{
+            div.content{
+                height: auto;
+                position: relative;
                 text-align: center;
-            
-                .img-wrap{
-
-                    a img{
-                       /* min-width: 270px;
-                        width: 100%;
-                        max-width: 460px;
-                        max-height: 345px;*/
-                    }
-                    /*.videoIndicator{
-                        position: relative;
-                        top: -200px;
-                    }*/
-                }
             }
             
         }
@@ -269,7 +255,7 @@ a{
 
 div.topUsers{
     overflow: hidden;
-    .item {
+    .video {
         float: left;
         margin-bottom: 8px;
         width: 140px;
@@ -481,25 +467,28 @@ h3.topUsers{
     color: red;
 }
 
+img.videoIndicator {
+          
+    position: absolute;
+    top: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    left: 50%;
+}
+
 /*laptop*/
 @media screen 
   and (min-device-width: 1200px) 
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
 
-    .item{
-        .img-wrap{
+    .video{
 
-            a img{
-                width: 460px;
-                height: 345px;
-            }
-            .videoIndicator {
-               
-                position: relative;
-                top: -200px;
-            }
+        a img{
+            width: 460px;
+            height: 345px;
         }
+       
     }
 }
 
@@ -515,19 +504,13 @@ h3.topUsers{
         visibility: visible;
     }
 
-    .item{
-        .img-wrap{
-            a img{
-                width: 270px;
-                height: 203px;
-            }
-
-            .videoIndicator {
-               
-                position: relative;
-                top: -125px;
-            }
+    .video{
+        a img{
+            width: 270px;
+            height: 203px;
         }
+
+       
     }
 }
 

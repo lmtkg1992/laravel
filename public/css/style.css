@@ -187,10 +187,7 @@ a:hover {
   color: #0087F7;
   text-decoration: none;
 }
-#video-content.list ul li img {
-  margin: 0 auto;
-}
-#video-content.list ul .video {
+#video-content.list ul li.video {
   padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #ddd;
@@ -200,42 +197,32 @@ a:hover {
   list-style-type: none;
   height: 415px;
 }
-#video-content.list ul .video .post-info {
+#video-content.list ul li.video .post-info {
   position: relative;
   width: 200px;
   float: right;
 }
-#video-content.list ul .video .content {
+#video-content.list ul li.video div.content {
+  height: auto;
+  position: relative;
   text-align: center;
-}
-#video-content.list ul .video .content .img-wrap {
-  /*.videoIndicator{
-                        position: relative;
-                        top: -200px;
-                    }*/
-}
-#video-content.list ul .video .content .img-wrap a img {
-  /* min-width: 270px;
-                        width: 100%;
-                        max-width: 460px;
-                        max-height: 345px;*/
 }
 /*top users*/
 div.topUsers {
   overflow: hidden;
 }
-div.topUsers .item {
+div.topUsers .video {
   float: left;
   margin-bottom: 8px;
   width: 140px;
 }
-div.topUsers .item img {
+div.topUsers .video img {
   float: left;
   height: 50px;
   width: 50px;
   border-radius: 25px;
 }
-div.topUsers .item .info {
+div.topUsers .video .info {
   margin-left: 52px;
 }
 div.topUsers .name {
@@ -406,15 +393,18 @@ h3.topUsers {
 .error {
   color: red;
 }
+img.videoIndicator {
+  position: absolute;
+  top: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+  left: 50%;
+}
 /*laptop*/
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
-  .item .img-wrap a img {
+  .video a img {
     width: 460px;
     height: 345px;
-  }
-  .item .img-wrap .videoIndicator {
-    position: relative;
-    top: -200px;
   }
 }
 /*phone*/
@@ -423,12 +413,8 @@ h3.topUsers {
     display: block;
     visibility: visible;
   }
-  .item .img-wrap a img {
+  .video a img {
     width: 270px;
     height: 203px;
-  }
-  .item .img-wrap .videoIndicator {
-    position: relative;
-    top: -125px;
   }
 }
