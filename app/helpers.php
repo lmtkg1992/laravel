@@ -28,5 +28,8 @@
 		return '';
 	}
 
-    }
+}
+function show_view_count($view_count){
+	return number_format($view_count / 1000, 2) .'k';
+}
 ?>

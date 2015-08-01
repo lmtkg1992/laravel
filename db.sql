@@ -1005,3 +1005,7 @@ UPDATE users SET enabled=1, approved=1;
 UPDATE users SET PASSWORD='$2y$10$nW1C5oNjJjcq.2EbonwiMOYiveY.CxRjqg.gVBqnJrzJvrKx.O8iC';
 
 UPDATE users SET view_count = RAND()*(2500-100)+1000, liked = RAND()*(250-10)+1000;
+
+TRUNCATE TABLE photos;
+
+

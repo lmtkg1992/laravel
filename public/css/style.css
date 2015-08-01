@@ -30,7 +30,7 @@ a:hover {
   margin: 8px 0;
 }
 #navbar .navbar-header .collapse.navbar-collapse ul {
-  width: 500px;
+  fwidth: 500px;
 }
 #navbar .navbar-header .collapse.navbar-collapse > #headerRight {
   float: right;
@@ -229,20 +229,20 @@ div.topUsers {
 }
 div.topUsers .item {
   float: left;
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 70px;
 }
 div.topUsers .item a img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  -webkit-border-radius: 150px;
-  -moz-border-radius: 150px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
-  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
-div.topUsers .item a .name {
+div.topUsers .item a div.info {
+  display: inline-block;
+  width: 55px;
+  padding-left: 5px;
+}
+div.topUsers .item a div.info .name {
   display: block;
   margin-bottom: 3px;
   overflow: hidden;

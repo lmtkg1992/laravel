@@ -40,8 +40,8 @@
                         </div>
                         
                         <div class="info">
-                            <div class="uploader-name"><a href="http://chatvl.com/user/beiber1280"><?= $data->displayname?></a></div>                           
-                            <div title="Lượt xem" class="views">27.264</div>
+                            <div class="uploader-name"><a href=""><?= $data->displayname?></a></div>                           
+                            <div title="Lượt xem" class="views"><?php echo $data->view_count?></div>
                         </div>
                     </div>
                     

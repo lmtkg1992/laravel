@@ -13,20 +13,22 @@
 <div class="topUsers">
 <?php 
 
-	foreach ($topusers as $key => $item) {
+
+	foreach ($topusers as $user) {
 ?>
 
 
 	<div class="item">
-    	<a href="<?php echo $base_url?>/user/<?php echo $item->username?>" title="<?php echo $item->displayname?>">
+    	<a href="<?php echo $base_url?>/user/<?php echo $user->username?>" title="<?php echo $user->displayname?>">
     	 <?php
-            $src = 'http://graph.facebook.com/'.$item->id.'/picture?type=normal' ;
+            $src = 'http://graph.facebook.com/'.$user->id.'/picture' ;
+            // $src = $base_url .'/images/no-profile-photo.png';
           ?>
-          <img src="<?php echo $src; ?>" alt='<?php echo $item->displayname?>' /> 
+          <img src="<?php echo $src?>" alt='<?php echo $user->displayname?>' /> 
         	
           <div class="info">
-    	       <span class="name"><?php echo $item->displayname?></span> 
-            <span class="views"><?php echo $item->view_count?></span>
+    	       <span class="name"><?php echo $user->displayname?></span> 
+            <span class="views"><?php echo $user->view_count?></span>
 		      </div>
 		</a>
 	</div>
