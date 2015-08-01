@@ -1,0 +1,58 @@
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px){
+
+    #navbar .navbar-header .collapse {
+       
+        display: block;
+        visibility: visible;
+    }
+
+    #navbar {
+        .head-logo {
+            a{
+                width: auto;
+                #logo{
+                    display: none; 
+                }
+                #small-logo{
+                    display: block; 
+                }
+            }
+        }
+        #headerRight{
+            display: none;
+        }
+        ul li {
+            &:last-child{
+                display: none;
+            }
+            a{
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+
+    }
+
+    .video{
+        a img{
+            width: 270px;
+            height: 203px;
+        }
+
+       
+    }
+    /* profile */
+    .profile-pad {
+
+        .profile-image {
+
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+

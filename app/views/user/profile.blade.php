@@ -9,10 +9,10 @@
     <div class="profile-pad">
         <div class="profile-image">
             <a href="<?php echo $base_url .'user/'.$user->username ?>">
-            <img src="http://graph.facebook.com/<?php echo $user->id?>/picture?width=480&amp;height=300" alt="<?php echo $user->username?>">
+                <img src="http://graph.facebook.com/<?php echo $user->id?>/picture?type=large" alt="<?php echo $user->username?>">
             </a>
         </div>
-        <div class="profile-info" href="#" style="background:#333333">
+        <div class="profile-info">
             <h3><a href="<?php echo $base_url .'user/'.$user->username?>"><?php echo $user->displayname?></a></h3>
             <h4><span class="post-title ptitle">Số bài đăng:</span> <span class="post-content pcontent"><?php echo $post_count?></span></h4>
             <h4><span class="post-title ptitle">Lượt xem:</span> <span class="view-content pcontent"><?php echo $view_count?></span></h4>

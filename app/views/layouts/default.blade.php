@@ -25,6 +25,8 @@
    {{ HTML::style('css/jquery.tagit.css') }}
 
    {{ HTML::style('css/style.css') }}
+
+   {{ HTML::style('css/mobile_style.css') }}
    
 
 </head>

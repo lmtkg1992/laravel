@@ -2,7 +2,7 @@
     <div class="content col-xs-12 col-sm-8 col-md-8">
         <a target="_blank" href="<?= $base_url . '/video/' .$video->video_id; ?>" class="jump_focus">
             <?php if ($video->youtube_id){?>
-            <img src="//i.ytimg.com/vi/<?php echo $video->youtube_id?>/mqdefault.jpg" width="450px">
+            <img src="//i.ytimg.com/vi/<?php echo $video->youtube_id?>/0.jpg" width="450px">
             <?php }else{
                 // @todo: lay hinh video image mac dinh cua site
                 }?>

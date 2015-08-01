@@ -501,36 +501,44 @@ img.videoIndicator {
 
 /* profile */
 .profile-pad {
+    overflow: hidden;
 
     .profile-image {
-        overflow: hidden;
+        
+        height: 280px;
+        /*display: inline;*/
         float: left;
+        padding-left: 0px;
+        padding-right: 0px;
+       
     }
     .profile-info {
+        /*display: inline;*/
         float: left;
+        background:#333333;
         width: 208px;
         height: 280px;
         padding: 20px 20px 0;
         background-color: #222;
-        display: block;
+       
         color: #fff;
         border-radius: 0 5px 0 0;
         -webkit-border-radius: 0 5px 0 0;
         -moz-border-radius: 0 5px 0 0;
-        position: relative;
+        /*position: relative;*/
         text-shadow: 0 -1px rgba(0, 0, 0, .2);
         box-shadow: 0 -68px rgba(0, 0, 0, .2) inset;
         -moz-box-shadow: 0 -68px rgba(0, 0, 0, .2) inset;
         -webkit-box-shadow: 0 -68px rgba(0, 0, 0, .2) inset;
     }
-    .profile-image img {
+    .profile-image a img {
+        
         display: block;
         float: left;
-        width: 480px;
+        /*width: 480px;*/
         height: 280px;
         background-color: #222;
-    }
-    .profile-image a img {
+    
         border: none;
     }
     a.friendship, a.settings {
