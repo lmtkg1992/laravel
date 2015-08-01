@@ -18,12 +18,14 @@
                 </a>
             </h1>
             <div class="uinfo">
-                bởi <a href="<?php echo $base_url?>/user/<?php echo $video->username?>"><?= $video->displayname?></a>
+                bởi <a href="<?php echo $base_url?>/user/<?php echo $video->username?>">
+                <?php echo $video->displayname?></a>
+               
                 <span><?php echo $video->time_interval?></span>
             </div>
             <div class="p-stats">
-                <span title="Lượt xem" class="views"><?php echo $video->view_count?></span>
-                <span class="comments"><?php echo $video->comment_count?></span>
+                <span title="Lượt xem" class="views"><?php echo $video->video_view_count?></span>
+                <span class="comments"><?php echo $video->video_comment_count?></span>
             </div>
         </div>
     </div>

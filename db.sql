@@ -1008,4 +1008,9 @@ UPDATE users SET view_count = RAND()*(2500-100)+1000, liked = RAND()*(250-10)+10
 
 TRUNCATE TABLE photos;
 
+alter table videos change column view_count video_view_count INT(11);  
+alter table videos change column comment_count video_comment_count INT(11);  
+
+alter table videos change column like_count video_comment_count INT(11);  
+
 

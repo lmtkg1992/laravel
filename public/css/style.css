@@ -30,7 +30,7 @@ a:hover {
   margin: 8px 0;
 }
 #navbar .navbar-header .collapse.navbar-collapse ul {
-  fwidth: 500px;
+  width: 500px;
 }
 #navbar .navbar-header .collapse.navbar-collapse > #headerRight {
   float: right;
@@ -67,7 +67,7 @@ a:hover {
 }
 #navbar li {
   margin: 0 5px;
-  padding: 0 0 8px;
+  padding: 5px 0 5px;
   float: left;
   list-style: none;
 }
