@@ -16,7 +16,7 @@
 				<div class="collapse navbar-collapse col-xs-12 col-sm-12 col-md-12 col-lg-8 col" id="bs-navbar-collapse">
 
 					<div class="head-logo">
-						<a href="<?php echo $base_url?>">
+						<a href="<?php echo $base_url.'/home'?>">
 							<img src="<?php echo $base_url .'/images/logo-white.png'?>" alt="cố gắng lên" id="logo"/>
 							<img src="<?php echo $base_url .'/images/small-logo.png'?>" alt="cố gắng lên" id="small-logo"/>
 						</a>

@@ -257,8 +257,41 @@ a{
 /*top users*/
 
 div.topUsers{
-    overflow: hidden;
-    .video {
+    /*overflow: hidden;*/
+    .item{
+        float: left;
+        width: 100px;
+        height: 100px;
+   
+     
+        a {
+
+            img{
+           
+                width: 100px;
+                height: 100px;
+
+                 border-radius: 50px;
+                -webkit-border-radius: 150px;
+                -moz-border-radius: 150px;
+               
+                box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+                -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+                -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+            }
+            .name {
+                display: block;
+                margin-bottom: 3px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 80px;
+                font-size: 11px;
+            }
+
+        }
+    }
+    /*.video {
         float: left;
         margin-bottom: 8px;
         width: 140px;
@@ -272,16 +305,8 @@ div.topUsers{
             margin-left: 52px;
         }
 
-    }
-    .name {
-        display: block;
-        margin-bottom: 3px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        width: 80px;
-        font-size: 11px;
-    }
+    }*/
+  
 }
 div.uploader {
     .avatar img {
@@ -479,6 +504,75 @@ img.videoIndicator {
     left: 50%;
 }
 
+/* profile */
+.profile-pad {
+
+    .profile-image {
+        overflow: hidden;
+        float: left;
+    }
+    .profile-info {
+        float: left;
+        width: 208px;
+        height: 280px;
+        padding: 20px 20px 0;
+        background-color: #222;
+        display: block;
+        color: #fff;
+        border-radius: 0 5px 0 0;
+        -webkit-border-radius: 0 5px 0 0;
+        -moz-border-radius: 0 5px 0 0;
+        position: relative;
+        text-shadow: 0 -1px rgba(0, 0, 0, .2);
+        box-shadow: 0 -68px rgba(0, 0, 0, .2) inset;
+        -moz-box-shadow: 0 -68px rgba(0, 0, 0, .2) inset;
+        -webkit-box-shadow: 0 -68px rgba(0, 0, 0, .2) inset;
+    }
+    .profile-image img {
+        display: block;
+        float: left;
+        width: 480px;
+        height: 280px;
+        background-color: #222;
+    }
+    .profile-image a img {
+        border: none;
+    }
+    a.friendship, a.settings {
+        display: block;
+        text-indent: -9999px;
+        overflow: hidden;
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        bottom: 15px;
+        right: 20px;
+        -webkit-transition: opacity .2s linear;
+        -moz-transition: opacity .2s linear;
+        border: 1px solid rgba(0, 0, 0, .4);
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, .2) inset;
+        -moz-box-shadow: 0 0 0 1px rgba(255, 255, 255, .2) inset;
+        -webkit-box-shadow: 0 0 0 1px rgba(255, 255, 255, .2) inset;
+        border-radius: 50px;
+        -webkit-transition: background-color .2s linear;
+        -moz-transition: background-color .2s linear;
+        background: url(../images/sprite_v12.png) -400px -100px no-repeat rgba(255, 255, 255, .1);
+    }
+}
+
+.main-filter {
+    background-color: #f4f4f4;
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    height: 43px;
+    overflow: hidden;
+    box-shadow: 0 1px #fff inset, 0 -1px #ddd inset;
+    -moz-box-shadow: 0 1px #fff inset, 0 -1px #ddd inset;
+    -webkit-box-shadow: 0 1px #fff inset, 0 -1px #ddd inset;
+}
+
+/* end profile */
 /*laptop*/
 @media screen 
   and (min-device-width: 1200px) 

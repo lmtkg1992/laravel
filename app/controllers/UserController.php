@@ -223,15 +223,10 @@ class UserController extends BaseController
 	public function submit_video()
 	{
 
-		
-
-
-
-
 		App::setLocale('vi');
 		$rules = array(
          	'url'	=> 'required',
-	        'title' => 'required|max:100|min:10',  
+	        'title' => 'required|max:100|min:5',  
 	        'tags' 	=> 'max:20',
 	        'source'=> 'max:100|min:5'	                
 	       
@@ -290,7 +285,7 @@ class UserController extends BaseController
 	public function profile($username,$page = 1)
 	{
 
-		$data = User::where('username', 'nguyenuit')->first(); 
+		$data = User::where('username', $username)->first(); 
 
 		$query = DB::table('videos AS v')
             ->join('users AS u', 'v.user_id', '=', 'u.id')          

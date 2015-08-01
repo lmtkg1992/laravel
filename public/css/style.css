@@ -210,23 +210,39 @@ a:hover {
 }
 /*top users*/
 div.topUsers {
-  overflow: hidden;
+  /*overflow: hidden;*/
+  /*.video {
+        float: left;
+        margin-bottom: 8px;
+        width: 140px;
+        img{
+            float: left;
+            height: 50px;
+            width: 50px;
+            border-radius: 25px;
+        }
+        .info {
+            margin-left: 52px;
+        }
+
+    }*/
 }
-div.topUsers .video {
+div.topUsers .item {
   float: left;
-  margin-bottom: 8px;
-  width: 140px;
+  width: 100px;
+  height: 100px;
 }
-div.topUsers .video img {
-  float: left;
-  height: 50px;
-  width: 50px;
-  border-radius: 25px;
+div.topUsers .item a img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
 }
-div.topUsers .video .info {
-  margin-left: 52px;
-}
-div.topUsers .name {
+div.topUsers .item a .name {
   display: block;
   margin-bottom: 3px;
   overflow: hidden;
@@ -401,6 +417,71 @@ img.videoIndicator {
   margin-top: -25px;
   left: 50%;
 }
+/* profile */
+.profile-pad .profile-image {
+  overflow: hidden;
+  float: left;
+}
+.profile-pad .profile-info {
+  float: left;
+  width: 208px;
+  height: 280px;
+  padding: 20px 20px 0;
+  background-color: #222;
+  display: block;
+  color: #fff;
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+  position: relative;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -68px rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 0 -68px rgba(0, 0, 0, 0.2) inset;
+  -webkit-box-shadow: 0 -68px rgba(0, 0, 0, 0.2) inset;
+}
+.profile-pad .profile-image img {
+  display: block;
+  float: left;
+  width: 480px;
+  height: 280px;
+  background-color: #222;
+}
+.profile-pad .profile-image a img {
+  border: none;
+}
+.profile-pad a.friendship,
+.profile-pad a.settings {
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  -webkit-transition: opacity .2s linear;
+  -moz-transition: opacity .2s linear;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+  -moz-box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+  -webkit-box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+  border-radius: 50px;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  background: url(../images/sprite_v12.png) -400px -100px no-repeat rgba(255, 255, 255, 0.1);
+}
+.main-filter {
+  background-color: #f4f4f4;
+  border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  height: 43px;
+  overflow: hidden;
+  box-shadow: 0 1px #ffffff inset, 0 -1px #dddddd inset;
+  -moz-box-shadow: 0 1px #ffffff inset, 0 -1px #dddddd inset;
+  -webkit-box-shadow: 0 1px #ffffff inset, 0 -1px #dddddd inset;
+}
+/* end profile */
 /*laptop*/
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
   #navbar .head-logo a {

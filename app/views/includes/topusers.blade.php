@@ -12,7 +12,7 @@
   </div>
 <div class="topUsers">
 <?php 
-if (0)
+
 	foreach ($topusers as $key => $item) {
 ?>
 
@@ -22,11 +22,12 @@ if (0)
     	 <?php
             $src = 'http://graph.facebook.com/'.$item->id.'/picture?type=normal' ;
           ?>
-          <img src="<?php echo $src; ?>" alt='profile avatar' /> 
+          <img src="<?php echo $src; ?>" alt='<?php echo $item->displayname?>' /> 
         	
-            <div class="info">
-            	<span class="name"><?php echo $item->displayname?></span> <span class="views"><?php echo $item->view_count?></span>
-			</div>
+          <div class="info">
+    	       <span class="name"><?php echo $item->displayname?></span> 
+            <span class="views"><?php echo $item->view_count?></span>
+		      </div>
 		</a>
 	</div>
 	
