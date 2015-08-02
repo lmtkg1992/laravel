@@ -12,10 +12,7 @@
 
    {{ HTML::script('js/jquery-ui.min.js') }}
 
-   {{ HTML::script('js/tag-it.js') }}
-   
-  <!--  {{ HTML::script('js/bootstrap.file-input.js') }} -->
-
+ 
    {{ HTML::script('js/bootstrap-typeahead.js') }}
 
    {{ HTML::style('css/bootstrap.min.css') }}
@@ -42,7 +39,7 @@
 	    	
 	        <div class="col-xs-12 col-sm-12 col-md-8">   
 		
-				    @yield('content')
+			    @yield('content')
 		    </div>
 		 
 		    <div class="col-xs-12 col-sm-12 col-md-4">
