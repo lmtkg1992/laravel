@@ -99,3 +99,9 @@
 
 
 @stop
+
+@section('sidebar_content')
+
+@include('includes.video_photo_upload_rules')
+
+@stop

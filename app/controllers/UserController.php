@@ -266,8 +266,8 @@ class UserController extends BaseController
                 'url'     		=> Input::get('url'),
                 'youtube_id' 	=> isset($youtube_id) ? $youtube_id : '',
                	
-                'view_count'    => '', 
-                'comment_count' => '',
+                'video_view_count'    => '', 
+                'video_comment_count' => '',
                 'source' => Input::get('source'),
                 'sensitive_content' => Input::get('sensitive_content')
     		);
@@ -296,9 +296,9 @@ class UserController extends BaseController
            
         $post_count = count($query->get());
 
-        $view_count = $query->sum('v.view_count');
-        $like_count = $query->sum('v.like_count');
-        $comment_count = $query->sum('v.comment_count');
+        $view_count = $query->sum('v.video_view_count');
+        $like_count = $query->sum('v.video_like_count');
+        $comment_count = $query->sum('v.video_comment_count');
             
         $itemPerPage = 2;
 

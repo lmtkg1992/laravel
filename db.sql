@@ -1011,6 +1011,15 @@ TRUNCATE TABLE photos;
 alter table videos change column view_count video_view_count INT(11);  
 alter table videos change column comment_count video_comment_count INT(11);  
 
-alter table videos change column like_count video_comment_count INT(11);  
+alter table videos change column like_count video_like_count INT(11);  
+
+TRUNCATE TABLE files;
+
+TRUNCATE TABLE tags_photos;
+
+alter table photos change column view_count photo_view_count INT(11);  
+alter table photos change column comment_count photo_comment_count INT(11);  
+
+alter table photos change column like_count photo_like_count INT(11); 
 
 

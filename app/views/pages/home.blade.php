@@ -4,6 +4,8 @@
 
     <?php $base_url = URL::to('/'); ?>
 
+   
+
     <div id="video-content" class="list">
         <ul id="video-content-ul"> 
 
@@ -24,5 +26,13 @@
     </div>
   
 @stop
+
+@section('sidebar_content')
+
+@include('includes.topusers')
+@include('includes.photo_sidebar')
+
+@stop
+
 
 
