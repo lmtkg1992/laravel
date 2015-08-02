@@ -103,6 +103,9 @@ class UserController extends BaseController
 
 
 			$destinationPath = 'uploads/photos';
+			if (!file_exists($destinationPath)){
+				mkdir($destinationPath, 0777);
+			}
 
 			if (Input::hasfile('image') && Input::file('image')->isValid()){
 
@@ -123,8 +126,8 @@ class UserController extends BaseController
 		                'status'        => 1, 
 		                // temp enable is_home
 		                'is_home'       => 1,
-		                'view_count'    => '', 
-		                'comment_count' => '',
+		                'photo_view_count'    => '', 
+		                'photo_comment_count' => '',
 		                'source' => Input::get('source'),
 		                'sensitive_content' => Input::get('sensitive_content')
 		    		);

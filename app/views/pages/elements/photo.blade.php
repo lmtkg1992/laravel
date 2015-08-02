@@ -19,8 +19,8 @@
                
 			</div>
             <div class="p-stats">
-            	<span title="Lượt xem" class="views"><?php echo $photo->view_count?></span>
-        		<span class="comments"><?php echo $photo->comment_count?></span>
+            	<span title="Lượt xem" class="views"><?php echo $photo->photo_view_count?></span>
+        		<span class="comments"><?php echo $photo->photo_comment_count?></span>
             </div>
            
         </div>
