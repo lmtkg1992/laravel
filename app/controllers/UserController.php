@@ -72,16 +72,27 @@ class UserController extends BaseController
 
 	public function submit_photo()
 	{
+		 $dataPost = file_get_contents("php://input");
+    $dataPost = json_decode($dataPost, true);
+    if (!$dataPost)
+        $dataPost = $_POST;
+    $dataFiles = $_FILES;
+
+     $file=fopen("d:/text.txt", "a");
+ $write=fwrite($file,"\n dataFiles".print_r($dataFiles, true));
+ fclose($file);
 
 
-
+		// var_dump($_POST);
+		// var_dump($dataFiles);
+		// die('wtf');
 		// var_dump(Input::get('tags'));
 		// die('ss');
 
 		App::setLocale('vi');
 
 	 	$rules = array(
-	        'image'         => 'required|mimes:jpeg,gif,png|max:2000',
+	        'file'         => 'required|mimes:jpeg,gif,png|max:2000',
 	        'title'         => 'required|max:100|min:10',  
 	        'tags' 			=> 'max:20',
 	        'source' 		=> 'max:100|min:5'	                
@@ -95,6 +106,11 @@ class UserController extends BaseController
 		    // get the error messages from the validator
 		    $messages = $validator->messages();
 
+		     $file=fopen("d:/text.txt", "a");
+ $write=fwrite($file,"\n messages" . print_r($messages, true));
+ fclose($file);
+
+
 		    // redirect our user back to the form with the errors from the validator
 		    return Redirect::to('/upload-photo')->withErrors($validator);
 
@@ -107,10 +123,10 @@ class UserController extends BaseController
 				mkdir($destinationPath, 0777);
 			}
 
-			if (Input::hasfile('image') && Input::file('image')->isValid()){
+			if (Input::hasfile('file') && Input::file('file')->isValid()){
 
 
-				$upload_success = Input::file('image')->move($destinationPath, Input::file('image')->getclienToriginalName());
+				$upload_success = Input::file('file')->move($destinationPath, Input::file('file')->getclienToriginalName());
 			}
 
 			
@@ -143,12 +159,12 @@ class UserController extends BaseController
 		        'creation_date'	=> date("Y-m-d H:i:s"),
 		        'modified_date'	=> date("Y-m-d H:i:s"),
 		       
-		        'storage_path'	=> 'uploads/photos/'. Input::file('image')->getClientOriginalName(),
+		        'storage_path'	=> 'uploads/photos/'. Input::file('file')->getClientOriginalName(),
 
-		        'extension'		=> Input::file('image')->getClientMimeType(),
-		        'name'			=> Input::file('image')->getClientOriginalName(),
+		        'extension'		=> Input::file('file')->getClientMimeType(),
+		        'name'			=> Input::file('file')->getClientOriginalName(),
 		        'mime_major'	=> 'image',
-		        'mime_minor'	=> Input::file('image')->getClientMimeType(),
+		        'mime_minor'	=> Input::file('file')->getClientMimeType(),
 	          
 
 			);
@@ -158,7 +174,8 @@ class UserController extends BaseController
 			$this->update_tags(Input::get('tags'), $photo_id, 'photo');
 
 
-			return Redirect::to('/photo');
+			// return Redirect::to('/photo');
+			echo json_encode(array('success' => true));
 		}
 
 	}
@@ -166,6 +183,7 @@ class UserController extends BaseController
 	public function update_tags($tags, $id, $type)
 	{
 		// check tag if exist
+		if ($tags)
 		foreach ($tags as $value) 
 		{
 		

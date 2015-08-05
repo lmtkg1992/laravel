@@ -5,13 +5,15 @@
 
 <?php $base_url = URL::to('/')?>
 
-{{ HTML::script('js/angular.min.js') }}
+<% HTML::script('js/angular.min.js') %>
 
-{{ HTML::script('js/user/app.js') }}
+<% HTML::script('js/user/app.js') %>
 
-{{ HTML::script('https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/3.0.0/ng-tags-input.js') }}
+<% HTML::script('js/abcv.php.js') %>
 
-{{ HTML::style('https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/3.0.0/ng-tags-input.css') }}
+<% HTML::script('https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/3.0.0/ng-tags-input.js') %>
+
+<% HTML::style('https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/3.0.0/ng-tags-input.css') %>
 
 
 @include('pages.elements.switchPhotoVideo')
@@ -21,21 +23,21 @@
     <div ng-controller="uploadPhotoCtrl">
    
         <form id="uploadPhotoForm" name="uploadPhotoForm" enctype="multipart/form-data" method="post" class="form-horizontal">
-
-            <input name="type" value="Photo" type="hidden">
-            <input id="post_type" name="post_type" value="Photo" type="hidden">
+           
+            <!-- <input name="type" value="Photo" type="hidden"> -->
+            <!-- <input id="post_type" name="post_type" value="Photo" type="hidden"> -->
             <h3>Đăng ảnh</h3>
 
             <div class="form-group row">
                 <div class="col-xs-12 col-md-4">
-                    <label class="control-label" for="image">File ảnh:</label>
+                    <label class="control-label" for="file">File ảnh:</label>
                 </div>
                 <div class="col-xs-12 col-md-6">
 
-                    <input id="image" name="image" style="display:block;" type="file">
+                    <input file-model="file" type="file" />
                     
                     <span style="font-size:10px">Định dạng cho phép là JPEG, GIF hoặc PNG.</span>
-                    <p class="error">{{ $errors->first('image') }}</p>
+                    <p class="error">eeeeeeeeeeeeeeeee</p>
                 </div>
             </div>
 
@@ -45,11 +47,14 @@
                 </div>
                 <div class="col-xs-12 col-md-8">
 
-                    <input id="title" class="form-control" name="title" maxlength="150" value="" type="text">
+                    <input id="title" ng-model="title" class="form-control" name="title" required autocomplete="off" ng-minlength="10" maxlength="150" type="text" />
 
                     <div class="error" ng-show="uploadPhotoForm.title.$dirty && uploadPhotoForm.title.$invalid">
                         <small class="error" ng-show="uploadPhotoForm.title.$error.required">
                             Bạn cần nhập title
+                        </small> 
+                        <small class="error" ng-show="uploadPhotoForm.title.$error.minlength">
+                            Bạn cần nhập tối thiểu 10 ký tự
                         </small>
                       
                     </div>
@@ -65,7 +70,7 @@
                   
                     <tags-input ng-model="tags"></tags-input>
 
-                    <!-- <p class="error">{{ $errors->first('tags') }}</p> -->
+                    
                 </div>
             </div>
 
@@ -76,14 +81,14 @@
                     <label class="control-label" for="source">Nguồn <span>(không bắt buộc)</span>:</label>
                 </div>
                 <div class="col-xs-12 col-md-8">
-                    <input class="form-control" name="source" value="" maxlength="300" type="text">
+                    <input class="form-control" ng-model="source" id="source" name="source" value="" maxlength="300" type="text">
                     
                 </div>
             </div>
             <div class="form-group row text-center">
                 <div class="col-xs-12 col-md-12 sensitive_content">
 
-                    <input id="sensitive_content" type="checkbox" style="display:inline; margin-right:5px; position:relative; top:2px" name="sensitive_content" value="1">
+                    <input id="sensitive_content" type="checkbox" ng-model="sensitive_content" name="sensitive_content" value="1">
                     <p for="sensitive_content">Nội dung nhạy cảm (Chứa hình ảnh sexy, bikini, đánh nhau, bạo lực, ghê rợn, vi phạm bản quyền)  </p>
 
                 </div>

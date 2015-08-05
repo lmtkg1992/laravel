@@ -8,6 +8,9 @@ a:hover {
   cursor: pointer;
   text-decoration: none;
 }
+.error {
+  font-size: 14px;
+}
 /*navigation*/
 #navbar {
   height: 55px;
@@ -261,6 +264,12 @@ div.uploader .info {
   width: 100px;
   float: left;
   margin-left: 10px;
+}
+#sensitive_content {
+  display: inline;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
 }
 .views {
   line-height: 16px;

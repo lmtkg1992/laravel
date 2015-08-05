@@ -10,6 +10,8 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+Blade::setContentTags('<%', '%>');        // for variables and all things Blade
+Blade::setEscapedContentTags('<%%', '%%>');   // for escaped data
 
 Route::get("home/{page?}", ['uses' => "HomeController@index"]);
 Route::get("vote/{page?}", ['uses' => "VoteController@index"]);
