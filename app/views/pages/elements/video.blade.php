@@ -10,7 +10,7 @@
         <img class="videoIndicator" src="<?php echo $base_url?>/images/play_icon.png">          
     </div>
     <div class="post-info col-xs-12 col-sm-4 col-md-4">
-        <div style="position: static; top: 55px;" class="info scriptolution-stop" id="action-174409">
+        <div style="position: static; top: 55px;" class="info scriptolution-stop">
             <h1>
                 <a target="_blank" href="<?= $base_url . '/video/' .$video->video_id; ?>" class="jump_focus">
                     <?= $video->title ?>
