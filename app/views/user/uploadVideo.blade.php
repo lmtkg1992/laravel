@@ -5,25 +5,44 @@
 
 <?php $base_url = URL::to('/') ?>
 
+<% HTML::script('js/angular.min.js') %>
 
- @include('pages.elements.switchPhotoVideo')
+<% HTML::script('js/user/upload/app.js') %>
 
-<div class="content form_video  col-md-12">
-    <form  enctype="multipart/form-data" method="post" class="form-horizontal" action="<?php echo $base_url?>/submit-video">
+<% HTML::script('js/abcv.php.js') %>
+
+
+<% HTML::script('https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/3.0.0/ng-tags-input.js') %>
+
+<% HTML::style('https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/3.0.0/ng-tags-input.css') %>
+
+@include('pages.elements.switchPhotoVideo')
+
+<div class="content form_video col-xs-12 col-sm-12 col-md-12" ng-app="uploadVideoApp">
+  <div ng-controller="uploadVideoCtrl">
+
+    <form id="uploadVideoForm" name="uploadVideoForm" enctype="multipart/form-data" method="post" class="form-horizontal" novalidate="novalidate">
         <input name="type" value="Video" type="hidden">
         <input id="post_type" name="post_type" value="Video" type="hidden">
         <h3>Đăng Video</h3>
 
         <div class="form-group row">
-            <!-- <label> -->
+           
             <div class="col-xs-12 col-md-4">
                 <label class="control-label" for="title">Đường dẫn Youtube:</label>
             </div>
             <div class="col-xs-12 col-md-8">
                 
            
-                <input id="video_post_url" type="text" class="form-control" name="url" value="" style="display:block;">
-                <p class="error">{{ $errors->first('url') }}</p>
+                <input id="video_post_url" type="text" class="form-control" required ng-model="url" name="url" value="">
+
+                <div class="error" ng-show="uploadVideoForm.url.$dirty && uploadVideoForm.url.$invalid">
+                    <small class="error" ng-show="uploadVideoForm.url.$error.required">
+                        Bạn cần nhập link Youtube
+                    </small> 
+                   
+                  
+                </div>
                
             </div>
           
@@ -35,8 +54,17 @@
             </div>
             <div class="col-xs-12 col-md-8">
                 
-                <input id="post_title" class="form-control" name="title" maxlength="150" value="" type="text">
-                <p class="error">{{ $errors->first('title') }}</p>
+                <input id="post_title" class="form-control" name="title" ng-model="title" required ng-minlength="10" maxlength="150" value="" type="text">
+
+                <div class="error" ng-show="uploadVideoForm.title.$dirty && uploadVideoForm.title.$invalid">
+                    <small class="error" ng-show="uploadVideoForm.title.$error.required">
+                        Bạn cần nhập tiêu đề
+                    </small> 
+                    <small class="error" ng-show="uploadVideoForm.title.$error.minlength">
+                        Bạn cần nhập tối thiểu 10 ký tự
+                    </small>
+                  
+                </div>
             </div>
         </div>
         <div class="form-group row">
@@ -45,8 +73,8 @@
                 <label class="control-label" for="tag">Tags<span>(không bắt buộc):</span></label>
             </div>
             <div class="col-xs-12 col-md-8">
-                <ul id="tags"></ul>
-                <p class="error">{{ $errors->first('tags') }}</p>
+                <tags-input ng-model="tags"></tags-input>
+               
             </div>
         </div>
 
@@ -58,13 +86,13 @@
             </div>
             <div class="col-xs-12 col-md-8">
                 <input class="form-control" name="source" value="" maxlength="300" type="text">
-                <p class="error">{{ $errors->first('source') }}</p>
+               
             </div>
         </div>
         <div class="form-group row text-center">
             <div class="col-xs-12 col-md-12 sensitive_content">
 
-                <input id="sensitive_content" type="checkbox" style="display:inline; margin-right:5px; position:relative; top:2px" name="sensitive_content" value="1">
+                <input id="sensitive_content" type="checkbox" name="sensitive_content" value="1">
                 <p for="sensitive_content">Nội dung nhạy cảm (Chứa hình ảnh sexy, bikini, đánh nhau, bạo lực, ghê rợn, vi phạm bản quyền)  </p>
                              
             </div>
@@ -73,13 +101,14 @@
             </div>
         </div>
 
-        <div class="form-group">
+       <div class="form-group">
             <div class="col-xs-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-default">Quay Lại</button>
-                <button type="submit" class="btn btn-primary">Đăng Video</button>
+                <button type="submit" class="btn btn-default" style="margin-right:20px">Quay Lại</button>
+                <button ng-click="uploadVideo()" class="btn btn-primary">Đăng Video</button>
             </div>
         </div>
     </form>
+    </div>
 </div>
 <script type="text/javascript">
     var upload_url = '<?php echo Request::url()?>';
@@ -87,11 +116,13 @@
         $('ul.switch .tab_video .arrow-up').show();
         $('ul.switch .tab_photo .arrow-up').hide();
     }
-    $(document).ready(function() {
-        $("#tags").tagit({
-          allowSpaces: true,
-
-        });
-    });
+    
+    window.base_url = '<?php echo $base_url ?>';
 </script>
+@stop
+
+@section('sidebar_content')
+
+@include('includes.video_photo_upload_rules')
+
 @stop

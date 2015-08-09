@@ -21,6 +21,7 @@ var uploadPhotoApp = angular.module('uploadPhotoApp', ['ngTagsInput'])
        
     };
 })
+
 .directive('fileModel', ['$parse', function ($parse) {
     return {
         restrict: 'A',
@@ -48,10 +49,43 @@ var uploadPhotoApp = angular.module('uploadPhotoApp', ['ngTagsInput'])
         })
         .success(function(data){
             if (data.success){
-                window.location = "http://laravel.test/photo";
+                window.location = "/photo";
             }
         })
         .error(function(){
         });
     }
 }]);
+
+var uploadVideoApp = angular.module('uploadVideoApp', ['ngTagsInput'])
+.controller('uploadVideoCtrl', function($scope, $http, $timeout){
+
+    $scope.uploadVideo = function(){
+        console.log('wtffffffffff');
+
+        $scope.uploadVideoForm.url.$dirty = true;
+        $scope.uploadVideoForm.title.$dirty = true;
+
+        if (! $scope.uploadVideoForm.$valid ){
+           
+            return false;
+        }
+        console.log('runnnn');
+        var fd = new FormData($('#uploadVideoForm')[0]);
+
+        $http.post("/submit-video", fd, {
+            transformRequest: angular.identity,
+            headers: {'Content-Type': undefined}
+        })
+        .success(function(data){
+
+            if (data.success){
+                window.location = "/home";
+            }
+        })
+        .error(function(){
+        });
+      
+       
+    };
+});

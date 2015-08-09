@@ -72,22 +72,12 @@ class UserController extends BaseController
 
 	public function submit_photo()
 	{
-		 $dataPost = file_get_contents("php://input");
-    $dataPost = json_decode($dataPost, true);
-    if (!$dataPost)
-        $dataPost = $_POST;
-    $dataFiles = $_FILES;
+	 	$dataPost = file_get_contents("php://input");
+	    $dataPost = json_decode($dataPost, true);
+	    if (!$dataPost)
+	        $dataPost = $_POST;
+	    $dataFiles = $_FILES;
 
-     $file=fopen("d:/text.txt", "a");
- $write=fwrite($file,"\n dataFiles".print_r($dataFiles, true));
- fclose($file);
-
-
-		// var_dump($_POST);
-		// var_dump($dataFiles);
-		// die('wtf');
-		// var_dump(Input::get('tags'));
-		// die('ss');
 
 		App::setLocale('vi');
 
@@ -243,6 +233,11 @@ class UserController extends BaseController
 
 	public function submit_video()
 	{
+		$dataPost = file_get_contents("php://input");
+	    $dataPost = json_decode($dataPost, true);
+	    if (!$dataPost)
+	        $dataPost = $_POST;
+	    $dataFiles = $_FILES;
 
 		App::setLocale('vi');
 		$rules = array(
@@ -299,7 +294,8 @@ class UserController extends BaseController
 
 			$this->update_tags(Input::get('tags'), $video_id, 'video');
 
-			return Redirect::to('/home');
+			// return Redirect::to('/home');
+			echo json_encode(array('success' => true));
 		}
 
 	}

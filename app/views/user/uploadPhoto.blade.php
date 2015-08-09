@@ -7,7 +7,7 @@
 
 <% HTML::script('js/angular.min.js') %>
 
-<% HTML::script('js/user/app.js') %>
+<% HTML::script('js/user/upload/app.js') %>
 
 <% HTML::script('js/abcv.php.js') %>
 
@@ -22,7 +22,7 @@
 
     <div ng-controller="uploadPhotoCtrl">
    
-        <form id="uploadPhotoForm" name="uploadPhotoForm" enctype="multipart/form-data" method="post" class="form-horizontal">
+        <form id="uploadPhotoForm" name="uploadPhotoForm" enctype="multipart/form-data" method="post" class="form-horizontal" novalidate="novalidate">
            
             <!-- <input name="type" value="Photo" type="hidden"> -->
             <!-- <input id="post_type" name="post_type" value="Photo" type="hidden"> -->
@@ -34,10 +34,20 @@
                 </div>
                 <div class="col-xs-12 col-md-6">
 
-                    <input file-model="file" type="file" />
+                    <input file-model="file" type="file" required/>
                     
-                    <span style="font-size:10px">Định dạng cho phép là JPEG, GIF hoặc PNG.</span>
-                    <p class="error">eeeeeeeeeeeeeeeee</p>
+                    <!-- <span style="font-size:10px">Định dạng cho phép là JPEG, GIF hoặc PNG.</span> -->
+
+                    <!-- <div class="error" ng-show="uploadPhotoForm.title.$dirty && uploadPhotoForm.title.$invalid">
+                        <small class="error" ng-show="uploadPhotoForm.title.$error.required">
+                            Bạn cần nhập tiêu đề
+                        </small> 
+                        <small class="error" ng-show="uploadPhotoForm.title.$error.minlength">
+                            Bạn cần nhập tối thiểu 10 ký tự
+                        </small>
+                      
+                    </div> -->
+                    
                 </div>
             </div>
 
@@ -47,11 +57,11 @@
                 </div>
                 <div class="col-xs-12 col-md-8">
 
-                    <input id="title" ng-model="title" class="form-control" name="title" required autocomplete="off" ng-minlength="10" maxlength="150" type="text" />
+                    <input id="title" ng-model="title" class="form-control" name="title" required autocomplete="off" ng-minlength="10" maxlength="150" type="text"  />
 
                     <div class="error" ng-show="uploadPhotoForm.title.$dirty && uploadPhotoForm.title.$invalid">
                         <small class="error" ng-show="uploadPhotoForm.title.$error.required">
-                            Bạn cần nhập title
+                            Bạn cần nhập tiêu đề
                         </small> 
                         <small class="error" ng-show="uploadPhotoForm.title.$error.minlength">
                             Bạn cần nhập tối thiểu 10 ký tự
@@ -109,11 +119,12 @@
 <script type="text/javascript">
 
 
-    var upload_url = '<?php echo Request::url()?>';
+    window.upload_url = '<?php echo Request::url()?>';
     if (upload_url.search('user/upload-photo') !== -1){
         $('ul.switch .tab_photo .arrow-up').show();
         $('ul.switch .tab_video .arrow-up').hide();
     }
+    window.base_url = '<?php echo $base_url ?>';
    
 </script>
 
