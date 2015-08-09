@@ -3,30 +3,16 @@
 class PhotoController extends BaseController {
 
 	
-	public function index($page = 1){	
+	public function detail($page = 1){	
 
 
 	 	$itemPerPage = 10;
-
-		$photos = DB::table('photos AS p')
-        ->join('users AS u', 'p.user_id', '=', 'u.id')          
-        ->join('files AS f', 'f.parent_id', '=', 'p.id')          
-        
-        ->select(array('*', 'p.id AS photo_id'))
-        ->skip(($page- 1) * $itemPerPage)
-        ->take($itemPerPage)
-        ->orderBy('p.id', 'DESC')
-        ->get();
-
-        foreach ($photos as $key => &$value) {
-           
-              $value->time_interval = calculate_time_period($value->creation_date);
-        }
+        $photos = Photo::getPhotos(5, $page);
+		
 
         return View::make("pages.photo")
- 		// ->with('videos', $videos)
- 		->with('photos', $photos)
-              ->with('page', $page);
+            ->with('photos', $photos)
+            ->with('page', $page);
  		;
 
 		

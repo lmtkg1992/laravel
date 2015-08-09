@@ -43,8 +43,8 @@ Route::get("upload-video", "UserController@upload_video");
 Route::post("submit-video", "UserController@submit_video");
 
 
-Route::get("video/{id}", ['uses' =>'VideoController@index']);
-Route::get("photo/{id}", ['uses' =>'PhotoController@index']);
+Route::get("video/{id}", ['uses' =>'VideoController@detail']);
+Route::get("photo/{id}", ['uses' =>'PhotoController@detail']);
 
 	
 

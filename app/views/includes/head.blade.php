@@ -26,7 +26,7 @@
 			  		<ul class="nav navbar-nav">
 
 					 	<li class="current"><a href="<?= $base_url .'/home'?>">Mới</a></li>
-					 	<li class="current"><a href="<?= $base_url .'/hot'?>">Hot</a></li>
+					 	<!-- <li class="current"><a href="<?= $base_url .'/hot'?>">Hot</a></li> -->
 						<li><a href="<?= $base_url?>/vote">Chờ duyệt</a>
 						<li><a href="<?= $base_url?>/photo">Ảnh</a></li>
 						<li>
