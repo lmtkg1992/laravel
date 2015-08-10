@@ -39,7 +39,7 @@ View::composer('includes.photo_sidebar', function($view)
             
             ->select(array('*', 'p.id AS photo_id'))
             ->skip(0)
-            ->take(6)
+            ->take(5)
             ->get();
 
 	$view->with('photos', $photos);

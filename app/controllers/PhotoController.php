@@ -17,6 +17,23 @@ class PhotoController extends BaseController {
 
 		
 	}
+
+	public function detail($id){	
+
+
+		
+		$photo = Photo::getPhoto($id);
+
+		$previous = Photo::getPreviousPhoto($id);
+		$next = Photo::getNextPhoto($id);
+        
+		return View::make('pages.photo.detail')
+		->with('photo', $photo)
+		->with('previous', $previous ? $previous->id : null)
+		->with('next', $next ? $next->id : null)
+		;
+		
+	}
 	
 
 	

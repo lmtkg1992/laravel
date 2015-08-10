@@ -46,7 +46,7 @@
                     </div>
                     
                     <div class="post-info">
-                        <div class="post-date">Đăng <?php echo $video->time_interval?> giờ trước</div>
+                        <div class="post-date">Đăng <?php echo $video->time_interval?></div>
                         <div class="stats">
                             <span title="Lượt xem" class="views"> <span class="number"><?php echo $video->video_view_count?></span></span>
                             <span title="Bình luận" class="comments"> <span class="number"><?php echo $video->video_comment_count?></span></span>
@@ -63,4 +63,9 @@
     </div>
 @stop
 
+@section('sidebar_content')
 
+@include('includes.topusers')
+@include('includes.photo_sidebar')
+
+@stop
