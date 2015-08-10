@@ -211,6 +211,69 @@ a:hover {
   position: relative;
   text-align: center;
 }
+/*photos list*/
+#photo-content.list ul {
+  padding-left: 0;
+}
+#photo-content.list ul .col-1 li div.info a.fix {
+  margin: 0px;
+  background: url(../images/sprite_v12.png) no-repeat 0 -2257px;
+  padding-left: 16px;
+  line-height: 14px;
+  margin: -16px 0 22px;
+  visibility: hidden;
+  color: #399A35;
+}
+#photo-content.list ul .col-1 li div.info a.fix:hover {
+  color: #43b93f;
+  text-decoration: underline;
+}
+#photo-content.list ul .col-1 li div.info a.report {
+  margin: -16px 0 30px;
+  visibility: hidden;
+}
+#photo-content.list ul .col-1 li div.info a.report:hover {
+  color: #ee5b8c;
+  text-decoration: underline;
+}
+#photo-content.list ul .info h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #000;
+  font-size: 18px;
+  line-height: 28px;
+}
+#photo-content.list ul .info h1 a {
+  color: #000;
+  font-size: 18px;
+  line-height: 28px;
+}
+#photo-content.list ul .info a:hover {
+  color: #0087F7;
+  text-decoration: none;
+}
+#photo-content.list ul li.photo {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  /*float: left;*/
+  /*margin-bottom: 10px;*/
+  list-style-type: none;
+  /*height: 415px;*/
+  height: auto;
+  overflow: hidden;
+}
+#photo-content.list ul li.photo .post-info {
+  position: relative
+  /*width: 200px;*/
+  /*float: right;*/
+}
+#photo-content.list ul li.photo div.content {
+  height: auto;
+  position: relative;
+  text-align: center;
+}
 /*top users*/
 div.topUsers {
   /*overflow: hidden;*/

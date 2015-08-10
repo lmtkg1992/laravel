@@ -49,7 +49,7 @@ var uploadPhotoApp = angular.module('uploadPhotoApp', ['ngTagsInput'])
         })
         .success(function(data){
             if (data.success){
-                window.location = "/photo";
+                window.location = "/photos";
             }
         })
         .error(function(){
@@ -80,7 +80,7 @@ var uploadVideoApp = angular.module('uploadVideoApp', ['ngTagsInput'])
         .success(function(data){
 
             if (data.success){
-                window.location = "/home";
+                window.location = "/videos";
             }
         })
         .error(function(){

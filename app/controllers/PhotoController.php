@@ -10,7 +10,7 @@ class PhotoController extends BaseController {
         $photos = Photo::getPhotos(5, $page);
 		
 
-        return View::make("pages.photo")
+        return View::make("pages.photos")
             ->with('photos', $photos)
             ->with('page', $page);
  		;

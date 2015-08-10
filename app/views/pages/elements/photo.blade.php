@@ -1,5 +1,5 @@
-<li class="item">
-    <div class="content">
+<li class="photo">
+    <div class="content col-xs-12 col-sm-8 col-md-8">
         
         <img style="max-width:400px" src="<?php echo $base_url . '/'.$photo->storage_path?>" alt="<?php echo $photo->title?>"/>
                     

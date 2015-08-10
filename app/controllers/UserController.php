@@ -18,7 +18,7 @@ class UserController extends BaseController
 	
 
 		if (Auth::check()){
-			return Redirect::to('/home');
+			return Redirect::to('/videos');
 		}else{
 			
 			return View::make('user.login');
@@ -29,7 +29,7 @@ class UserController extends BaseController
 
 		if (Auth::attempt(Input::only('email', 'password'))){
 
-			return Redirect::to('/home');
+			return Redirect::to('/videos');
 		}
 		return 'failed!';
 	}
@@ -96,9 +96,7 @@ class UserController extends BaseController
 		    // get the error messages from the validator
 		    $messages = $validator->messages();
 
-		     $file=fopen("d:/text.txt", "a");
- $write=fwrite($file,"\n messages" . print_r($messages, true));
- fclose($file);
+		     
 
 
 		    // redirect our user back to the form with the errors from the validator
@@ -164,7 +162,7 @@ class UserController extends BaseController
 			$this->update_tags(Input::get('tags'), $photo_id, 'photo');
 
 
-			// return Redirect::to('/photo');
+			
 			echo json_encode(array('success' => true));
 		}
 
@@ -227,7 +225,7 @@ class UserController extends BaseController
 			$autocomplete_tags = $this->autocomplete_tags();
 			return View::make('user.uploadVideo')->with('autocomplete_tags', $autocomplete_tags);
 		}else{
-			return Redirect::to('/home');	
+			return Redirect::to('/videos');	
 		}
 	}
 

@@ -251,8 +251,86 @@ a{
     }
 }
 
+/*photos list*/
+#photo-content.list { 
+    ul {
+        padding-left: 0;
 
+        .col-1 li {
+            div.info {
+                a{
+                    &.fix{
+                        margin: 0px;
+                        background: url(../images/sprite_v12.png) no-repeat 0 -2257px;
+                        padding-left: 16px;
+                        line-height: 14px;
+                        margin: -16px 0 22px;
+                        visibility: hidden;
+                        color: #399A35;
+                        &:hover{
+                            color: #43b93f;
+                            text-decoration: underline;
+                        }
+                    }
+                    &.report{
+                        margin: -16px 0 30px;
+                        visibility: hidden;
+                        &:hover{
+                            color: #ee5b8c;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        .info {
 
+            h1{ 
+                margin-top: 0;
+                margin-bottom: 0;
+                color: #000;
+                font-size: 18px;
+                line-height: 28px;
+                a{
+                    color: #000;
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+            a{
+                &:hover {
+                    color: #0087F7;
+                    text-decoration: none;
+                }
+            }
+
+        }
+        
+        li.photo{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            width: 100%;
+            /*float: left;*/
+            /*margin-bottom: 10px;*/
+            list-style-type:none;
+            /*height: 415px;*/
+            height: auto;
+            overflow: hidden;
+            .post-info {
+                position: relative;
+                /*width: 200px;*/
+                /*float: right;*/
+            }
+            div.content{
+                height: auto;
+                position: relative;
+                text-align: center;
+            }
+            
+        }
+    }
+}
 
 
 

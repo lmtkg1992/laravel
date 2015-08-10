@@ -28,7 +28,7 @@
 					 	<li class="current"><a href="<?= $base_url .'/videos'?>">Video</a></li>
 					 	<!-- <li class="current"><a href="<?= $base_url .'/hot'?>">Hot</a></li> -->
 						<li><a href="<?= $base_url?>/vote">Chờ duyệt</a>
-						<li><a href="<?= $base_url?>/photo">Ảnh</a></li>
+						<li><a href="<?= $base_url?>/photos">Ảnh</a></li>
 						<li>
 							<a href="<?= $base_url?>/upload-photo">
 								<img src ='<?= $base_url?>/images/upload_icon.png' alt='Dang Anh' />Đăng Ảnh
