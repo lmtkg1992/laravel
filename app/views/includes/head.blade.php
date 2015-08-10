@@ -16,7 +16,7 @@
 				<div class="collapse navbar-collapse col-xs-12 col-sm-12 col-md-12 col-lg-8 col" id="bs-navbar-collapse">
 
 					<div class="head-logo">
-						<a href="<?php echo $base_url.'/home'?>">
+						<a href="<?php echo $base_url.'/videos'?>">
 							<img src="<?php echo $base_url .'/images/logo-white.png'?>" alt="cố gắng lên" id="logo"/>
 							<img src="<?php echo $base_url .'/images/small-logo.png'?>" alt="cố gắng lên" id="small-logo"/>
 						</a>
@@ -25,7 +25,7 @@
 
 			  		<ul class="nav navbar-nav">
 
-					 	<li class="current"><a href="<?= $base_url .'/home'?>">Mới</a></li>
+					 	<li class="current"><a href="<?= $base_url .'/videos'?>">Video</a></li>
 					 	<!-- <li class="current"><a href="<?= $base_url .'/hot'?>">Hot</a></li> -->
 						<li><a href="<?= $base_url?>/vote">Chờ duyệt</a>
 						<li><a href="<?= $base_url?>/photo">Ảnh</a></li>

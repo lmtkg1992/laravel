@@ -2,7 +2,19 @@
 
 class VideoController extends BaseController {
 
+	public function index($page = 1){	
 
+         
+	    $itemPerPage = 5;
+	    $videos = Video::getVideos(5, $page);
+			     
+	    return View::make("pages.videos")
+		 		->with('videos', $videos)
+	      ->with('page', $page);
+		 		;
+		  
+	}
+     
 	public function detail($id){	
 
 

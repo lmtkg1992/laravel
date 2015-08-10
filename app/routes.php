@@ -13,12 +13,12 @@
 Blade::setContentTags('<%', '%>');        // for variables and all things Blade
 Blade::setEscapedContentTags('<%%', '%%>');   // for escaped data
 
-Route::get("home/{page?}", ['uses' => "HomeController@index"]);
+Route::get("videos/{page?}", ['uses' => "VideoController@index"]);
 Route::get("vote/{page?}", ['uses' => "VoteController@index"]);
 
 Route::post("voteAjax", ['uses' => "VoteController@voteAjax"]);
 
-Route::get("photo/{page?}", ['uses' => "PhotoController@index"]);
+Route::get("photos/{page?}", ['uses' => "PhotoController@index"]);
 
 // Route::get("home/get_page", "HomeController@get_page");
 

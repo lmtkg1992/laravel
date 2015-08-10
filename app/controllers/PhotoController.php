@@ -3,7 +3,7 @@
 class PhotoController extends BaseController {
 
 	
-	public function detail($page = 1){	
+	public function index($page = 1){	
 
 
 	 	$itemPerPage = 10;
