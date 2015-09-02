@@ -2,10 +2,21 @@
 
 @section('content')
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4&appId=264703003672441";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
     <?php $base_url = URL::to('/'); ?>
     <div id="container">
     
 	<div id="main">
+
     	  
         <div id="content-holder">
 
@@ -55,7 +66,7 @@
                 </div>
                            
             </div>
-          
+           <div class="fb-comments" data-href="http://giaitrivl69.tk/video/<?php echo $video->video_id?>" data-width="700" data-numposts="5"></div>
       </div>
 
 	</div>

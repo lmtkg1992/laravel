@@ -605,6 +605,9 @@ img.videoIndicator {
   -webkit-box-shadow: 0 1px #ffffff inset, 0 -1px #dddddd inset;
 }
 /* end profile */
+.fb-comments iframe {
+  width: 700px !important;
+}
 /*laptop*/
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
   #navbar .head-logo a {
@@ -653,6 +656,9 @@ img.videoIndicator {
   }
   .video a img {
     width: 100%;
+  }
+  .fb-comments iframe {
+    width: 300px !important;
   }
 }
 /*tablet*/
